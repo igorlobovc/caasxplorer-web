@@ -1,0 +1,42 @@
+{
+  "titulo": "Distribuição de Posts por Tema",
+  "dados": [
+    {
+      "categoria": "Campanha de Vacinação",
+      "quantidade": 1464
+    },
+    {
+      "categoria": "Saúde Mental",
+      "quantidade": 1341
+    },
+    {
+      "categoria": "Planos de Saúde",
+      "quantidade": 1245
+    },
+    {
+      "categoria": "Eventos Esportivos",
+      "quantidade": 1186
+    },
+    {
+      "categoria": "Convênios e Parcerias",
+      "quantidade": 786
+    },
+    {
+      "categoria": "Wellhub/Gympass",
+      "quantidade": 181
+    },
+    {
+      "categoria": "Institucional",
+      "quantidade": 111
+    },
+    {
+      "categoria": "Telemedicina",
+      "quantidade": 33
+    },
+    {
+      "categoria": "Outros",
+      "quantidade": 10
+    }
+  ],
+  "total_posts": 6357
+}

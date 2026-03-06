@@ -1,0 +1,684 @@
+{
+  "categorias": [
+    {
+      "categoria": "Campanha de Vacinação",
+      "quantidade": 1464
+    },
+    {
+      "categoria": "Saúde Mental",
+      "quantidade": 1341
+    },
+    {
+      "categoria": "Planos de Saúde",
+      "quantidade": 1245
+    },
+    {
+      "categoria": "Eventos Esportivos",
+      "quantidade": 1186
+    },
+    {
+      "categoria": "Convênios e Parcerias",
+      "quantidade": 786
+    },
+    {
+      "categoria": "Wellhub/Gympass",
+      "quantidade": 181
+    },
+    {
+      "categoria": "Institucional",
+      "quantidade": 111
+    },
+    {
+      "categoria": "Telemedicina",
+      "quantidade": 33
+    },
+    {
+      "categoria": "Outros",
+      "quantidade": 10
+    }
+  ],
+  "engagement_categoria": [
+    {
+      "categoria": "Wellhub/Gympass",
+      "engagement_medio": 0.013435085787591257,
+      "total_posts": 90
+    },
+    {
+      "categoria": "Eventos Esportivos",
+      "engagement_medio": 0.008339994014177163,
+      "total_posts": 419
+    },
+    {
+      "categoria": "Institucional",
+      "engagement_medio": 0.007324879638225476,
+      "total_posts": 65
+    },
+    {
+      "categoria": "Telemedicina",
+      "engagement_medio": 0.005972985758274713,
+      "total_posts": 16
+    },
+    {
+      "categoria": "Campanha de Vacinação",
+      "engagement_medio": 0.005211259435637346,
+      "total_posts": 745
+    },
+    {
+      "categoria": "Saúde Mental",
+      "engagement_medio": 0.004545564742781808,
+      "total_posts": 574
+    },
+    {
+      "categoria": "Outros",
+      "engagement_medio": 0.0035817967693929625,
+      "total_posts": 3
+    },
+    {
+      "categoria": "Convênios e Parcerias",
+      "engagement_medio": 0.002934540449899976,
+      "total_posts": 361
+    },
+    {
+      "categoria": "Planos de Saúde",
+      "engagement_medio": 0.0021790719632685663,
+      "total_posts": 699
+    }
+  ],
+  "caas": [
+    {
+      "caa": "CASAG",
+      "quantidade": 518
+    },
+    {
+      "caa": "CAADF",
+      "quantidade": 491
+    },
+    {
+      "caa": "CAAPI",
+      "quantidade": 469
+    },
+    {
+      "caa": "CAAAM",
+      "quantidade": 428
+    },
+    {
+      "caa": "CAARO",
+      "quantidade": 387
+    },
+    {
+      "caa": "CAAES",
+      "quantidade": 282
+    },
+    {
+      "caa": "CAASP",
+      "quantidade": 240
+    },
+    {
+      "caa": "CAARN",
+      "quantidade": 238
+    },
+    {
+      "caa": "CAASC",
+      "quantidade": 197
+    },
+    {
+      "caa": "CAACE",
+      "quantidade": 186
+    },
+    {
+      "caa": "CAARR",
+      "quantidade": 158
+    },
+    {
+      "caa": "CAAAC",
+      "quantidade": 151
+    },
+    {
+      "caa": "CAARS",
+      "quantidade": 141
+    },
+    {
+      "caa": "CAAPA",
+      "quantidade": 130
+    },
+    {
+      "caa": "CAAB",
+      "quantidade": 129
+    }
+  ],
+  "engagement_caa": [
+    {
+      "caa": "CAAES",
+      "engagement_medio": 0.007925589335118876,
+      "engagement_total": 2.235016192503523,
+      "total_posts": 282
+    },
+    {
+      "caa": "CAADF",
+      "engagement_medio": 0.003631062007191823,
+      "engagement_total": 1.7828514455311852,
+      "total_posts": 491
+    },
+    {
+      "caa": "CAAPI",
+      "engagement_medio": 0.005308051333331923,
+      "engagement_total": 1.7569649913328664,
+      "total_posts": 331
+    },
+    {
+      "caa": "CAAAM",
+      "engagement_medio": 0.005855773082222791,
+      "engagement_total": 1.7508761515846145,
+      "total_posts": 299
+    },
+    {
+      "caa": "CAAB",
+      "engagement_medio": 0.010685672490044748,
+      "engagement_total": 1.3784517512157726,
+      "total_posts": 129
+    },
+    {
+      "caa": "CAARR",
+      "engagement_medio": 0.006180791160701543,
+      "engagement_total": 0.9765650033908437,
+      "total_posts": 158
+    },
+    {
+      "caa": "CAAAC",
+      "engagement_medio": 0.009273464710238485,
+      "engagement_total": 0.9737137945750408,
+      "total_posts": 105
+    },
+    {
+      "caa": "CAARO",
+      "engagement_medio": 0.0043465293775054445,
+      "engagement_total": 0.8693058755010888,
+      "total_posts": 200
+    },
+    {
+      "caa": "CAASC",
+      "engagement_medio": 0.005225392961992585,
+      "engagement_total": 0.5747932258191844,
+      "total_posts": 110
+    },
+    {
+      "caa": "CAAPE",
+      "engagement_medio": 0.006092231544977448,
+      "engagement_total": 0.49956298668815075,
+      "total_posts": 82
+    },
+    {
+      "caa": "CASAG",
+      "engagement_medio": 0.0006968219034392256,
+      "engagement_total": 0.36095374598151886,
+      "total_posts": 518
+    },
+    {
+      "caa": "CAAMS",
+      "engagement_medio": 0.023773652031087583,
+      "engagement_total": 0.19018921624870067,
+      "total_posts": 8
+    },
+    {
+      "caa": "CAARJ",
+      "engagement_medio": 0.0014811781934622819,
+      "engagement_total": 0.15108017573315274,
+      "total_posts": 102
+    },
+    {
+      "caa": "CAAPA",
+      "engagement_medio": 0.006685054441072936,
+      "engagement_total": 0.05348043552858349,
+      "total_posts": 8
+    },
+    {
+      "caa": "CAARN",
+      "engagement_medio": 0.004906512238563825,
+      "engagement_total": 0.0392520979085106,
+      "total_posts": 8
+    }
+  ],
+  "temporal": [
+    {
+      "mes": "2024-01",
+      "quantidade": 13
+    },
+    {
+      "mes": "2024-02",
+      "quantidade": 148
+    },
+    {
+      "mes": "2024-03",
+      "quantidade": 279
+    },
+    {
+      "mes": "2024-04",
+      "quantidade": 567
+    },
+    {
+      "mes": "2024-05",
+      "quantidade": 270
+    },
+    {
+      "mes": "2024-06",
+      "quantidade": 191
+    },
+    {
+      "mes": "2024-07",
+      "quantidade": 262
+    },
+    {
+      "mes": "2024-08",
+      "quantidade": 270
+    },
+    {
+      "mes": "2024-09",
+      "quantidade": 239
+    },
+    {
+      "mes": "2024-10",
+      "quantidade": 262
+    },
+    {
+      "mes": "2024-11",
+      "quantidade": 216
+    },
+    {
+      "mes": "2024-12",
+      "quantidade": 156
+    },
+    {
+      "mes": "2025-01",
+      "quantidade": 155
+    },
+    {
+      "mes": "2025-02",
+      "quantidade": 119
+    },
+    {
+      "mes": "2025-03",
+      "quantidade": 186
+    },
+    {
+      "mes": "2025-04",
+      "quantidade": 274
+    },
+    {
+      "mes": "2025-05",
+      "quantidade": 355
+    },
+    {
+      "mes": "2025-06",
+      "quantidade": 235
+    },
+    {
+      "mes": "2025-07",
+      "quantidade": 255
+    },
+    {
+      "mes": "2025-08",
+      "quantidade": 334
+    },
+    {
+      "mes": "2025-09",
+      "quantidade": 283
+    },
+    {
+      "mes": "2025-10",
+      "quantidade": 348
+    },
+    {
+      "mes": "2025-11",
+      "quantidade": 339
+    },
+    {
+      "mes": "2025-12",
+      "quantidade": 230
+    },
+    {
+      "mes": "2026-01",
+      "quantidade": 221
+    },
+    {
+      "mes": "2026-02",
+      "quantidade": 150
+    }
+  ],
+  "temporal_categorias": [
+    {
+      "mes": "2024-01",
+      "Campanha de Vacinação": 1,
+      "Saúde Mental": 10,
+      "Planos de Saúde": 2,
+      "Eventos Esportivos": 0,
+      "Convênios e Parcerias": 0,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-02",
+      "Campanha de Vacinação": 6,
+      "Saúde Mental": 45,
+      "Planos de Saúde": 52,
+      "Eventos Esportivos": 9,
+      "Convênios e Parcerias": 32,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-03",
+      "Campanha de Vacinação": 149,
+      "Saúde Mental": 31,
+      "Planos de Saúde": 47,
+      "Eventos Esportivos": 18,
+      "Convênios e Parcerias": 25,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-04",
+      "Campanha de Vacinação": 451,
+      "Saúde Mental": 29,
+      "Planos de Saúde": 49,
+      "Eventos Esportivos": 10,
+      "Convênios e Parcerias": 21,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-05",
+      "Campanha de Vacinação": 132,
+      "Saúde Mental": 40,
+      "Planos de Saúde": 46,
+      "Eventos Esportivos": 15,
+      "Convênios e Parcerias": 32,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-06",
+      "Campanha de Vacinação": 63,
+      "Saúde Mental": 39,
+      "Planos de Saúde": 36,
+      "Eventos Esportivos": 22,
+      "Convênios e Parcerias": 28,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-07",
+      "Campanha de Vacinação": 26,
+      "Saúde Mental": 50,
+      "Planos de Saúde": 45,
+      "Eventos Esportivos": 113,
+      "Convênios e Parcerias": 25,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-08",
+      "Campanha de Vacinação": 21,
+      "Saúde Mental": 25,
+      "Planos de Saúde": 41,
+      "Eventos Esportivos": 151,
+      "Convênios e Parcerias": 30,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-09",
+      "Campanha de Vacinação": 40,
+      "Saúde Mental": 75,
+      "Planos de Saúde": 57,
+      "Eventos Esportivos": 31,
+      "Convênios e Parcerias": 31,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-10",
+      "Campanha de Vacinação": 28,
+      "Saúde Mental": 66,
+      "Planos de Saúde": 94,
+      "Eventos Esportivos": 28,
+      "Convênios e Parcerias": 41,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-11",
+      "Campanha de Vacinação": 19,
+      "Saúde Mental": 52,
+      "Planos de Saúde": 91,
+      "Eventos Esportivos": 20,
+      "Convênios e Parcerias": 30,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2024-12",
+      "Campanha de Vacinação": 7,
+      "Saúde Mental": 47,
+      "Planos de Saúde": 40,
+      "Eventos Esportivos": 17,
+      "Convênios e Parcerias": 36,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2025-01",
+      "Campanha de Vacinação": 2,
+      "Saúde Mental": 89,
+      "Planos de Saúde": 23,
+      "Eventos Esportivos": 12,
+      "Convênios e Parcerias": 24,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2025-02",
+      "Campanha de Vacinação": 7,
+      "Saúde Mental": 35,
+      "Planos de Saúde": 25,
+      "Eventos Esportivos": 17,
+      "Convênios e Parcerias": 28,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "mes": "2025-03",
+      "Campanha de Vacinação": 52,
+      "Saúde Mental": 43,
+      "Planos de Saúde": 32,
+      "Eventos Esportivos": 24,
+      "Convênios e Parcerias": 24,
+      "Wellhub/Gympass": 5
+    },
+    {
+      "mes": "2025-04",
+      "Campanha de Vacinação": 100,
+      "Saúde Mental": 49,
+      "Planos de Saúde": 45,
+      "Eventos Esportivos": 30,
+      "Convênios e Parcerias": 32,
+      "Wellhub/Gympass": 6
+    },
+    {
+      "mes": "2025-05",
+      "Campanha de Vacinação": 214,
+      "Saúde Mental": 46,
+      "Planos de Saúde": 39,
+      "Eventos Esportivos": 23,
+      "Convênios e Parcerias": 21,
+      "Wellhub/Gympass": 1
+    },
+    {
+      "mes": "2025-06",
+      "Campanha de Vacinação": 59,
+      "Saúde Mental": 65,
+      "Planos de Saúde": 38,
+      "Eventos Esportivos": 38,
+      "Convênios e Parcerias": 26,
+      "Wellhub/Gympass": 5
+    },
+    {
+      "mes": "2025-07",
+      "Campanha de Vacinação": 15,
+      "Saúde Mental": 43,
+      "Planos de Saúde": 50,
+      "Eventos Esportivos": 107,
+      "Convênios e Parcerias": 24,
+      "Wellhub/Gympass": 6
+    },
+    {
+      "mes": "2025-08",
+      "Campanha de Vacinação": 17,
+      "Saúde Mental": 48,
+      "Planos de Saúde": 48,
+      "Eventos Esportivos": 144,
+      "Convênios e Parcerias": 51,
+      "Wellhub/Gympass": 20
+    },
+    {
+      "mes": "2025-09",
+      "Campanha de Vacinação": 4,
+      "Saúde Mental": 98,
+      "Planos de Saúde": 49,
+      "Eventos Esportivos": 58,
+      "Convênios e Parcerias": 37,
+      "Wellhub/Gympass": 32
+    },
+    {
+      "mes": "2025-10",
+      "Campanha de Vacinação": 10,
+      "Saúde Mental": 104,
+      "Planos de Saúde": 81,
+      "Eventos Esportivos": 88,
+      "Convênios e Parcerias": 48,
+      "Wellhub/Gympass": 15
+    },
+    {
+      "mes": "2025-11",
+      "Campanha de Vacinação": 17,
+      "Saúde Mental": 58,
+      "Planos de Saúde": 53,
+      "Eventos Esportivos": 123,
+      "Convênios e Parcerias": 56,
+      "Wellhub/Gympass": 28
+    },
+    {
+      "mes": "2025-12",
+      "Campanha de Vacinação": 9,
+      "Saúde Mental": 34,
+      "Planos de Saúde": 54,
+      "Eventos Esportivos": 58,
+      "Convênios e Parcerias": 40,
+      "Wellhub/Gympass": 28
+    },
+    {
+      "mes": "2026-01",
+      "Campanha de Vacinação": 4,
+      "Saúde Mental": 102,
+      "Planos de Saúde": 44,
+      "Eventos Esportivos": 14,
+      "Convênios e Parcerias": 23,
+      "Wellhub/Gympass": 22
+    },
+    {
+      "mes": "2026-02",
+      "Campanha de Vacinação": 11,
+      "Saúde Mental": 18,
+      "Planos de Saúde": 64,
+      "Eventos Esportivos": 16,
+      "Convênios e Parcerias": 21,
+      "Wellhub/Gympass": 13
+    }
+  ],
+  "stacked": [
+    {
+      "caa": "CASAG",
+      "Campanha de Vacinação": 22,
+      "Saúde Mental": 88,
+      "Planos de Saúde": 259,
+      "Eventos Esportivos": 29,
+      "Convênios e Parcerias": 111,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "caa": "CAADF",
+      "Campanha de Vacinação": 213,
+      "Saúde Mental": 34,
+      "Planos de Saúde": 65,
+      "Eventos Esportivos": 96,
+      "Convênios e Parcerias": 65,
+      "Wellhub/Gympass": 12
+    },
+    {
+      "caa": "CAAPI",
+      "Campanha de Vacinação": 65,
+      "Saúde Mental": 151,
+      "Planos de Saúde": 64,
+      "Eventos Esportivos": 120,
+      "Convênios e Parcerias": 45,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "caa": "CAAAM",
+      "Campanha de Vacinação": 88,
+      "Saúde Mental": 106,
+      "Planos de Saúde": 88,
+      "Eventos Esportivos": 64,
+      "Convênios e Parcerias": 36,
+      "Wellhub/Gympass": 30
+    },
+    {
+      "caa": "CAARO",
+      "Campanha de Vacinação": 193,
+      "Saúde Mental": 64,
+      "Planos de Saúde": 95,
+      "Eventos Esportivos": 6,
+      "Convênios e Parcerias": 17,
+      "Wellhub/Gympass": 0
+    },
+    {
+      "caa": "CAAES",
+      "Campanha de Vacinação": 73,
+      "Saúde Mental": 69,
+      "Planos de Saúde": 50,
+      "Eventos Esportivos": 29,
+      "Convênios e Parcerias": 17,
+      "Wellhub/Gympass": 32
+    },
+    {
+      "caa": "CAASP",
+      "Campanha de Vacinação": 30,
+      "Saúde Mental": 79,
+      "Planos de Saúde": 63,
+      "Eventos Esportivos": 3,
+      "Convênios e Parcerias": 52,
+      "Wellhub/Gympass": 5
+    },
+    {
+      "caa": "CAARN",
+      "Campanha de Vacinação": 42,
+      "Saúde Mental": 41,
+      "Planos de Saúde": 42,
+      "Eventos Esportivos": 59,
+      "Convênios e Parcerias": 41,
+      "Wellhub/Gympass": 9
+    },
+    {
+      "caa": "CAASC",
+      "Campanha de Vacinação": 39,
+      "Saúde Mental": 25,
+      "Planos de Saúde": 49,
+      "Eventos Esportivos": 45,
+      "Convênios e Parcerias": 23,
+      "Wellhub/Gympass": 16
+    },
+    {
+      "caa": "CAACE",
+      "Campanha de Vacinação": 17,
+      "Saúde Mental": 33,
+      "Planos de Saúde": 39,
+      "Eventos Esportivos": 41,
+      "Convênios e Parcerias": 43,
+      "Wellhub/Gympass": 13
+    }
+  ],
+  "resumo": {
+    "total_posts": 6357,
+    "total_caas": 20,
+    "media_engagement": 0.0048,
+    "top_categoria": "Campanha de Vacinação",
+    "top_categoria_count": 1464,
+    "top_caa": "CASAG",
+    "top_caa_count": 518
+  }
+}

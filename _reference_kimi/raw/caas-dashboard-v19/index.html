@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAAsXplorer v2.1 - Dashboard de Observabilidade Institucional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    
+    :root {
+      --bg-primary: #0a1628;
+      --bg-secondary: #0d1e36;
+      --bg-card: rgba(13, 30, 54, 0.8);
+      --accent-cyan: #00d4ff;
+      --accent-blue: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --text-primary: #ffffff;
+      --text-secondary: #94a3b8;
+      --border-color: rgba(59, 130, 246, 0.2);
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, #0f2847 50%, var(--bg-primary) 100%);
+      color: var(--text-primary);
+      min-height: 100vh;
+    }
+    
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.1);
+    }
+    
+    .accent-text {
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .status-badge {
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      color: var(--accent-cyan);
+    }
+    
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent-cyan);
+      margin-bottom: 0.5rem;
+    }
+    
+    .nav-link {
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--accent-cyan);
+    }
+    
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.05);
+      color: var(--text-secondary);
+      border: 1px solid transparent;
+    }
+    
+    .tab-btn:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    
+    .tab-btn.active {
+      background: rgba(0, 212, 255, 0.1);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    
+    .region-tag {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.375rem 0.875rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: var(--accent-blue);
+      margin: 0.25rem;
+    }
+    
+    .caa-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .caa-card:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: var(--accent-cyan);
+    }
+    
+    .caa-card.active {
+      border-color: var(--accent-cyan);
+      background: rgba(0, 212, 255, 0.1);
+    }
+    
+    .chart-container {
+      position: relative;
+      height: 350px;
+    }
+    
+    .data-table th {
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+    }
+    
+    .data-table td {
+      font-size: 0.875rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .data-table tr:hover td {
+      background: rgba(255,255,255,0.03);
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.3);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(59, 130, 246, 0.5);
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .profile-pic {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    }
+    
+    .vaccination-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    
+    .comparison-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .comparison-badge.positive {
+      background: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+    }
+    
+    .comparison-badge.negative {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-card mx-4 mt-4 px-6 py-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg">CAAsXplorer</h1>
+          <p class="text-xs text-slate-400">v2.1.0 • Success Finder</p>
+        </div>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#hero" class="nav-link text-sm">Início</a>
+        <a href="#taxonomia" class="nav-link text-sm">Taxonomia</a>
+        <a href="#acoes" class="nav-link text-sm">Ações</a>
+        <a href="#vacinacao" class="nav-link text-sm">Vacinação</a>
+        <a href="#sinal" class="nav-link text-sm">Sinal Externo</a>
+        <a href="#comparativos" class="nav-link text-sm">Comparativos</a>
+        <a href="#ranking" class="nav-link text-sm">Ranking</a>
+        <a href="#ultimos30" class="nav-link text-sm">Últimos 30 Dias</a>
+      </div>
+      
+      <div class="status-badge px-3 py-1 rounded-full text-xs font-medium flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 pulse"></span>
+        OPERACIONAL
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-32 pb-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="section-title">Busca Estruturada</p>
+          <h2 class="text-5xl font-bold mb-4">
+            <span class="accent-text">Estrutura</span> → Ação
+          </h2>
+          <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+            Transforma informação dispersa em evidência estruturada. 
+            Sinal sem ruído. Dados comparáveis sobre serviços de assistência à advocacia.
+          </p>
+          
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex items-center gap-2 text-sm text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              27 CAAs mapeadas
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+              Taxonomia validada
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+              Datasets auditáveis
+            </div>
+          </div>
+        </div>
+        
+        <!-- Status Panel -->
+        <div class="glass-card p-6">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-xs text-slate-400 uppercase tracking-wider">Estado do Sistema</span>
+            <span class="text-xs text-cyan-400 font-medium">OPERACIONAL</span>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg bg-white/5">
+              <p class="text-xs text-slate-400 mb-1">CAAs Mapeadas</p>
+              <p class="metric-value">27</p>
+            </div>
+            <div class="p-4 rounded-lg bg-white/5">
+              <p class="text-xs text-slate-400 mb-1">Categorias</p>
+              <p class="metric-value">30+</p>
+            </div>
+            <div class="p-4 rounded-lg bg-white/5">
+              <p class="text-xs text-slate-400 mb-1">Posts Analisados</p>
+              <p class="metric-value">14.8K</p>
+            </div>
+            <div class="p-4 rounded-lg bg-white/5">
+              <p class="text-xs text-slate-400 mb-1">Cobertura</p>
+              <p class="text-2xl font-bold text-white">NACIONAL</p>
+            </div>
+          </div>
+          
+          <div class="mt-6 flex gap-2">
+            <span class="px-2 py-1 rounded text-xs bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">SCHEMA v2.1</span>
+            <span class="px-2 py-1 rounded text-xs bg-blue-500/20 text-blue-400 border border-blue-500/30">PIPELINE ATIVO</span>
+            <span class="px-2 py-1 rounded text-xs bg-purple-500/20 text-purple-400 border border-purple-500/30">AUDITÁVEL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Taxonomia Canônica -->
+  <section id="taxonomia" class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Taxonomia Canônica</p>
+      <h3 class="text-2xl font-bold mb-2">Serviços Mapeados</h3>
+      <p class="text-slate-400 mb-8">Serviços institucionais identificados e classificados por categoria e região.</p>
+      
+      <!-- Region Tabs -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button onclick="filterRegion('todas')" class="tab-btn active" id="tab-todas">Todas (27 CAAs)</button>
+        <button onclick="filterRegion('norte')" class="tab-btn" id="tab-norte">Norte (6 CAAs)</button>
+        <button onclick="filterRegion('nordeste')" class="tab-btn" id="tab-nordeste">Nordeste (9 CAAs)</button>
+        <button onclick="filterRegion('centro')" class="tab-btn" id="tab-centro">Centro-Oeste (5 CAAs)</button>
+        <button onclick="filterRegion('sudeste')" class="tab-btn" id="tab-sudeste">Sudeste (4 CAAs)</button>
+        <button onclick="filterRegion('sul')" class="tab-btn" id="tab-sul">Sul (3 CAAs)</button>
+      </div>
+      
+      <!-- Region Stats - Dynamic -->
+      <div id="region-stats" class="grid md:grid-cols-4 gap-4 mb-8">
+        <div class="glass-card p-4 text-center">
+          <p class="text-3xl font-bold text-cyan-400" id="stat-posts">14,883</p>
+          <p class="text-xs text-slate-400">Posts Analisados</p>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <p class="text-3xl font-bold text-blue-400" id="stat-caas">27</p>
+          <p class="text-xs text-slate-400">CAAs</p>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <p class="text-3xl font-bold text-purple-400" id="stat-servicos">80+</p>
+          <p class="text-xs text-slate-400">Serviços Identificados</p>
+        </div>
+        <div class="glass-card p-4 text-center">
+          <p class="text-3xl font-bold text-pink-400" id="stat-regiao">Nacional</p>
+          <p class="text-xs text-slate-400">Cobertura</p>
+        </div>
+      </div>
+      
+      <!-- Service Categories -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4" id="services-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Ações Institucionais - Todas as 27 CAAs com Profile Pics -->
+  <section id="acoes" class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Ações Institucionais e Evidência Pública</p>
+      <h3 class="text-2xl font-bold mb-2">Iniciativas Não-Transacionais</h3>
+      <p class="text-slate-400 mb-8">Ações institucionais que geram alto impacto simbólico, produzem buzz social e fortalecem a imagem institucional.</p>
+      
+      <!-- State Tabs -->
+      <div class="flex flex-wrap gap-1 mb-8 overflow-x-auto pb-2" id="state-tabs">
+        <!-- Populated by JS with all 27 states -->
+      </div>
+      
+      <!-- Selected State Info with Profile Pic -->
+      <div id="selected-state-info" class="glass-card p-6 mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-4">
+            <div id="state-profile-container" class="relative">
+              <img id="state-profile-pic" src="" alt="Profile" class="profile-pic" style="border-color: #31A69B;">
+              <div id="state-badge" class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold" style="background: #31A69B;">
+                AC
+              </div>
+            </div>
+            <div>
+              <h4 id="state-name" class="text-xl font-bold">Acre</h4>
+              <p id="state-caa" class="text-slate-400">CAAAC - caaac.org.br</p>
+              <p id="state-regiao-display" class="text-xs text-cyan-400 mt-1">Norte</p>
+            </div>
+          </div>
+          <div class="text-right">
+            <a id="state-site" href="https://caaac.org.br" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/30 transition mb-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              Site Oficial
+            </a>
+            <br>
+            <a id="state-instagram" href="#" target="_blank" class="inline-flex items-center gap-2 text-slate-400 hover:text-pink-400 transition">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
+              <span id="state-instagram-handle">@caaac.oficial</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h5 class="font-semibold mb-3 text-cyan-400">Serviços Identificados</h5>
+            <div id="state-services" class="flex flex-wrap gap-2">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-3 text-cyan-400">Métricas de Engajamento</h5>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="text-center p-3 rounded-lg bg-white/5">
+                <p class="text-2xl font-bold text-cyan-400" id="state-posts">124</p>
+                <p class="text-xs text-slate-400">Posts</p>
+              </div>
+              <div class="text-center p-3 rounded-lg bg-white/5">
+                <p class="text-2xl font-bold text-blue-400" id="state-engagement">2.8%</p>
+                <p class="text-xs text-slate-400">Engajamento</p>
+              </div>
+              <div class="text-center p-3 rounded-lg bg-white/5">
+                <p class="text-2xl font-bold text-purple-400" id="state-reach">45K</p>
+                <p class="text-xs text-slate-400">Alcance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- All CAAs Grid -->
+      <h4 class="font-semibold mb-4">Todas as CAAs (27)</h4>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="caas-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- NOVA SEÇÃO: Vacinação -->
+  <section id="vacinacao" class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Campanha Nacional</p>
+      <h3 class="text-2xl font-bold mb-2">Vacinação da Advocacia</h3>
+      <p class="text-slate-400 mb-8">Análise completa das campanhas de vacinação realizadas pelas CAAs em todo o território nacional.</p>
+      
+      <!-- Vaccination Stats -->
+      <div class="grid md:grid-cols-4 gap-4 mb-8">
+        <div class="glass-card vaccination-card p-6 text-center">
+          <p class="text-4xl font-bold text-emerald-400 mb-2">1,569</p>
+          <p class="text-sm text-slate-400">Posts sobre Vacinação</p>
+          <p class="text-xs text-emerald-400 mt-1">+12% vs período anterior</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-cyan-400 mb-2">8</p>
+          <p class="text-sm text-slate-400">CAAs com Campanha Ativa</p>
+          <p class="text-xs text-slate-500">CAAPB, CAAPE, CAAPR, CAAMS, CAACE, CAAMG, CAASC, CAARS</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-blue-400 mb-2">3.5%</p>
+          <p class="text-sm text-slate-400">Engagement Médio</p>
+          <p class="text-xs text-slate-500">acima da média geral (2.8%)</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-purple-400 mb-2">Gripe/H1N1</p>
+          <p class="text-sm text-slate-400">Vacina Mais Divulgada</p>
+          <p class="text-xs text-slate-500">seguida de COVID-19 e Hepatite</p>
+        </div>
+      </div>
+      
+      <!-- Vaccination Charts -->
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="glass-card p-6">
+          <h4 class="font-semibold mb-4">Vacinação por CAA (Volume de Posts)</h4>
+          <div class="chart-container">
+            <canvas id="chart-vacinacao-caas"></canvas>
+          </div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <h4 class="font-semibold mb-4">Tipos de Vacina Mais Divulgados</h4>
+          <div class="chart-container">
+            <canvas id="chart-vacinacao-tipos"></canvas>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Vaccination Timeline -->
+      <div class="glass-card p-6 mb-8">
+        <h4 class="font-semibold mb-4">Timeline de Campanhas de Vacinação</h4>
+        <div class="chart-container">
+          <canvas id="chart-vacinacao-timeline"></canvas>
+        </div>
+      </div>
+      
+      <!-- Vaccination Table -->
+      <div class="glass-card overflow-hidden">
+        <div class="px-6 py-4 border-b border-white/10">
+          <h4 class="font-semibold">Detalhamento por CAA</h4>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="data-table w-full">
+            <thead>
+              <tr>
+                <th class="px-4 py-3 text-left">CAA</th>
+                <th class="px-4 py-3 text-left">Estado</th>
+                <th class="px-4 py-3 text-right">Posts</th>
+                <th class="px-4 py-3 text-right">Engajamento</th>
+                <th class="px-4 py-3 text-left">Vacinas Oferecidas</th>
+                <th class="px-4 py-3 text-center">Status</th>
+              </tr>
+            </thead>
+            <tbody id="vacinacao-table">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sinal Externo -->
+  <section id="sinal" class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Sinal Externo</p>
+      <h3 class="text-2xl font-bold mb-2">Evidência de Repercussão</h3>
+      <p class="text-slate-400 mb-8">Leitura de repercussão externa baseada em consultas temáticas estruturadas.</p>
+      
+      <div class="grid md:grid-cols-4 gap-4 mb-8">
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-cyan-400 mb-2">14.8K</p>
+          <p class="text-sm text-slate-400">Menções Totais</p>
+          <p class="text-xs text-slate-500">volume consolidado</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-blue-400 mb-2">550</p>
+          <p class="text-sm text-slate-400">Média por CAA</p>
+          <p class="text-xs text-slate-500">por entidade</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-purple-400 mb-2">Alta</p>
+          <p class="text-sm text-slate-400">Densidade de Sinais</p>
+          <p class="text-xs text-slate-500">presença confirmada</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-green-400 mb-2">Neutro/Pos</p>
+          <p class="text-sm text-slate-400">Sentimento</p>
+          <p class="text-xs text-slate-500">predominante</p>
+        </div>
+      </div>
+      
+      <!-- Top Categorias por Volume (sem Outros) -->
+      <div class="glass-card p-6 mb-8">
+        <h4 class="font-semibold mb-4">Top Categorias por Volume</h4>
+        <div class="chart-container">
+          <canvas id="chart-categorias-volume"></canvas>
+        </div>
+      </div>
+      
+      <!-- Top Categorias por Engagement -->
+      <div class="glass-card p-6">
+        <h4 class="font-semibold mb-4">Top Categorias por Engagement</h4>
+        <div class="chart-container">
+          <canvas id="chart-categorias-engagement"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparativos Analíticos - Melhorado -->
+  <section id="comparativos" class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Comparativos Analíticos</p>
+      <h3 class="text-2xl font-bold mb-2">Leitura Comparativa</h3>
+      <p class="text-slate-400 mb-8">Comparação lado a lado de períodos equivalentes (mesma duração).</p>
+      
+      <!-- Period Info -->
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="glass-card p-4 border-l-4 border-blue-500">
+          <p class="text-xs text-slate-400 uppercase">Período Anterior</p>
+          <p class="text-lg font-bold text-white">Jan/2024 - Mar/2025</p>
+          <p class="text-sm text-slate-400">420 dias • 4,802 posts</p>
+        </div>
+        <div class="glass-card p-4 border-l-4 border-cyan-500">
+          <p class="text-xs text-slate-400 uppercase">Gestão Atual</p>
+          <p class="text-lg font-bold text-white">Jan/2025 - Mar/2026</p>
+          <p class="text-sm text-slate-400">420 dias • 7,097 posts</p>
+        </div>
+      </div>
+      
+      <!-- Comparative Charts Row 1 -->
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="glass-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="font-semibold">Período Anterior</h4>
+            <span class="px-2 py-1 rounded text-xs bg-blue-500/20 text-blue-400">4,802 posts</span>
+          </div>
+          <div class="chart-container" style="height: 250px;">
+            <canvas id="chart-anterior-comp"></canvas>
+          </div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="font-semibold">Gestão Atual</h4>
+            <span class="px-2 py-1 rounded text-xs bg-cyan-500/20 text-cyan-400">7,097 posts</span>
+          </div>
+          <div class="chart-container" style="height: 250px;">
+            <canvas id="chart-gestao-comp"></canvas>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Comparative Charts Row 2 - Growth Analysis -->
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="glass-card p-6">
+          <h4 class="font-semibold mb-4">Variação por Categoria (%)</h4>
+          <div class="chart-container">
+            <canvas id="chart-variacao-categorias"></canvas>
+          </div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <h4 class="font-semibold mb-4">Comparativo por Região</h4>
+          <div class="chart-container">
+            <canvas id="chart-comparativo-regioes"></canvas>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Comparative Table -->
+      <div class="glass-card overflow-hidden mb-8">
+        <div class="px-6 py-4 border-b border-white/10">
+          <h4 class="font-semibold">Comparativo Detalhado por Categoria</h4>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="data-table w-full">
+            <thead>
+              <tr>
+                <th class="px-4 py-3 text-left">Categoria</th>
+                <th class="px-4 py-3 text-right">Período Anterior</th>
+                <th class="px-4 py-3 text-right">Gestão Atual</th>
+                <th class="px-4 py-3 text-right">Variação</th>
+                <th class="px-4 py-3 text-right">Tendência</th>
+              </tr>
+            </thead>
+            <tbody id="comparativo-table">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Engagement Comparison -->
+      <div class="glass-card p-6">
+        <h4 class="font-semibold mb-4">Comparativo de Engagement por Categoria</h4>
+        <div class="chart-container">
+          <canvas id="chart-engagement-comparison"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ranking por Tema -->
+  <section id="ranking" class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Ranking Temático</p>
+      <h3 class="text-2xl font-bold mb-2">Top Posts por Engagement</h3>
+      <p class="text-slate-400 mb-8">Posts de maior performance classificados por tema e engagement, com links para visualização.</p>
+      
+      <div class="glass-card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="data-table w-full">
+            <thead>
+              <tr>
+                <th class="px-4 py-3 text-left">Rank</th>
+                <th class="px-4 py-3 text-left">CAA</th>
+                <th class="px-4 py-3 text-left">Categoria</th>
+                <th class="px-4 py-3 text-left">Post</th>
+                <th class="px-4 py-3 text-right">Engagement</th>
+                <th class="px-4 py-3 text-center">Link</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-table">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Últimos 30 Dias - Deep Dive -->
+  <section id="ultimos30" class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Análise Recente</p>
+      <h3 class="text-2xl font-bold mb-2">Últimos 30 Dias - Deep Dive</h3>
+      <p class="text-slate-400 mb-8">Análise detalhada dos últimos 30 dias de atividade nas redes sociais das CAAs.</p>
+      
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-cyan-400 mb-2">380</p>
+          <p class="text-sm text-slate-400">Posts</p>
+          <p class="text-xs text-slate-500">últimos 30 dias</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-blue-400 mb-2">15</p>
+          <p class="text-sm text-slate-400">CAAs Ativas</p>
+          <p class="text-xs text-slate-500">com posts recentes</p>
+        </div>
+        <div class="glass-card p-6 text-center">
+          <p class="text-4xl font-bold text-purple-400 mb-2">2.5%</p>
+          <p class="text-sm text-slate-400">Engagement Médio</p>
+          <p class="text-xs text-slate-500">taxa de interação</p>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass-card p-6">
+          <h4 class="font-semibold mb-4">Categorias - Últimos 30 Dias</h4>
+          <div class="chart-container">
+            <canvas id="chart-30dias-categorias"></canvas>
+          </div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <h4 class="font-semibold mb-4">CAAs - Últimos 30 Dias</h4>
+          <div class="chart-container">
+            <canvas id="chart-30dias-caas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radar Chart Section -->
+  <section class="py-16 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <p class="section-title">Análise Multidimensional</p>
+      <h3 class="text-2xl font-bold mb-2">Radar de Serviços</h3>
+      <p class="text-slate-400 mb-8">Comparativo de cobertura de serviços por categoria.</p>
+      
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="glass-card p-6">
+          <div class="chart-container">
+            <canvas id="chart-radar"></canvas>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="glass-card p-4">
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">Saúde & Bem-estar</span>
+              <span class="text-cyan-400 font-bold">4,521 posts</span>
+            </div>
+            <div class="mt-2 h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-cyan-400 rounded-full" style="width: 95%"></div>
+            </div>
+          </div>
+          
+          <div class="glass-card p-4">
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">Convênios & Parcerias</span>
+              <span class="text-blue-400 font-bold">3,104 posts</span>
+            </div>
+            <div class="mt-2 h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-blue-400 rounded-full" style="width: 78%"></div>
+            </div>
+          </div>
+          
+          <div class="glass-card p-4">
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">Eventos & Recreação</span>
+              <span class="text-purple-400 font-bold">2,372 posts</span>
+            </div>
+            <div class="mt-2 h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-purple-400 rounded-full" style="width: 65%"></div>
+            </div>
+          </div>
+          
+          <div class="glass-card p-4">
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">Assistência Financeira</span>
+              <span class="text-pink-400 font-bold">1,523 posts</span>
+            </div>
+            <div class="mt-2 h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full bg-pink-400 rounded-full" style="width: 52%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto text-center">
+      <h3 class="font-bold text-lg mb-2">CAAsXplorer</h3>
+      <p class="text-sm text-slate-400 mb-4">Sistema de leitura institucional</p>
+      <p class="text-xs text-slate-500">Base operacional: 06/02/2026 • © 2026</p>
+    </div>
+  </footer>
+
+  <script>
+
+    // ============================================
+    // DADOS DAS CAAs - REGIÕES CORRIGIDAS
+    // ============================================
+    // NORTE: 6 CAAs (AC, AP, AM, PA, RO, RR) - CORRETO
+    // CENTRO-OESTE: 5 CAAs (DF, GO, MT, MS, TO) - TO ESTÁ AQUI!
+    // ============================================
+    
+    const caasInfo = {
+      // NORTE (6 CAAs) - CORRETO
+      'CAAAC': {
+        uf: 'AC', estado: 'Acre', regiao: 'Norte', cor: '#31A69B',
+        site: 'caaac.org.br', instagram: '@caaac.oficial',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAAC&background=31A69B&color=fff&size=128',
+        servicos: ['Academias', 'Bares & Restaurantes', 'Contabilidade', 'Educação', 'Estética & Beleza', 'Eventos', 'Hotelaria', 'Lavanderia', 'Lojas', 'Saúde', 'Tecnologia'],
+        posts: 124, engagement: 2.8, reach: 45200
+      },
+      'CAAAP': {
+        uf: 'AP', estado: 'Amapá', regiao: 'Norte', cor: '#31A69B',
+        site: 'caaap.org.br', instagram: '@caixadeassistenciadosadv.ap',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAAP&background=31A69B&color=fff&size=128',
+        servicos: ['Convênios', 'Eventos', 'Cursos'],
+        posts: 89, engagement: 2.3, reach: 28100
+      },
+      'CAAAM': {
+        uf: 'AM', estado: 'Amazonas', regiao: 'Norte', cor: '#31A69B',
+        site: 'caaam.org.br', instagram: '@caaamazonas',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAAM&background=31A69B&color=fff&size=128',
+        servicos: ['Wellhub Pesquisa', 'Corrida pela Vida', 'Eventos', 'Convênios'],
+        posts: 156, engagement: 3.1, reach: 52300
+      },
+      'CAAPA': {
+        uf: 'PA', estado: 'Pará', regiao: 'Norte', cor: '#31A69B',
+        site: 'caapara.org.br', instagram: '@caapa.oab',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAPA&background=31A69B&color=fff&size=128',
+        servicos: ['Wellhub', 'Eventos', 'Convênios'],
+        posts: 178, engagement: 2.9, reach: 48900
+      },
+      'CAARO': {
+        uf: 'RO', estado: 'Rondônia', regiao: 'Norte', cor: '#31A69B',
+        site: 'caaro.org.br', instagram: '@caaro_rondonia',
+        profilePic: 'https://ui-avatars.com/api/?name=CAARO&background=31A69B&color=fff&size=128',
+        servicos: ['Convênios', 'Eventos'],
+        posts: 67, engagement: 2.1, reach: 19200
+      },
+      'CAARR': {
+        uf: 'RR', estado: 'Roraima', regiao: 'Norte', cor: '#31A69B',
+        site: 'oabrr.org.br', instagram: '@caarr_oraima',
+        profilePic: 'https://ui-avatars.com/api/?name=CAARR&background=31A69B&color=fff&size=128',
+        servicos: ['Convênios', 'Eventos'],
+        posts: 45, engagement: 1.9, reach: 12800
+      },
+      
+      // NORDESTE (9 CAAs)
+      'CAAAL': {
+        uf: 'AL', estado: 'Alagoas', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caa-al.org.br', instagram: '@caa.al',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAAL&background=A36A66&color=fff&size=128',
+        servicos: ['Circuito Corrida', 'Bloquinho', 'Eventos', 'Convênios'],
+        posts: 112, engagement: 2.7, reach: 34500
+      },
+      'CAABA': {
+        uf: 'BA', estado: 'Bahia', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caab.org.br', instagram: '@caab_oficial',
+        profilePic: 'https://ui-avatars.com/api/?name=CAABA&background=A36A66&color=fff&size=128',
+        servicos: ['ADVPass', 'TotalPass', 'Corrida da Advocacia', 'Eventos'],
+        posts: 234, engagement: 3.4, reach: 67800
+      },
+      'CAACE': {
+        uf: 'CE', estado: 'Ceará', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caace.org.br', instagram: '@caace.oab',
+        profilePic: 'https://ui-avatars.com/api/?name=CAACE&background=A36A66&color=fff&size=128',
+        servicos: ['Wellhub para Dependentes', 'Bloquinho da Advocacia', 'Corrida da Advocacia', 'Minha Foto CAACE', 'Eventos'],
+        posts: 198, engagement: 3.2, reach: 56700
+      },
+      'CAAMA': {
+        uf: 'MA', estado: 'Maranhão', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caama.org.br', instagram: '@caama.oabma',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAMA&background=A36A66&color=fff&size=128',
+        servicos: ['Corrida pela Vida', 'Eventos', 'Cursos'],
+        posts: 87, engagement: 2.2, reach: 25600
+      },
+      'CAAPB': {
+        uf: 'PB', estado: 'Paraíba', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caapb.org.br', instagram: '@caa_paraiba',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAPB&background=A36A66&color=fff&size=128',
+        servicos: ['Vacinação da Advocacia', 'Jogos de Verão', 'Plano Pet', 'Circuito de Corrida', 'Psicologia (Conexa Saúde)', 'Wellhub', 'Clube da Advocacia'],
+        posts: 245, engagement: 3.8, reach: 72300
+      },
+      'CAAPE': {
+        uf: 'PE', estado: 'Pernambuco', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caape.org.br', instagram: '@caape_oab',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAPE&background=A36A66&color=fff&size=128',
+        servicos: ['Vacinação', 'Corrida da OAB-PE', 'Plano Odontológico', 'TotalPass', 'Jusbrasil', 'Wellhub', 'Kit Corrida'],
+        posts: 267, engagement: 3.5, reach: 68900
+      },
+      'CAAPI': {
+        uf: 'PI', estado: 'Piauí', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caapi.org.br', instagram: '@caapi',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAPI&background=A36A66&color=fff&size=128',
+        servicos: ['Resort BOB Z', 'Pousada Praia', 'Convênios', 'Sorteios'],
+        posts: 78, engagement: 2.4, reach: 22300
+      },
+      'CAARN': {
+        uf: 'RN', estado: 'Rio Grande do Norte', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'caarn.org.br', instagram: '@caarn.oab',
+        profilePic: 'https://ui-avatars.com/api/?name=CAARN&background=A36A66&color=fff&size=128',
+        servicos: ['Eventos', 'Convênios', 'Cursos'],
+        posts: 134, engagement: 2.6, reach: 37800
+      },
+      'CAASE': {
+        uf: 'SE', estado: 'Sergipe', regiao: 'Nordeste', cor: '#A36A66',
+        site: 'oabse.org.br', instagram: '@caasergipe',
+        profilePic: 'https://ui-avatars.com/api/?name=CAASE&background=A36A66&color=fff&size=128',
+        servicos: ['Corrida da Advocacia', 'Eventos', 'Bloquinho'],
+        posts: 92, engagement: 2.3, reach: 26700
+      },
+      
+      // CENTRO-OESTE (5 CAAs) - TO ESTÁ AQUI! CORRETO!
+      'CAADF': {
+        uf: 'DF', estado: 'Distrito Federal', regiao: 'Centro-Oeste', cor: '#C45DF5',
+        site: 'caadf.org.br', instagram: '@caa.df',
+        profilePic: 'https://ui-avatars.com/api/?name=CAADF&background=C45DF5&color=fff&size=128',
+        servicos: ['Psicologia Gratuita', 'Wellhub', 'Azul Passagens', 'Churrascaria Steak Bull', 'Veículos Brasal', 'Na Praia Festival', 'Guarda-Roupas Sustentável'],
+        posts: 289, engagement: 3.6, reach: 78900
+      },
+      'CASAG': {
+        uf: 'GO', estado: 'Goiás', regiao: 'Centro-Oeste', cor: '#C45DF5',
+        site: 'casag.org.br', instagram: '@oab_casag',
+        profilePic: 'https://ui-avatars.com/api/?name=CASAG&background=C45DF5&color=fff&size=128',
+        servicos: ['Festa da Advocacia', 'Azul Passagens', 'Wellhub', 'Eventos'],
+        posts: 312, engagement: 3.9, reach: 83400
+      },
+      'CAAMT': {
+        uf: 'MT', estado: 'Mato Grosso', regiao: 'Centro-Oeste', cor: '#C45DF5',
+        site: 'caamt.com.br', instagram: '@caamt1',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAMT&background=C45DF5&color=fff&size=128',
+        servicos: ['Plano UNIMED', 'Telemedicina', 'Centro de Saúde', 'Certificação Digital', 'Livraria', 'OABPrev', 'Seguro de Vida', 'Auxílio Maternidade', 'Auxílio Funeral', 'Meu Escritório', 'Estacionamento'],
+        posts: 178, engagement: 2.8, reach: 45600
+      },
+      'CAAMS': {
+        uf: 'MS', estado: 'Mato Grosso do Sul', regiao: 'Centro-Oeste', cor: '#C45DF5',
+        site: 'caams.org.br', instagram: '@caams.oficial',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAMS&background=C45DF5&color=fff&size=128',
+        servicos: ['Vacinação', 'Convênios', 'Assistência Jurídica', 'Cursos'],
+        posts: 134, engagement: 2.5, reach: 34500
+      },
+      'CAATO': {
+        uf: 'TO', estado: 'Tocantins', regiao: 'Centro-Oeste', cor: '#C45DF5',
+        site: 'caato.com.br', instagram: '@caatocantis',
+        profilePic: 'https://ui-avatars.com/api/?name=CAATO&background=C45DF5&color=fff&size=128',
+        servicos: ['Convênios', 'Eventos', 'Cursos', 'Assistência Médica'],
+        posts: 76, engagement: 2.1, reach: 19800
+      },
+      
+      // SUDESTE (4 CAAs)
+      'CAAES': {
+        uf: 'ES', estado: 'Espírito Santo', regiao: 'Sudeste', cor: '#DA2E2C',
+        site: 'caaes.org.br', instagram: '@caaes',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAES&background=DA2E2C&color=fff&size=128',
+        servicos: ['Wellhub', 'TotalPass', 'Eventos', 'Workshops'],
+        posts: 167, engagement: 2.9, reach: 42300
+      },
+      'CAAMG': {
+        uf: 'MG', estado: 'Minas Gerais', regiao: 'Sudeste', cor: '#DA2E2C',
+        site: 'caamg.org.br', instagram: '@caa_mg',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAMG&background=DA2E2C&color=fff&size=128',
+        servicos: ['JAM - Jogos da Advocacia Mineira', 'TotalPass', 'Eventos Esportivos', 'Cursos', 'Convênios'],
+        posts: 423, engagement: 4.2, reach: 112000
+      },
+      'CAARJ': {
+        uf: 'RJ', estado: 'Rio de Janeiro', regiao: 'Sudeste', cor: '#DA2E2C',
+        site: 'caarj.org.br', instagram: '@caarj_oab',
+        profilePic: 'https://ui-avatars.com/api/?name=CAARJ&background=DA2E2C&color=fff&size=128',
+        servicos: ['Notas Institucionais', 'Defesa da Advocacia', 'Eventos'],
+        posts: 198, engagement: 2.7, reach: 56700
+      },
+      'CAASP': {
+        uf: 'SP', estado: 'São Paulo', regiao: 'Sudeste', cor: '#DA2E2C',
+        site: 'caasp.org.br', instagram: '@oabcaasp',
+        profilePic: 'https://ui-avatars.com/api/?name=CAASP&background=DA2E2C&color=fff&size=128',
+        servicos: ['Baile da Advocacia', 'Uber Parceria', 'Prêmio Advocacia Mulher', 'Notas de Pesar', 'Eventos'],
+        posts: 567, engagement: 4.5, reach: 156000
+      },
+      
+      // SUL (3 CAAs)
+      'CAAPR': {
+        uf: 'PR', estado: 'Paraná', regiao: 'Sul', cor: '#EECF0E',
+        site: 'caapr.org.br', instagram: '@caa_parana',
+        profilePic: 'https://ui-avatars.com/api/?name=CAAPR&background=EECF0E&color=000&size=128',
+        servicos: ['Vacinação', 'Descontos Farmácia Nissei', 'Psicologia Conexa', 'Wellhub', 'Clube da Advocacia', 'Circuito Corrida', 'Bradesco Seguros'],
+        posts: 298, engagement: 3.7, reach: 78900
+      },
+      'CAARS': {
+        uf: 'RS', estado: 'Rio Grande do Sul', regiao: 'Sul', cor: '#EECF0E',
+        site: 'caars.org.br', instagram: '@caa.rs',
+        profilePic: 'https://ui-avatars.com/api/?name=CAARS&background=EECF0E&color=000&size=128',
+        servicos: ['Festa do Rubi', 'Ipesaúde', 'Eventos', 'Vacinação'],
+        posts: 245, engagement: 3.2, reach: 62300
+      },
+      'CAASC': {
+        uf: 'SC', estado: 'Santa Catarina', regiao: 'Sul', cor: '#EECF0E',
+        site: 'caasc.org.br', instagram: '@caasc_santacatarina',
+        profilePic: 'https://ui-avatars.com/api/?name=CAASC&background=EECF0E&color=000&size=128',
+        servicos: ['ADVerão', 'Wellhub', 'PopUp CAASC', 'Eventos', 'Vacinação'],
+        posts: 234, engagement: 3.4, reach: 67800
+      }
+    };
+
+    // Dados por região - CORRIGIDOS
+    const dadosRegiao = {
+      'todas': {posts: 14883, caas: 27, servicos: 80, nome: 'Nacional'},
+      'norte': {posts: 2677, caas: 6, servicos: 35, nome: 'Norte'},        // 6 CAAs - CORRETO
+      'nordeste': {posts: 5414, caas: 9, servicos: 45, nome: 'Nordeste'},  // 9 CAAs
+      'centro': {posts: 1896, caas: 5, servicos: 32, nome: 'Centro-Oeste'}, // 5 CAAs - CORRETO (inclui TO)
+      'sudeste': {posts: 2117, caas: 4, servicos: 32, nome: 'Sudeste'},    // 4 CAAs
+      'sul': {posts: 1165, caas: 3, servicos: 25, nome: 'Sul'}             // 3 CAAs
+    };
+
+    // Serviços por categoria
+    const servicosCategoria = {
+      saude: {nome: 'Saúde', icon: '💉', items: ['Vacinação', 'Plano de Saúde', 'Odontologia', 'Saúde Mental', 'Saúde Pet', 'Telemedicina', 'Wellhub', 'TotalPass']},
+      beneficios: {nome: 'Benefícios', icon: '🎁', items: ['Convênios', 'Descontos', 'Clube de Vantagens', 'Farmácia', 'Alimentação', 'Hotelaria']},
+      financeiro: {nome: 'Financeiro', icon: '💰', items: ['Auxílio Funeral', 'Auxílio Maternidade', 'Auxílio Doença', 'Pecuniário', 'Emergencial']},
+      esporte: {nome: 'Esporte e Bem-estar', icon: '🏃', items: ['JAM', 'Corrida da Advocacia', 'Jogos de Verão', 'Circuito de Corrida', 'ADVerão', 'Eventos Esportivos']},
+      infra: {nome: 'Infraestrutura', icon: '🏢', items: ['Coworking', 'Certificado Digital', 'Espaços', 'Estacionamento', 'Veículos']},
+      educacao: {nome: 'Educação', icon: '📚', items: ['Cursos', 'Palestras', 'Workshops', 'Oratória', 'Livraria']},
+      tecnologia: {nome: 'Tecnologia', icon: '💻', items: ['Jusbrasil', 'Apps', 'Software', 'Sistemas']}
+    };
+
+    // Dados de vacinação por CAA
+    const vacinacaoData = {
+      'CAAPB': { posts: 312, engagement: 4.2, vacinas: ['Gripe', 'COVID-19', 'Hepatite'], status: 'ativa' },
+      'CAAPE': { posts: 287, engagement: 3.8, vacinas: ['Gripe', 'COVID-19'], status: 'ativa' },
+      'CAAPR': { posts: 245, engagement: 3.5, vacinas: ['Gripe', 'H1N1', 'Meningite'], status: 'ativa' },
+      'CAAMS': { posts: 198, engagement: 3.2, vacinas: ['Gripe', 'COVID-19'], status: 'ativa' },
+      'CAACE': { posts: 156, engagement: 3.0, vacinas: ['Gripe'], status: 'ativa' },
+      'CAAMG': { posts: 134, engagement: 2.8, vacinas: ['Gripe', 'COVID-19'], status: 'ativa' },
+      'CAASC': { posts: 123, engagement: 2.9, vacinas: ['Gripe'], status: 'ativa' },
+      'CAARS': { posts: 114, engagement: 2.7, vacinas: ['Gripe', 'COVID-19'], status: 'ativa' }
+    };
+
+    // Top posts com URLs enriquecidas
+    const topPosts = [
+      {caa: 'CAAMG', categoria: 'Recreação - Eventos Esportivos', message: '🏃‍♂️ JAM 2024 - Jogos da Advocacia Mineira! Inscrições abertas para todas as modalidades.', engagement: 0.089, url: 'https://instagram.com/caa_mg', date: '2026-02-15'},
+      {caa: 'CAAPB', categoria: 'Saúde - Campanha de Vacinação', message: '💉 Vacinação da Advocacia Paraibana! Proteja-se contra a gripe. Postos disponíveis em todas as comarcas.', engagement: 0.087, url: 'https://instagram.com/caa_paraiba', date: '2026-02-20'},
+      {caa: 'CAACE', categoria: 'Saúde - Wellhub/Gympass/TotalPass', message: '💪 Wellhub para dependentes! Agora seus familiares também têm acesso às academias parceiras.', engagement: 0.085, url: 'https://instagram.com/caace.oab', date: '2026-02-18'},
+      {caa: 'CAAPE', categoria: 'Saúde - Odontologia', message: '🦷 Plano Odontológico com cobertura completa! Exames, limpezas, tratamentos e próteses.', engagement: 0.082, url: 'https://instagram.com/caape_oab', date: '2026-02-22'},
+      {caa: 'CAAPR', categoria: 'Recreação - Eventos Esportivos', message: '🏆 Circuito de Corrida da Advocacia Paranaense! 5 etapas, premiação para os melhores.', engagement: 0.081, url: 'https://instagram.com/caa_parana', date: '2026-02-25'},
+      {caa: 'CAADF', categoria: 'Saúde - Saúde Mental/Psicologia', message: '🧠 Psicologia Gratuita para advogados! Atendimento com profissionais qualificados.', engagement: 0.078, url: 'https://instagram.com/caa.df', date: '2026-02-10'},
+      {caa: 'CASAG', categoria: 'Recreação - Eventos Sociais', message: '🎉 Festa da Advocacia Goiana! O maior evento social da advocacia goiana.', engagement: 0.076, url: 'https://instagram.com/oab_casag', date: '2026-02-28'},
+      {caa: 'CAAES', categoria: 'Saúde - Wellhub/Gympass/TotalPass', message: '💪 Wellhub CAAES! Acesso a mais de 20.000 academias em todo o Brasil.', engagement: 0.074, url: 'https://instagram.com/caaes', date: '2026-02-12'},
+      {caa: 'CAASP', categoria: 'Institucional - Gestão', message: '🏆 Prêmio Advocacia Mulher 2024! Reconhecimento às mulheres advogadas.', engagement: 0.072, url: 'https://instagram.com/oabcaasp', date: '2026-02-08'},
+      {caa: 'CAASC', categoria: 'Recreação - Eventos Esportivos', message: '🏖️ ADVerão CAASC! Verão da advocacia catarinense com eventos esportivos e sociais.', engagement: 0.070, url: 'https://instagram.com/caasc_santacatarina', date: '2026-02-05'}
+    ];
+
+    // Charts configuration
+    Chart.defaults.color = '#94a3b8';
+    Chart.defaults.borderColor = 'rgba(255,255,255,0.1)';
+
+    // Initialize all charts
+    function initCharts() {
+      // Chart 1: Categorias por Volume (sem Outros)
+      new Chart(document.getElementById('chart-categorias-volume'), {
+        type: 'bar',
+        data: {
+          labels: ['Convênios', 'Vacinação', 'Assist. Financeira', 'Eventos Esportivos', 'Eventos Sociais', 'Saúde Mental', 'Cursos', 'Gestão', 'Plano de Saúde', 'Saúde Pet'],
+          datasets: [{
+            label: 'Posts',
+            data: [1709, 1569, 1429, 1418, 859, 691, 683, 633, 552, 534],
+            backgroundColor: ['#00d4ff', '#3b82f6', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444', '#6366f1', '#14b8a6', '#84cc16'],
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+          }
+        }
+      });
+
+      // Chart 2: Categorias por Engagement
+      new Chart(document.getElementById('chart-categorias-engagement'), {
+        type: 'bar',
+        data: {
+          labels: ['Eventos Esportivos', 'Wellhub/TotalPass', 'Vacinação', 'Odontologia', 'Saúde Mental', 'Convênios', 'Eventos Sociais', 'Cursos'],
+          datasets: [{
+            label: 'Engagement Médio (%)',
+            data: [4.2, 3.8, 3.5, 3.2, 2.9, 2.5, 2.3, 1.8],
+            backgroundColor: '#ec4899',
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => v + '%' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+          }
+        }
+      });
+
+      // Chart 3: Comparativo - Anterior
+      new Chart(document.getElementById('chart-anterior-comp'), {
+        type: 'bar',
+        data: {
+          labels: ['Vacinação', 'Convênios', 'Eventos Esportivos', 'Assist. Financeira', 'Eventos Sociais'],
+          datasets: [{
+            data: [911, 424, 414, 350, 219],
+            backgroundColor: '#3b82f6',
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+          }
+        }
+      });
+
+      // Chart 4: Comparativo - Gestão Atual
+      new Chart(document.getElementById('chart-gestao-comp'), {
+        type: 'bar',
+        data: {
+          labels: ['Convênios', 'Assist. Financeira', 'Eventos Esportivos', 'Vacinação', 'Eventos Sociais'],
+          datasets: [{
+            data: [889, 887, 709, 467, 386],
+            backgroundColor: '#00d4ff',
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+          }
+        }
+      });
+
+      // Chart 5: Variação por Categoria
+      new Chart(document.getElementById('chart-variacao-categorias'), {
+        type: 'bar',
+        data: {
+          labels: ['Convênios', 'Assist. Financeira', 'Eventos Esportivos', 'Saúde Mental', 'Cursos'],
+          datasets: [{
+            label: 'Variação (%)',
+            data: [109.7, 153.4, 71.3, 57.2, 99.4],
+            backgroundColor: ['#10b981', '#10b981', '#10b981', '#10b981', '#10b981'],
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { 
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => `+${ctx.raw}%`
+              }
+            }
+          },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => '+' + v + '%' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+          }
+        }
+      });
+
+      // Chart 6: Comparativo por Região
+      new Chart(document.getElementById('chart-comparativo-regioes'), {
+        type: 'bar',
+        data: {
+          labels: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'],
+          datasets: [
+            {
+              label: 'Período Anterior',
+              data: [1890, 4210, 1456, 1890, 980],
+              backgroundColor: '#3b82f6',
+              borderRadius: 4
+            },
+            {
+              label: 'Gestão Atual',
+              data: [2677, 5414, 1896, 2117, 1165],
+              backgroundColor: '#00d4ff',
+              borderRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { 
+            legend: { position: 'top', labels: { boxWidth: 12 } }
+          },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+          }
+        }
+      });
+
+      // Chart 7: Engagement Comparison
+      new Chart(document.getElementById('chart-engagement-comparison'), {
+        type: 'line',
+        data: {
+          labels: ['Convênios', 'Vacinação', 'Eventos', 'Saúde Mental', 'Cursos', 'Wellhub', 'Odontologia'],
+          datasets: [
+            {
+              label: 'Período Anterior',
+              data: [2.1, 3.2, 3.8, 2.5, 1.6, 3.1, 2.9],
+              borderColor: '#3b82f6',
+              backgroundColor: 'rgba(59, 130, 246, 0.1)',
+              fill: true,
+              tension: 0.4
+            },
+            {
+              label: 'Gestão Atual',
+              data: [2.5, 3.5, 4.2, 2.9, 1.8, 3.8, 3.2],
+              borderColor: '#00d4ff',
+              backgroundColor: 'rgba(0, 212, 255, 0.1)',
+              fill: true,
+              tension: 0.4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { 
+            legend: { position: 'top', labels: { boxWidth: 12 } }
+          },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: v => v + '%' } },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+
+      // Chart 8: Últimos 30 dias - Categorias
+      new Chart(document.getElementById('chart-30dias-categorias'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Convênios', 'Assist. Financeira', 'Eventos Esportivos', 'Eventos Sociais', 'Wellhub/TotalPass'],
+          datasets: [{
+            data: [50, 47, 27, 26, 25],
+            backgroundColor: ['#00d4ff', '#3b82f6', '#8b5cf6', '#ec4899', '#10b981'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'right', labels: { boxWidth: 12, font: { size: 10 } } }
+          }
+        }
+      });
+
+      // Chart 9: Últimos 30 dias - CAAs
+      new Chart(document.getElementById('chart-30dias-caas'), {
+        type: 'bar',
+        data: {
+          labels: ['CAACE', 'CAAMG', 'CASAG', 'CAADF', 'CAAPB'],
+          datasets: [{
+            data: [45, 38, 32, 28, 25],
+            backgroundColor: '#8b5cf6',
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            y: { grid: { display: false } }
+          }
+        }
+      });
+
+      // Chart 10: Radar
+      new Chart(document.getElementById('chart-radar'), {
+        type: 'radar',
+        data: {
+          labels: ['Saúde', 'Convênios', 'Eventos', 'Financeiro', 'Educação', 'Infraestrutura', 'Tecnologia'],
+          datasets: [{
+            label: 'Volume de Posts',
+            data: [4521, 3104, 2372, 1523, 854, 360, 229],
+            backgroundColor: 'rgba(0, 212, 255, 0.2)',
+            borderColor: '#00d4ff',
+            pointBackgroundColor: '#00d4ff',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: '#00d4ff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              angleLines: { color: 'rgba(255,255,255,0.1)' },
+              grid: { color: 'rgba(255,255,255,0.1)' },
+              pointLabels: { color: '#94a3b8', font: { size: 10 } },
+              ticks: { display: false, backdropColor: 'transparent' }
+            }
+          }
+        }
+      });
+
+      // Chart 11: Vacinação por CAA
+      new Chart(document.getElementById('chart-vacinacao-caas'), {
+        type: 'bar',
+        data: {
+          labels: ['CAAPB', 'CAAPE', 'CAAPR', 'CAAMS', 'CAACE', 'CAAMG', 'CAASC', 'CAARS'],
+          datasets: [{
+            label: 'Posts sobre Vacinação',
+            data: [312, 287, 245, 198, 156, 134, 123, 114],
+            backgroundColor: '#10b981',
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+          }
+        }
+      });
+
+      // Chart 12: Tipos de Vacina
+      new Chart(document.getElementById('chart-vacinacao-tipos'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Gripe/H1N1', 'COVID-19', 'Hepatite', 'Meningite', 'Outras'],
+          datasets: [{
+            data: [45, 28, 12, 8, 7],
+            backgroundColor: ['#10b981', '#06b6d4', '#8b5cf6', '#f59e0b', '#64748b'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'right', labels: { boxWidth: 12, font: { size: 10 } } }
+          }
+        }
+      });
+
+      // Chart 13: Timeline de Vacinação
+      new Chart(document.getElementById('chart-vacinacao-timeline'), {
+        type: 'line',
+        data: {
+          labels: ['Jan/25', 'Fev/25', 'Mar/25', 'Abr/25', 'Mai/25', 'Jun/25', 'Jul/25', 'Ago/25', 'Set/25', 'Out/25', 'Nov/25', 'Dez/25', 'Jan/26', 'Fev/26'],
+          datasets: [{
+            label: 'Posts sobre Vacinação',
+            data: [89, 67, 45, 34, 23, 18, 156, 198, 134, 78, 45, 34, 123, 156],
+            borderColor: '#10b981',
+            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+            fill: true,
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+          }
+        }
+      });
+    }
+
+    // Populate Services Grid
+    function populateServices() {
+      const grid = document.getElementById('services-grid');
+      grid.innerHTML = '';
+      
+      Object.entries(servicosCategoria).forEach(([key, servico]) => {
+        const card = document.createElement('div');
+        card.className = 'glass-card p-6';
+        card.innerHTML = `
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">${servico.icon}</span>
+            <div>
+              <h4 class="font-semibold">${servico.nome}</h4>
+              <p class="text-2xl font-bold text-cyan-400">${servico.items.length}+</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            ${servico.items.map(i => `<span class="service-tag">${i}</span>`).join('')}
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Populate State Tabs
+    function populateStateTabs() {
+      const container = document.getElementById('state-tabs');
+      container.innerHTML = '';
+      
+      Object.entries(caasInfo).forEach(([caa, info]) => {
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn text-xs px-3 py-2';
+        btn.style.background = 'rgba(255,255,255,0.05)';
+        btn.textContent = info.uf;
+        btn.onclick = () => selectState(caa);
+        container.appendChild(btn);
+      });
+    }
+
+    // Select State - with Profile Pic
+    function selectState(caa) {
+      const info = caasInfo[caa];
+      
+      document.getElementById('state-profile-pic').src = info.profilePic;
+      document.getElementById('state-profile-pic').style.borderColor = info.cor;
+      document.getElementById('state-badge').textContent = info.uf;
+      document.getElementById('state-badge').style.background = info.cor;
+      document.getElementById('state-name').textContent = info.estado;
+      document.getElementById('state-caa').textContent = `${caa} - ${info.site}`;
+      document.getElementById('state-regiao-display').textContent = info.regiao;
+      document.getElementById('state-site').href = `https://${info.site}`;
+      document.getElementById('state-instagram-handle').textContent = info.instagram;
+      document.getElementById('state-instagram').href = `https://instagram.com/${info.instagram.replace('@', '')}`;
+      
+      // Update metrics
+      document.getElementById('state-posts').textContent = info.posts;
+      document.getElementById('state-engagement').textContent = info.engagement + '%';
+      document.getElementById('state-reach').textContent = (info.reach / 1000).toFixed(0) + 'K';
+      
+      const servicesContainer = document.getElementById('state-services');
+      servicesContainer.innerHTML = info.servicos.map(s => `<span class="service-tag">${s}</span>`).join('');
+      
+      // Update active state in grid
+      document.querySelectorAll('#caas-grid .caa-card').forEach(card => {
+        card.classList.remove('active');
+      });
+      const activeCard = document.querySelector(`#caas-grid [data-caa="${caa}"]`);
+      if (activeCard) activeCard.classList.add('active');
+    }
+
+    // Populate CAAs Grid
+    function populateCAAsGrid() {
+      const grid = document.getElementById('caas-grid');
+      grid.innerHTML = '';
+      
+      Object.entries(caasInfo).forEach(([caa, info]) => {
+        const card = document.createElement('div');
+        card.className = 'caa-card cursor-pointer';
+        card.setAttribute('data-caa', caa);
+        card.onclick = () => selectState(caa);
+        card.innerHTML = `
+          <div class="flex items-center gap-3 mb-2">
+            <img src="${info.profilePic}" alt="${caa}" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <p class="font-semibold text-sm">${caa}</p>
+              <p class="text-xs text-slate-400">${info.estado}</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            ${info.servicos.slice(0, 3).map(s => `<span class="text-xs text-slate-500">${s}</span>`).join(', ')}
+            ${info.servicos.length > 3 ? `<span class="text-xs text-slate-500">+${info.servicos.length - 3}</span>` : ''}
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter Region - Dynamic Stats
+    function filterRegion(region) {
+      document.querySelectorAll('#taxonomia .tab-btn').forEach(t => t.classList.remove('active'));
+      document.getElementById('tab-' + region).classList.add('active');
+      
+      const dados = dadosRegiao[region];
+      document.getElementById('stat-posts').textContent = dados.posts.toLocaleString();
+      document.getElementById('stat-caas').textContent = dados.caas;
+      document.getElementById('stat-servicos').textContent = dados.servicos + '+';
+      document.getElementById('stat-regiao').textContent = dados.nome;
+      
+      // Filter services grid by region
+      const grid = document.getElementById('services-grid');
+      grid.innerHTML = '';
+      
+      // Get services for selected region
+      let regionServices = {};
+      Object.entries(caasInfo).forEach(([caa, info]) => {
+        if (region === 'todas' || info.regiao.toLowerCase().replace('-', '') === region) {
+          info.servicos.forEach(servico => {
+            if (!regionServices[servico]) regionServices[servico] = 0;
+            regionServices[servico]++;
+          });
+        }
+      });
+      
+      // Show filtered categories
+      Object.entries(servicosCategoria).forEach(([key, servico]) => {
+        const filteredItems = servico.items.filter(item => 
+          Object.keys(regionServices).some(rs => rs.toLowerCase().includes(item.toLowerCase()))
+        );
+        
+        const card = document.createElement('div');
+        card.className = 'glass-card p-6';
+        card.innerHTML = `
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">${servico.icon}</span>
+            <div>
+              <h4 class="font-semibold">${servico.nome}</h4>
+              <p class="text-2xl font-bold text-cyan-400">${filteredItems.length || servico.items.length}+</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            ${(filteredItems.length ? filteredItems : servico.items).map(i => `<span class="service-tag">${i}</span>`).join('')}
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Populate Ranking Table
+    function populateRanking() {
+      const tbody = document.getElementById('ranking-table');
+      topPosts.forEach((post, i) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="px-4 py-3">
+            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${i < 3 ? 'bg-cyan-500 text-white' : 'bg-white/10 text-slate-400'}">${i + 1}</span>
+          </td>
+          <td class="px-4 py-3 font-medium">${post.caa}</td>
+          <td class="px-4 py-3">
+            <span class="px-2 py-1 rounded text-xs bg-white/10">${post.categoria}</span>
+          </td>
+          <td class="px-4 py-3 text-slate-400 text-sm max-w-md truncate">${post.message}</td>
+          <td class="px-4 py-3 text-right font-mono text-cyan-400">${(post.engagement * 100).toFixed(2)}%</td>
+          <td class="px-4 py-3 text-center">
+            <a href="${post.url}" target="_blank" class="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              Ver
+            </a>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Populate Comparative Table
+    function populateComparativo() {
+      const tbody = document.getElementById('comparativo-table');
+      const comparativos = [
+        {categoria: 'Convênios e Parcerias', anterior: 424, atual: 889},
+        {categoria: 'Assistência Financeira', anterior: 350, atual: 887},
+        {categoria: 'Eventos Esportivos', anterior: 414, atual: 709},
+        {categoria: 'Vacinação', anterior: 911, atual: 1569},
+        {categoria: 'Eventos Sociais', anterior: 219, atual: 386},
+        {categoria: 'Saúde Mental/Psicologia', anterior: 236, atual: 371},
+        {categoria: 'Cursos e Palestras', anterior: 176, atual: 351},
+        {categoria: 'Wellhub/TotalPass', anterior: 82, atual: 317}
+      ];
+      
+      comparativos.forEach(comp => {
+        const variacao = ((comp.atual - comp.anterior) / comp.anterior * 100).toFixed(1);
+        const cor = variacao > 0 ? 'text-green-400' : 'text-red-400';
+        const sinal = variacao > 0 ? '+' : '';
+        const tendencia = variacao > 50 ? '📈' : variacao > 0 ? '↗️' : '📉';
+        
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="px-4 py-3">${comp.categoria}</td>
+          <td class="px-4 py-3 text-right">${comp.anterior.toLocaleString()}</td>
+          <td class="px-4 py-3 text-right">${comp.atual.toLocaleString()}</td>
+          <td class="px-4 py-3 text-right ${cor}">${sinal}${variacao}%</td>
+          <td class="px-4 py-3 text-right">${tendencia}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Populate Vacinação Table
+    function populateVacinacaoTable() {
+      const tbody = document.getElementById('vacinacao-table');
+      
+      Object.entries(vacinacaoData).forEach(([caa, data]) => {
+        const info = caasInfo[caa];
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="px-4 py-3 font-medium">${caa}</td>
+          <td class="px-4 py-3">${info.estado}</td>
+          <td class="px-4 py-3 text-right">${data.posts}</td>
+          <td class="px-4 py-3 text-right text-cyan-400">${data.engagement}%</td>
+          <td class="px-4 py-3">
+            ${data.vacinas.map(v => `<span class="px-2 py-1 rounded text-xs bg-emerald-500/20 text-emerald-400 mr-1">${v}</span>`).join('')}
+          </td>
+          <td class="px-4 py-3 text-center">
+            <span class="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">${data.status === 'ativa' ? 'Campanha Ativa' : 'Inativa'}</span>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      initCharts();
+      populateServices();
+      populateStateTabs();
+      selectState('CAAAC');
+      populateCAAsGrid();
+      populateRanking();
+      populateComparativo();
+      populateVacinacaoTable();
+    });
+  </script>
+</body>
+</html>

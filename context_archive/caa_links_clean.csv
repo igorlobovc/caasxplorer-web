@@ -1,0 +1,28 @@
+uf,estado,regiao,region_color,caa_nome,site_oficial,instagram_handle,instagram_url,facebook_handle,facebook_url,x_twitter,youtube_outro,review_flag
+PR,Parana,Sul,#EECF0E,CAAPR,https://caapr.org.br,@caa_parana,https://instagram.com/caa_parana,caixadosadvogadosPR,https://web.facebook.com/caixadosadvogadosPR,,,
+SC,Santa Catarina,Sul,#EECF0E,CAASC,https://caasc.org.br,@caasc_santacatarina,https://instagram.com/caasc_santacatarina,https://www.facebook.com/caasc.sc,https://web.facebook.com/caasc.sc,,,
+RS,Rio Grande do Sul,Sul,#EECF0E,CAARS,https://caars.org.br,@caa.rs,https://instagram.com/caa.rs,caars.daoabrs,https://web.facebook.com/caars.daoabrs,,,
+ES,Espirito Santo,Sudeste,#DA2E2C,CAAES,https://caaes.org.br,@caaes,https://instagram.com/caaes,,https://www.facebook.com/oabes.espiritosanto/?locale=pt_BR,,,REVIEW_FACEBOOK_NOT_CAA_SPECIFIC
+MG,Minas Gerais,Sudeste,#DA2E2C,CAAMG,https://caamg.org.br,@caa_mg,https://instagram.com/caa_mg,caaminas,https://web.facebook.com/caaminas,,,
+RJ,Rio de Janeiro,Sudeste,#DA2E2C,CAARJ,https://caarj.org.br,@caarj_oab,https://www.instagram.com/oabrjcaarj/,caarj,https://web.facebook.com/caarj,,,REVIEW_INSTAGRAM_HANDLE_URL_MISMATCH
+SP,Sao Paulo,Sudeste,#DA2E2C,CAASP,https://caasp.org.br,@oabcaasp,https://instagram.com/oabcaasp,oabcaasp,https://www.facebook.com/caasc.sc,,,REVIEW_FACEBOOK_URL_WRONG_STATE
+DF,Distrito Federal,Centro-Oeste,#C45DF5,CAADF,https://caadf.org.br,@caa.df,https://instagram.com/caa.df,caixadeassistenciadf,https://web.facebook.com/caixadeassistenciadf,,,
+GO,Goias,Centro-Oeste,#C45DF5,CASAG,https://casag.org.br,@oab_casag,https://instagram.com/oab_casag,casag.go,https://web.facebook.com/casag.go,,,
+MT,Mato Grosso,Centro-Oeste,#C45DF5,CAAMT,https://caamt.com.br,@caamt1,https://instagram.com/caamt1,caaoabmt,https://web.facebook.com/caaoabmt,,,
+MS,Mato Grosso do Sul,Centro-Oeste,#C45DF5,CAAMS,https://caams.org.br,@caams.oficial,https://instagram.com/caams.oficial,caixadosadvogadosms,https://web.facebook.com/caixadosadvogadosms,,,
+TO,Tocantins,Norte,#C45DF5,CAATO,https://caato.com.br,@caatocantis,https://www.instagram.com/caatocantins/,caatocantins,https://web.facebook.com/caatocantins,,,REVIEW_INSTAGRAM_HANDLE_URL_MISMATCH;REVIEW_REGION_COLOR_MISMATCH
+PB,Paraiba,Nordeste,#A36A66,CAAPB,https://caapb.org.br,@caa_paraiba,https://instagram.com/caa_paraiba,caapb,https://www.facebook.com/CAAParaiba/?locale=pt_BR,,,
+SE,Sergipe,Nordeste,#A36A66,CAASE,https://caase.com.br/,@caasergipe,https://instagram.com/caasergipe,CAASergipe,https://web.facebook.com/CAASergipe,,,
+AL,Alagoas,Nordeste,#A36A66,CAAAL,https://caa-al.org.br,@caa.al,https://instagram.com/caa.al,caa.alagoas,https://web.facebook.com/caa.alagoas,,,
+CE,Ceara,Nordeste,#A36A66,CAACE,https://caace.org.br,@caace.oab,https://instagram.com/caace.oab,caace.oab,https://web.facebook.com/caace.oab,,,
+MA,Maranhao,Nordeste,#A36A66,CAAMA,https://caama.org.br,@caama.oabma,https://instagram.com/caama.oabma,Caama,http://www.facebook.com/OABMA,,,
+PE,Pernambuco,Nordeste,#A36A66,CAAPE,https://caape.org.br,@caape_oab,https://instagram.com/caape_oab,caape,https://www.facebook.com/CAAPE.OABPE/,,,
+PI,Piaui,Nordeste,#A36A66,CAAPI,https://caapi.org.br,@caapi,https://www.instagram.com/caapiaui/,caapioab,https://web.facebook.com/caapioab,,,
+RN,Rio Grande do Norte,Nordeste,#A36A66,CAARN,https://caarn.org.br,@caarn.oab,https://instagram.com/caarn.oab,caarn.oab,https://web.facebook.com/caarn.oab,,,
+BA,Bahia,Nordeste,#A36A66,CAAB,https://caab.org.br,@caab_oficial,https://instagram.com/caab_oficial,caab.oficial,https://web.facebook.com/caab.oficial,,,
+AC,Acre,Norte,#31A69B,CAAAC,https://caaac.org.br,@caaac.oficial,https://instagram.com/caaac.oficial,caaac.oficial,https://web.facebook.com/caaac.oficial,,,
+AP,Amapa,Norte,#31A69B,CAAAP,https://caaap.org.br,@caixadeassistenciadosadv.ap,https://instagram.com/caixadeassistenciadosadv.ap,caaamapa,https://web.facebook.com/caaamapa,,,
+AM,Amazonas,Norte,#31A69B,CAAAM,https://caaam.org.br,@caaamazonas,https://instagram.com/caaamazonas,caaamazonas,https://web.facebook.com/caaamazonas,,,
+PA,Para,Norte,#31A69B,CAAPA,https://caapara.org.br,@caapa.oab,https://www.instagram.com/caapa.oab/,caapara.oficial,https://www.facebook.com/caapa.oab/?locale=pt_BR,,,
+RO,Rondonia,Norte,#31A69B,CAARO,https://caaro.org.br,@caaro_rondonia,https://instagram.com/caaro_rondonia,caarondonia,https://web.facebook.com/caarondonia,,,
+RR,Roraima,Norte,#31A69B,CAARR,https://oabrr.org.br,@caarr_oraima,https://www.instagram.com/caaroraima/?hl=pt,CAARORAIMA,https://web.facebook.com/CAARORAIMA,,,REVIEW_SITE_NOT_CAA_SPECIFIC;REVIEW_INSTAGRAM_HANDLE_URL_MISMATCH

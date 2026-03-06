@@ -1,0 +1,83 @@
+{
+  "vacinacao": [
+    {
+      "caa": "CAARR",
+      "mensagem": "A presidente da Caixa de Assistência dos Advogados de Roraima, Dra. Natália Leitão participou do VIII Colégio de Presidentes de Caixas de Assistência dos Advogados, realizado nesta sexta-feira, 13, em",
+      "engagement": 0.0809
+    },
+    {
+      "caa": "CAADF",
+      "mensagem": "Atenção Advocacia do DF, nossa campanha de vacinação antigripal vem aí! ??\n\nPoderão se vacinar:\n\n➡️ Advogados(as) e estagiários(as) regularmente inscritos (as) na OAB/DF;\n\n➡️ Familiar de 1° grau: pais",
+      "engagement": 0.0595
+    },
+    {
+      "caa": "CAADF",
+      "mensagem": "Contagem regressiva para a nossa campanha de vacinação antigripal!\n\nVamos conferir a programação completa? Arraste para ver as datas e locais de vacinação. ????\n\nNossa Campanha de Vacinação antigripal",
+      "engagement": 0.0575
+    },
+    {
+      "caa": "CAAES",
+      "mensagem": "Ótima notícia para a advocacia! A vacinação deste ano será gratuita para advogados e advogadas. A dose antigripal tetravalente protege contra os vírus das gripes H1N1, H3N2 e os dois tipos da gripe B.",
+      "engagement": 0.0422
+    },
+    {
+      "caa": "CAARR",
+      "mensagem": "Nos dias 15 e 16 de maio, durante a Campanha de Vacinação, a Casa do Cidadão estará presente na sede da CAARR emitindo a nova Carteira Nacional de Identidade (CIN).\n\n?? Atendimento das 8h às 12h e das",
+      "engagement": 0.0421
+    }
+  ],
+  "wellhub": [
+    {
+      "caa": "CAAES",
+      "mensagem": "Atendendo a pedidos: CAAES agora tem Wellhub (Gympass) e TotalPass!\n\nAgora você, advogado e advogada, pode acessar academias e estúdios renomados em todo o Brasil, com mensalidades acessíveis e a flex",
+      "engagement": 0.1584
+    },
+    {
+      "caa": "CAAB",
+      "mensagem": "Acabou a espera! A CAAB e a OAB-BA lançam uma grande novidade para a advocacia! É o ADVPass, um programa que vai ampliar o acesso da advocacia baiana a saúde e bem-estar! E a primeira ação já vem com ",
+      "engagement": 0.1109
+    },
+    {
+      "caa": "CAAAM",
+      "mensagem": "?? ATENÇÃO, ADVOGADO(A)!\n\nA CAAAM quer saber: você já conhece a Wellhub? ??\n\nEstamos realizando uma pesquisa para entender o seu interesse nesse benefício exclusivo que dá acesso a milhares de academi",
+      "engagement": 0.0797
+    },
+    {
+      "caa": "CAAMS",
+      "mensagem": "A CAA/MS apresenta mais um benefício pensado para quem vive a intensa rotina da advocacia. O Wellhub chega para ampliar o acesso ao bem-estar, saúde física, saúde mental e qualidade de vida, tudo de f",
+      "engagement": 0.0729
+    },
+    {
+      "caa": "CAAB",
+      "mensagem": "Tá esperando o que pra fazer seu cadastro?! \n\nAproveite todos os benefícios do TotalPass agora mesmo e tenha acesso a uma ampla rede de serviços de esporte, saúde, bem-estar e qualidade de vida.\n\nComo",
+      "engagement": 0.0682
+    }
+  ],
+  "esportes": [
+    {
+      "caa": "CAAES",
+      "mensagem": "Há quase 1 ano, a advogada Michaella Zukowski Reis passa por uma série de tratamentos para se recuperar de um traumatismo crânio encefálico, sofrido no dia 8 de julho de 2023. No fatídico dia, Michael",
+      "engagement": 0.3216
+    },
+    {
+      "caa": "CAAAC",
+      "mensagem": "??⚖️ Neste domingo, 7, vivemos juntos a emoção da 4ª Corrida da Advocacia!\n\nUma manhã de superação, união e celebração da nossa categoria, que mostrou que quando corremos lado a lado, vamos ainda mais",
+      "engagement": 0.0719
+    },
+    {
+      "caa": "CAAAC",
+      "mensagem": "Inscrições até o dia 25 de agosto!\n\nVem aí mais uma edição da Corrida da Advocacia!\nUm momento especial para celebrar a união, a saúde e a força da nossa classe com muito esporte e energia positiva.\n\n",
+      "engagement": 0.0624
+    },
+    {
+      "caa": "CAAES",
+      "mensagem": "Na tarde da última terça-feira (07/01), a advogada Kelly Andrade foi oficialmente empossada como presidente da Caixa de Assistência dos Advogados do Espírito Santo (CAAES) para o triênio 2025-2027, em",
+      "engagement": 0.0577
+    },
+    {
+      "caa": "CAAAM",
+      "mensagem": "INSCRIÇÕES ABERTAS! ??‍♂️\n\nA CAAMA e a OAB Maranhão apresentam a Corrida pela Vida, Advocacia Consciente, um evento que une esporte, solidariedade e conscientização em um grande movimento pela saúde f",
+      "engagement": 0.0525
+    }
+  ]
+}

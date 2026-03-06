@@ -1,0 +1,635 @@
+{
+  "caas_info": {
+    "CAAAC": {
+      "uf": "AC",
+      "estado": "Acre",
+      "regiao": "Norte",
+      "site": "caaac.org.br",
+      "instagram": "@caaac.oficial"
+    },
+    "CAAAL": {
+      "uf": "AL",
+      "estado": "Alagoas",
+      "regiao": "Nordeste",
+      "site": "caa-al.org.br",
+      "instagram": "@caa.al"
+    },
+    "CAAAP": {
+      "uf": "AP",
+      "estado": "Amapá",
+      "regiao": "Norte",
+      "site": "caaap.org.br",
+      "instagram": "@caixadeassistenciadosadv.ap"
+    },
+    "CAAAM": {
+      "uf": "AM",
+      "estado": "Amazonas",
+      "regiao": "Norte",
+      "site": "caaam.org.br",
+      "instagram": "@caaamazonas"
+    },
+    "CAABA": {
+      "uf": "BA",
+      "estado": "Bahia",
+      "regiao": "Nordeste",
+      "site": "caab.org.br",
+      "instagram": "@caab_oficial"
+    },
+    "CAACE": {
+      "uf": "CE",
+      "estado": "Ceará",
+      "regiao": "Nordeste",
+      "site": "caace.org.br",
+      "instagram": "@caace.oab"
+    },
+    "CAADF": {
+      "uf": "DF",
+      "estado": "Distrito Federal",
+      "regiao": "Centro-Oeste",
+      "site": "caadf.org.br",
+      "instagram": "@caa.df"
+    },
+    "CAAES": {
+      "uf": "ES",
+      "estado": "Espírito Santo",
+      "regiao": "Sudeste",
+      "site": "caaes.org.br",
+      "instagram": "@caaes"
+    },
+    "CASAG": {
+      "uf": "GO",
+      "estado": "Goiás",
+      "regiao": "Centro-Oeste",
+      "site": "casag.org.br",
+      "instagram": "@oab_casag"
+    },
+    "CAAMA": {
+      "uf": "MA",
+      "estado": "Maranhão",
+      "regiao": "Nordeste",
+      "site": "caama.org.br",
+      "instagram": "@caama.oabma"
+    },
+    "CAAMT": {
+      "uf": "MT",
+      "estado": "Mato Grosso",
+      "regiao": "Centro-Oeste",
+      "site": "caamt.com.br",
+      "instagram": "@caamt1"
+    },
+    "CAAMS": {
+      "uf": "MS",
+      "estado": "Mato Grosso do Sul",
+      "regiao": "Centro-Oeste",
+      "site": "caams.org.br",
+      "instagram": "@caams.oficial"
+    },
+    "CAAMG": {
+      "uf": "MG",
+      "estado": "Minas Gerais",
+      "regiao": "Sudeste",
+      "site": "caamg.org.br",
+      "instagram": "@caa_mg"
+    },
+    "CAAPA": {
+      "uf": "PA",
+      "estado": "Pará",
+      "regiao": "Norte",
+      "site": "caapara.org.br",
+      "instagram": "@caapara.oficial"
+    },
+    "CAAPB": {
+      "uf": "PB",
+      "estado": "Paraíba",
+      "regiao": "Nordeste",
+      "site": "caapb.org.br",
+      "instagram": "@caa_paraiba"
+    },
+    "CAAPE": {
+      "uf": "PE",
+      "estado": "Pernambuco",
+      "regiao": "Nordeste",
+      "site": "caape.org.br",
+      "instagram": "@caape_oab"
+    },
+    "CAAPI": {
+      "uf": "PI",
+      "estado": "Piauí",
+      "regiao": "Nordeste",
+      "site": "caapi.org.br",
+      "instagram": "@caapi"
+    },
+    "CAAPR": {
+      "uf": "PR",
+      "estado": "Paraná",
+      "regiao": "Sul",
+      "site": "caapr.org.br",
+      "instagram": "@caa_parana"
+    },
+    "CAARJ": {
+      "uf": "RJ",
+      "estado": "Rio de Janeiro",
+      "regiao": "Sudeste",
+      "site": "caarj.org.br",
+      "instagram": "@caarj_oab"
+    },
+    "CAARN": {
+      "uf": "RN",
+      "estado": "Rio Grande do Norte",
+      "regiao": "Nordeste",
+      "site": "caarn.org.br",
+      "instagram": "@caarn.oab"
+    },
+    "CAARS": {
+      "uf": "RS",
+      "estado": "Rio Grande do Sul",
+      "regiao": "Sul",
+      "site": "caars.org.br",
+      "instagram": "@caa.rs"
+    },
+    "CAARO": {
+      "uf": "RO",
+      "estado": "Rondônia",
+      "regiao": "Norte",
+      "site": "caaro.org.br",
+      "instagram": "@caaro_rondonia"
+    },
+    "CAARR": {
+      "uf": "RR",
+      "estado": "Roraima",
+      "regiao": "Norte",
+      "site": "oabrr.org.br",
+      "instagram": "@caarr_oraima"
+    },
+    "CAASC": {
+      "uf": "SC",
+      "estado": "Santa Catarina",
+      "regiao": "Sul",
+      "site": "caasc.org.br",
+      "instagram": "@caasc_santacatarina"
+    },
+    "CAASP": {
+      "uf": "SP",
+      "estado": "São Paulo",
+      "regiao": "Sudeste",
+      "site": "caasp.org.br",
+      "instagram": "@oabcaasp"
+    },
+    "CAASE": {
+      "uf": "SE",
+      "estado": "Sergipe",
+      "regiao": "Nordeste",
+      "site": "oabse.org.br",
+      "instagram": "@caasergipe"
+    },
+    "CAATO": {
+      "uf": "TO",
+      "estado": "Tocantins",
+      "regiao": "Norte",
+      "site": "caato.com.br",
+      "instagram": "@caatocantis"
+    }
+  },
+  "servicos_por_caa": {
+    "CAAPB": [
+      "Vacinação da Advocacia",
+      "Jogos de Verão",
+      "Plano Pet",
+      "Circuito de Corrida",
+      "Psicologia (Conexa Saúde)",
+      "Wellhub",
+      "Clube da Advocacia"
+    ],
+    "CAAPE": [
+      "Vacinação",
+      "Corrida da OAB-PE",
+      "Plano Odontológico",
+      "TotalPass",
+      "Jusbrasil",
+      "Wellhub",
+      "Kit Corrida"
+    ],
+    "CAAMG": [
+      "JAM - Jogos da Advocacia Mineira",
+      "TotalPass",
+      "Eventos Esportivos",
+      "Cursos",
+      "Convênios"
+    ],
+    "CAACE": [
+      "Wellhub para Dependentes",
+      "Bloquinho da Advocacia",
+      "Corrida da Advocacia",
+      "Minha Foto CAACE",
+      "Eventos"
+    ],
+    "CAAPR": [
+      "Vacinação",
+      "Descontos Farmácia Nissei",
+      "Psicologia Conexa",
+      "Wellhub",
+      "Clube da Advocacia",
+      "Circuito Corrida",
+      "Bradesco Seguros"
+    ],
+    "CAADF": [
+      "Psicologia Gratuita",
+      "Wellhub",
+      "Azul Passagens",
+      "Churrascaria Steak Bull",
+      "Veículos Brasal",
+      "Na Praia Festival",
+      "Guarda-Roupas Sustentável"
+    ],
+    "CASAG": [
+      "Festa da Advocacia",
+      "Azul Passagens",
+      "Wellhub",
+      "Eventos"
+    ],
+    "CAAES": [
+      "Wellhub",
+      "TotalPass",
+      "Eventos"
+    ],
+    "CAAAM": [
+      "Wellhub Pesquisa",
+      "Corrida pela Vida",
+      "Eventos"
+    ],
+    "CAAPA": [
+      "Wellhub",
+      "Eventos",
+      "Convênios"
+    ],
+    "CAASP": [
+      "Baile da Advocacia",
+      "Uber Parceria",
+      "Prêmio Advocacia Mulher",
+      "Notas de Pesar",
+      "Eventos"
+    ],
+    "CAARJ": [
+      "Notas Institucionais",
+      "Defesa da Advocacia",
+      "Eventos"
+    ],
+    "CAARS": [
+      "Festa do Rubi",
+      "Ipesaúde",
+      "Eventos"
+    ],
+    "CAASC": [
+      "ADVerão",
+      "Wellhub",
+      "PopUp CAASC",
+      "Eventos"
+    ],
+    "CAARN": [
+      "Eventos",
+      "Convênios",
+      "Cursos"
+    ],
+    "CAASE": [
+      "Corrida da Advocacia",
+      "Eventos",
+      "Bloquinho"
+    ],
+    "CAAAL": [
+      "Circuito Corrida",
+      "Bloquinho",
+      "Eventos"
+    ],
+    "CAAPI": [
+      "Resort BOB Z",
+      "Pousada Praia",
+      "Convênios",
+      "Sorteios"
+    ],
+    "CAAAC": [
+      "Convênios",
+      "Eventos",
+      "Cursos"
+    ],
+    "CAAAP": [
+      "Convênios",
+      "Eventos",
+      "Cursos"
+    ],
+    "CAAMA": [
+      "Corrida pela Vida",
+      "Eventos",
+      "Cursos"
+    ],
+    "CAARO": [
+      "Convênios",
+      "Eventos"
+    ],
+    "CAARR": [
+      "Convênios",
+      "Eventos"
+    ],
+    "CAATO": [
+      "Convênios",
+      "Eventos"
+    ],
+    "CAAMT": [
+      "Vacinação",
+      "Convênios",
+      "Eventos"
+    ],
+    "CAAMS": [
+      "Vacinação",
+      "Convênios"
+    ],
+    "CAABA": [
+      "ADVPass",
+      "TotalPass",
+      "Corrida da Advocacia",
+      "Eventos"
+    ]
+  },
+  "regioes_cores": {
+    "Norte": "#31A69B",
+    "Nordeste": "#A36A66",
+    "Centro-Oeste": "#C45DF5",
+    "Sudeste": "#DA2E2C",
+    "Sul": "#EECF0E"
+  },
+  "stats": {
+    "total_posts": 14883,
+    "caas_total": 27,
+    "periodo": "31/01/2023 - 27/02/2026"
+  },
+  "dados_regiao": {
+    "Norte": {
+      "posts": 2677,
+      "caas": 7,
+      "servicos": {
+        "saude": [
+          "Vacinação",
+          "Plano de Saúde",
+          "Odontologia",
+          "Saúde Mental",
+          "Saúde Pet",
+          "Telemedicina"
+        ],
+        "beneficios": [
+          "Convênios",
+          "Descontos",
+          "Clube de Vantagens",
+          "Turismo"
+        ],
+        "financeiro": [
+          "Auxílios",
+          "Pecuniário",
+          "Emergencial"
+        ],
+        "esporte": [
+          "Eventos Esportivos",
+          "Academias",
+          "Corrida",
+          "Jogos"
+        ],
+        "infra": [
+          "Coworking",
+          "Certificado Digital",
+          "Espaços"
+        ],
+        "educacao": [
+          "Cursos",
+          "Palestras",
+          "Workshops"
+        ],
+        "tecnologia": [
+          "Jusbrasil",
+          "Apps",
+          "Software"
+        ]
+      }
+    },
+    "Nordeste": {
+      "posts": 5414,
+      "caas": 9,
+      "servicos": {
+        "saude": [
+          "Vacinação",
+          "Plano de Saúde",
+          "Odontologia",
+          "Saúde Mental",
+          "Wellhub",
+          "TotalPass"
+        ],
+        "beneficios": [
+          "Convênios",
+          "Descontos",
+          "Clube de Vantagens",
+          "Farmácia"
+        ],
+        "financeiro": [
+          "Auxílios",
+          "Maternidade",
+          "Funeral"
+        ],
+        "esporte": [
+          "Eventos Esportivos",
+          "Corrida",
+          "Jogos de Verão",
+          "Circuito"
+        ],
+        "infra": [
+          "Coworking",
+          "Estacionamento",
+          "Espaços"
+        ],
+        "educacao": [
+          "Cursos",
+          "Oratória",
+          "Livraria"
+        ],
+        "tecnologia": [
+          "Jusbrasil",
+          "Apps"
+        ]
+      }
+    },
+    "Centro-Oeste": {
+      "posts": 1496,
+      "caas": 4,
+      "servicos": {
+        "saude": [
+          "Vacinação",
+          "Plano de Saúde",
+          "Psicologia",
+          "Wellhub",
+          "Telemedicina"
+        ],
+        "beneficios": [
+          "Convênios",
+          "Descontos",
+          "Azul Passagens"
+        ],
+        "financeiro": [
+          "Auxílios",
+          "Pecuniário"
+        ],
+        "esporte": [
+          "Eventos Esportivos",
+          "Festa da Advocacia"
+        ],
+        "infra": [
+          "Coworking",
+          "Certificado Digital",
+          "Veículos"
+        ],
+        "educacao": [
+          "Cursos",
+          "Palestras"
+        ],
+        "tecnologia": [
+          "Apps"
+        ]
+      }
+    },
+    "Sudeste": {
+      "posts": 2117,
+      "caas": 4,
+      "servicos": {
+        "saude": [
+          "Vacinação",
+          "Plano de Saúde",
+          "Odontologia",
+          "Saúde Mental",
+          "Wellhub"
+        ],
+        "beneficios": [
+          "Convênios",
+          "Uber",
+          "Descontos"
+        ],
+        "financeiro": [
+          "Auxílios",
+          "Seguros"
+        ],
+        "esporte": [
+          "JAM",
+          "Baile da Advocacia",
+          "Super Copa"
+        ],
+        "infra": [
+          "Coworking",
+          "Espaços"
+        ],
+        "educacao": [
+          "Cursos",
+          "Workshops"
+        ],
+        "tecnologia": [
+          "Jusbrasil",
+          "Apps"
+        ]
+      }
+    },
+    "Sul": {
+      "posts": 1165,
+      "caas": 3,
+      "servicos": {
+        "saude": [
+          "Vacinação",
+          "Plano de Saúde",
+          "Ipesaúde",
+          "Wellhub"
+        ],
+        "beneficios": [
+          "Convênios",
+          "Descontos",
+          "Festa do Rubi"
+        ],
+        "financeiro": [
+          "Auxílios"
+        ],
+        "esporte": [
+          "ADVerão",
+          "Eventos Esportivos"
+        ],
+        "infra": [
+          "Coworking"
+        ],
+        "educacao": [
+          "Cursos"
+        ],
+        "tecnologia": [
+          "Apps"
+        ]
+      }
+    }
+  },
+  "categorias_sem_outros": {
+    "Convênios e Parcerias": 1709,
+    "Saúde - Campanha de Vacinação": 1569,
+    "Assistência Financeira - Geral": 1429,
+    "Recreação - Eventos Esportivos": 1418,
+    "Recreação - Eventos Sociais": 859,
+    "Saúde - Saúde Mental/Psicologia": 691,
+    "Educação - Cursos e Palestras": 683,
+    "Institucional - Gestão": 633,
+    "Saúde - Plano de Saúde": 552,
+    "Saúde - Saúde Pet": 534,
+    "Saúde - Wellhub/Gympass/TotalPass": 427,
+    "Convênios - Alimentação": 384,
+    "Saúde - Odontologia": 265,
+    "Tecnologia": 229
+  },
+  "top_caas": [
+    {
+      "caa": "CAAAL",
+      "posts": 932,
+      "regiao": "Nordeste"
+    },
+    {
+      "caa": "CAARN",
+      "posts": 788,
+      "regiao": "Nordeste"
+    },
+    {
+      "caa": "CASAG",
+      "posts": 784,
+      "regiao": "Centro-Oeste"
+    },
+    {
+      "caa": "CAAMG",
+      "posts": 766,
+      "regiao": "Sudeste"
+    },
+    {
+      "caa": "CAAAM",
+      "posts": 738,
+      "regiao": "Norte"
+    },
+    {
+      "caa": "CAAPR",
+      "posts": 707,
+      "regiao": "Sul"
+    },
+    {
+      "caa": "CAAPB",
+      "posts": 697,
+      "regiao": "Nordeste"
+    },
+    {
+      "caa": "CAASP",
+      "posts": 639,
+      "regiao": "Sudeste"
+    },
+    {
+      "caa": "CAACE",
+      "posts": 633,
+      "regiao": "Nordeste"
+    },
+    {
+      "caa": "CAABA",
+      "posts": 575,
+      "regiao": "Nordeste"
+    }
+  ]
+}

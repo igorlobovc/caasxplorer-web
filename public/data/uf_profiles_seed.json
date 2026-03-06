@@ -1,0 +1,868 @@
+[
+  {
+    "uf": "PR",
+    "slug": "pr-parana",
+    "estado": "Parana",
+    "titulo_ptbr": "CAAPR · Parana",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Parana.",
+    "headline_ptbr": "CAAPR reúne presença digital, base potencial de 100639 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 100639,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caapr.org.br",
+      "instagram": "https://instagram.com/caa_parana",
+      "facebook": "https://web.facebook.com/caixadosadvogadosPR",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "incluindo o app CAAPR",
+      "fonte_servicos": "USER_PATCH_2026-03-05_PR"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "SC",
+    "slug": "sc-santa-catarina",
+    "estado": "Santa Catarina",
+    "titulo_ptbr": "CAASC · Santa Catarina",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Santa Catarina.",
+    "headline_ptbr": "CAASC reúne presença digital, base potencial de 60046 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 60046,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caasc.org.br",
+      "instagram": "https://instagram.com/caasc_santacatarina",
+      "facebook": "https://web.facebook.com/caasc.sc",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "24/7 online medical orientation (Einstein Conecta)",
+      "fonte_servicos": "1-4, 9"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "RS",
+    "slug": "rs-rio-grande-do-sul",
+    "estado": "Rio Grande do Sul",
+    "titulo_ptbr": "CAARS · Rio Grande do Sul",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Rio Grande do Sul.",
+    "headline_ptbr": "CAARS reúne presença digital, base potencial de 104135 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 104135,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caars.org.br",
+      "instagram": "https://instagram.com/caa.rs",
+      "facebook": "https://web.facebook.com/caars.daoabrs",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "health and wellness platforms (Psicologia Viva",
+      "fonte_servicos": "1-4, 6"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "ES",
+    "slug": "es-espirito-santo",
+    "estado": "Espirito Santo",
+    "titulo_ptbr": "CAAES · Espirito Santo",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Espirito Santo.",
+    "headline_ptbr": "CAAES reúne presença digital, base potencial de 30821 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 30821,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caaes.org.br",
+      "instagram": "https://instagram.com/caaes",
+      "facebook": "https://web.facebook.com/caixadeassistenciacaaes",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "nutritional and psychological care",
+      "fonte_servicos": "1-4, 8"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "MG",
+    "slug": "mg-minas-gerais",
+    "estado": "Minas Gerais",
+    "titulo_ptbr": "CAAMG · Minas Gerais",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Minas Gerais.",
+    "headline_ptbr": "CAAMG reúne presença digital, base potencial de 158161 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 158161,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caamg.org.br",
+      "instagram": "https://instagram.com/caa_mg",
+      "facebook": "https://web.facebook.com/caaminas",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "CAAlmamente",
+      "fonte_servicos": "4, 7, 13"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "RJ",
+    "slug": "rj-rio-de-janeiro",
+    "estado": "Rio de Janeiro",
+    "titulo_ptbr": "CAARJ · Rio de Janeiro",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Rio de Janeiro.",
+    "headline_ptbr": "CAARJ reúne presença digital, base potencial de 172504 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 172504,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caarj.org.br",
+      "instagram": "https://www.instagram.com/oabrjcaarj/",
+      "facebook": "https://web.facebook.com/caarj",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "cinemas",
+      "fonte_servicos": "1-5"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "SP",
+    "slug": "sp-sao-paulo",
+    "estado": "Sao Paulo",
+    "titulo_ptbr": "CAASP · Sao Paulo",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Sao Paulo.",
+    "headline_ptbr": "CAASP reúne presença digital, base potencial de 404461 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 404461,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caasp.org.br",
+      "instagram": "https://instagram.com/oabcaasp",
+      "facebook": "https://web.facebook.com/oabcaasp",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "bookstores",
+      "fonte_servicos": "1-4, 12"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "DF",
+    "slug": "df-distrito-federal",
+    "estado": "Distrito Federal",
+    "titulo_ptbr": "CAADF · Distrito Federal",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Distrito Federal.",
+    "headline_ptbr": "CAADF reúne presença digital, base potencial de 62686 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 62686,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caadf.org.br",
+      "instagram": "https://instagram.com/caa.df",
+      "facebook": "https://web.facebook.com/caixadeassistenciadf",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "digital certification support",
+      "fonte_servicos": "1-4, 7, 15"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "GO",
+    "slug": "go-goias",
+    "estado": "Goias",
+    "titulo_ptbr": "CASAG · Goias",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Goias.",
+    "headline_ptbr": "CASAG reúne presença digital, base potencial de 61767 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 61767,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://casag.org.br",
+      "instagram": "https://instagram.com/oab_casag",
+      "facebook": "https://web.facebook.com/casag.go",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "ticket sales for events (Arraiá",
+      "fonte_servicos": "1-4, 11"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "MT",
+    "slug": "mt-mato-grosso",
+    "estado": "Mato Grosso",
+    "titulo_ptbr": "CAAMT · Mato Grosso",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Mato Grosso.",
+    "headline_ptbr": "CAAMT reúne presença digital, base potencial de 29377 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 29377,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caamt.com.br",
+      "instagram": "https://instagram.com/caamt1",
+      "facebook": "https://web.facebook.com/caaoabmt",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "telemedicine",
+      "fonte_servicos": "1-4, 16"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "MS",
+    "slug": "ms-mato-grosso-do-sul",
+    "estado": "Mato Grosso do Sul",
+    "titulo_ptbr": "CAAMS · Mato Grosso do Sul",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Mato Grosso do Sul.",
+    "headline_ptbr": "CAAMS reúne presença digital, base potencial de 21629 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 21629,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caams.org.br",
+      "instagram": "https://instagram.com/caams.oficial",
+      "facebook": "https://web.facebook.com/caixadosadvogadosms",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "including ““Saúde em Ordem”” (psychological care)",
+      "fonte_servicos": "1-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "TO",
+    "slug": "to-tocantins",
+    "estado": "Tocantins",
+    "titulo_ptbr": "CAATO · Tocantins",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Tocantins.",
+    "headline_ptbr": "CAATO reúne presença digital, base potencial de 11621 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 11621,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caato.com.br",
+      "instagram": "https://www.instagram.com/caatocantins/",
+      "facebook": "https://web.facebook.com/caatocantins",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "health plans",
+      "fonte_servicos": "1-4, 17"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "PB",
+    "slug": "pb-paraiba",
+    "estado": "Paraiba",
+    "titulo_ptbr": "CAAPB · Paraiba",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Paraiba.",
+    "headline_ptbr": "CAAPB reúne presença digital, base potencial de 24226 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 24226,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caapb.org.br",
+      "instagram": "https://instagram.com/caa_paraiba",
+      "facebook": "https://www.facebook.com/CAAParaiba/?locale=pt_BR",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "apoio profissional e utilidade prática. Inclui o app CAA-PB para cupons",
+      "fonte_servicos": "USER_PATCH_2026-03-05_PB"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "SE",
+    "slug": "se-sergipe",
+    "estado": "Sergipe",
+    "titulo_ptbr": "CAASE · Sergipe",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Sergipe.",
+    "headline_ptbr": "CAASE reúne presença digital, base potencial de 14866 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 14866,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caase.com.br/",
+      "instagram": "https://instagram.com/caasergipe",
+      "facebook": "https://web.facebook.com/CAASergipe",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "physiotherapy",
+      "fonte_servicos": "1-4, 8, 14"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "AL",
+    "slug": "al-alagoas",
+    "estado": "Alagoas",
+    "titulo_ptbr": "CAAAL · Alagoas",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Alagoas.",
+    "headline_ptbr": "CAAAL reúne presença digital, base potencial de 17250 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 17250,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caa-al.org.br",
+      "instagram": "https://instagram.com/caa.al",
+      "facebook": "https://web.facebook.com/caa.alagoas",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "access to 100+ partner agreements",
+      "fonte_servicos": "1-4, 7, 8"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "CE",
+    "slug": "ce-ceara",
+    "estado": "Ceara",
+    "titulo_ptbr": "CAACE · Ceara",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Ceara.",
+    "headline_ptbr": "CAACE reúne presença digital, base potencial de 43456 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 43456,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caace.org.br",
+      "instagram": "https://instagram.com/caace.oab",
+      "facebook": "https://web.facebook.com/caace.oab",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "health service scheduling (physiotherapy",
+      "fonte_servicos": "1-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "MA",
+    "slug": "ma-maranhao",
+    "estado": "Maranhao",
+    "titulo_ptbr": "CAAMA · Maranhao",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Maranhao.",
+    "headline_ptbr": "CAAMA reúne presença digital, base potencial de 27952 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 27952,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caama.org.br",
+      "instagram": "https://instagram.com/caama.oabma",
+      "facebook": "http://www.facebook.com/OABMA",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "health and dental services",
+      "fonte_servicos": "1-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "PE",
+    "slug": "pe-pernambuco",
+    "estado": "Pernambuco",
+    "titulo_ptbr": "CAAPE · Pernambuco",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Pernambuco.",
+    "headline_ptbr": "CAAPE reúne presença digital, base potencial de 48093 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 48093,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caape.org.br",
+      "instagram": "https://instagram.com/caape_oab",
+      "facebook": "https://www.facebook.com/CAAPE.OABPE/",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "including pharmacy delivery",
+      "fonte_servicos": "1-4, 7, 8"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "PI",
+    "slug": "pi-piaui",
+    "estado": "Piaui",
+    "titulo_ptbr": "CAAPI · Piaui",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Piaui.",
+    "headline_ptbr": "CAAPI reúne presença digital, base potencial de 19865 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 19865,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caapi.org.br",
+      "instagram": "https://www.instagram.com/caapiaui/",
+      "facebook": "https://web.facebook.com/caapioab",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "digital INSS appointment scheduling",
+      "fonte_servicos": "1-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "RN",
+    "slug": "rn-rio-grande-do-norte",
+    "estado": "Rio Grande do Norte",
+    "titulo_ptbr": "CAARN · Rio Grande do Norte",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Rio Grande do Norte.",
+    "headline_ptbr": "CAARN reúne presença digital, base potencial de 18553 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 18553,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caarn.org.br",
+      "instagram": "https://instagram.com/caarn.oab",
+      "facebook": "https://web.facebook.com/caarn.oab",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "PJE Helpdesk",
+      "fonte_servicos": "1-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "BA",
+    "slug": "ba-bahia",
+    "estado": "Bahia",
+    "titulo_ptbr": "CAAB · Bahia",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Bahia.",
+    "headline_ptbr": "CAAB reúne presença digital, base potencial de 69474 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 69474,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caab.org.br",
+      "instagram": "https://instagram.com/caab_oficial",
+      "facebook": "https://web.facebook.com/caab.oficial",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "wellness platform enrollment (ADVPass/TotalPass)",
+      "fonte_servicos": "1-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "AC",
+    "slug": "ac-acre",
+    "estado": "Acre",
+    "titulo_ptbr": "CAAAC · Acre",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Acre.",
+    "headline_ptbr": "CAAAC reúne presença digital, base potencial de 4736 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 4736,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caaac.org.br",
+      "instagram": "https://instagram.com/caaac.oficial",
+      "facebook": "https://web.facebook.com/caaac.oficial",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "including Law Club management",
+      "fonte_servicos": "1-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "AP",
+    "slug": "ap-amapa",
+    "estado": "Amapa",
+    "titulo_ptbr": "CAAAP · Amapa",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Amapa.",
+    "headline_ptbr": "CAAAP reúne presença digital, base potencial de 5056 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 5056,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caaap.org.br",
+      "instagram": "https://instagram.com/caixadeassistenciadosadv.ap",
+      "facebook": "https://web.facebook.com/caaamapa",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "including health insurance agreements (Unimed)",
+      "fonte_servicos": "1-3"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "AM",
+    "slug": "am-amazonas",
+    "estado": "Amazonas",
+    "titulo_ptbr": "CAAAM · Amazonas",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Amazonas.",
+    "headline_ptbr": "CAAAM reúne presença digital, base potencial de 18459 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 18459,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caaam.org.br",
+      "instagram": "https://instagram.com/caaamazonas",
+      "facebook": "https://web.facebook.com/caaamazonas",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "scheduling for health and wellness services (physiotherapy",
+      "fonte_servicos": "1-4, 7, 8"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "PA",
+    "slug": "pa-para",
+    "estado": "Para",
+    "titulo_ptbr": "CAAPA · Para",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Para.",
+    "headline_ptbr": "CAAPA reúne presença digital, base potencial de 32364 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 32364,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caapara.org.br",
+      "instagram": "https://www.instagram.com/caapa.oab/",
+      "facebook": "https://www.facebook.com/caapa.oab/?locale=pt_BR",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "health service referrals (multivaccination)",
+      "fonte_servicos": "2-4, 7"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "RO",
+    "slug": "ro-rondonia",
+    "estado": "Rondonia",
+    "titulo_ptbr": "CAARO · Rondonia",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Rondonia.",
+    "headline_ptbr": "CAARO reúne presença digital, base potencial de 12596 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 12596,
+      "app_disponivel": "NAO",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://caaro.org.br",
+      "instagram": "https://instagram.com/caaro_rondonia",
+      "facebook": "https://web.facebook.com/caarondonia",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Sem aplicativo próprio identificado",
+      "resumo_ptbr": "maternity support (Mães Atípicas)",
+      "fonte_servicos": "1-3"
+    },
+    "qa": {
+      "review_flag": "",
+      "review_flags": [],
+      "observacao_ptbr": "Perfil sem pendências críticas de QA nesta etapa."
+    }
+  },
+  {
+    "uf": "RR",
+    "slug": "rr-roraima",
+    "estado": "Roraima",
+    "titulo_ptbr": "CAARR · Roraima",
+    "subtitulo_ptbr": "Panorama da Caixa de Assistência em Roraima.",
+    "headline_ptbr": "CAARR reúne presença digital, base potencial de 3479 advogados e uma camada de serviços já mapeada.",
+    "kpis": {
+      "total_advs": 3479,
+      "app_disponivel": "SIM",
+      "tem_instagram": true,
+      "tem_facebook": true,
+      "tem_site": true
+    },
+    "links": {
+      "site_oficial": "https://oabrr.org.br",
+      "instagram": "https://www.instagram.com/caaroraima/?hl=pt",
+      "facebook": "https://web.facebook.com/CAARORAIMA",
+      "x_twitter": "",
+      "youtube_outro": ""
+    },
+    "servicos": {
+      "status_app_ptbr": "Aplicativo próprio disponível",
+      "resumo_ptbr": "“A CAARR conta com aplicativo próprio que permite solicitar carteira digital da advocacia e acessar convênios nacionais e benefícios locais específicos de Roraima.”",
+      "fonte_servicos": "3"
+    },
+    "qa": {
+      "review_flag": "REVIEW_SITE_NOT_CAA_SPECIFIC",
+      "review_flags": [
+        "REVIEW_SITE_NOT_CAA_SPECIFIC"
+      ],
+      "observacao_ptbr": "Pendência de validação: REVIEW_SITE_NOT_CAA_SPECIFIC"
+    }
+  }
+]

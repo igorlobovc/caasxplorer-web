@@ -1,0 +1,870 @@
+{
+  "stats_geral": {
+    "total_posts": 5000,
+    "periodo": "31/01/2023 - 27/02/2026",
+    "caas_com_dados": 19,
+    "caas_total": 27,
+    "cobertura": "19/27 (70.4%)"
+  },
+  "top_categorias": {
+    "Outros": 765,
+    "Convênios e Parcerias": 694,
+    "Recreação - Eventos Sociais": 522,
+    "Recreação - Eventos Esportivos": 468,
+    "Assistência Financeira - Geral": 449,
+    "Saúde - Campanha de Vacinação": 345,
+    "Institucional - Gestão": 301,
+    "Educação - Cursos e Palestras": 289,
+    "Saúde - Wellhub/Gympass/TotalPass": 170,
+    "Saúde - Saúde Mental/Psicologia": 151,
+    "Convênios - Alimentação": 144,
+    "Institucional - Notas de Pesar": 94,
+    "Infraestrutura - Espaços": 66,
+    "Infraestrutura - Estacionamento": 57,
+    "Saúde - Plano de Saúde": 51
+  },
+  "top_caas": {
+    "CAAMG": 593,
+    "CAAAM": 418,
+    "CAAES": 284,
+    "CAASP": 280,
+    "CAACE": 275,
+    "CAADF": 252,
+    "CASAG": 206,
+    "CAARN": 180,
+    "CAAPA": 144,
+    "CAASE": 133,
+    "CAARJ": 121,
+    "CAASC": 116,
+    "CAAAP": 91,
+    "CAAMA": 88,
+    "CAAMT": 47
+  },
+  "gestao_atual": {
+    "total_posts": 1849,
+    "periodo": "01/01/2025 - 31/03/2026",
+    "top_categorias": {
+      "Convênios e Parcerias": 266,
+      "Assistência Financeira - Geral": 229,
+      "Outros": 219,
+      "Recreação - Eventos Sociais": 198,
+      "Recreação - Eventos Esportivos": 193,
+      "Educação - Cursos e Palestras": 131,
+      "Saúde - Wellhub/Gympass/TotalPass": 119,
+      "Saúde - Campanha de Vacinação": 108,
+      "Institucional - Gestão": 99,
+      "Saúde - Saúde Mental/Psicologia": 53
+    },
+    "top_caas": {
+      "CAAMG": 212,
+      "CAAAM": 142,
+      "CAASE": 125,
+      "CAADF": 99,
+      "CAACE": 90,
+      "CAAES": 82,
+      "CAASP": 81,
+      "CASAG": 61,
+      "CAARN": 53,
+      "CAAPA": 48
+    }
+  },
+  "evolucao_mensal": [
+    {
+      "mes": "2023-01",
+      "quantidade": 9
+    },
+    {
+      "mes": "2023-02",
+      "quantidade": 134
+    },
+    {
+      "mes": "2023-03",
+      "quantidade": 188
+    },
+    {
+      "mes": "2023-04",
+      "quantidade": 180
+    },
+    {
+      "mes": "2023-05",
+      "quantidade": 198
+    },
+    {
+      "mes": "2023-06",
+      "quantidade": 151
+    },
+    {
+      "mes": "2023-07",
+      "quantidade": 208
+    },
+    {
+      "mes": "2023-08",
+      "quantidade": 230
+    },
+    {
+      "mes": "2023-09",
+      "quantidade": 106
+    },
+    {
+      "mes": "2023-10",
+      "quantidade": 136
+    },
+    {
+      "mes": "2023-11",
+      "quantidade": 124
+    },
+    {
+      "mes": "2023-12",
+      "quantidade": 106
+    },
+    {
+      "mes": "2024-01",
+      "quantidade": 114
+    },
+    {
+      "mes": "2024-02",
+      "quantidade": 88
+    },
+    {
+      "mes": "2024-03",
+      "quantidade": 173
+    },
+    {
+      "mes": "2024-04",
+      "quantidade": 154
+    },
+    {
+      "mes": "2024-05",
+      "quantidade": 115
+    },
+    {
+      "mes": "2024-06",
+      "quantidade": 127
+    },
+    {
+      "mes": "2024-07",
+      "quantidade": 138
+    },
+    {
+      "mes": "2024-08",
+      "quantidade": 159
+    },
+    {
+      "mes": "2024-09",
+      "quantidade": 115
+    },
+    {
+      "mes": "2024-10",
+      "quantidade": 62
+    },
+    {
+      "mes": "2024-11",
+      "quantidade": 68
+    },
+    {
+      "mes": "2024-12",
+      "quantidade": 68
+    },
+    {
+      "mes": "2025-01",
+      "quantidade": 138
+    },
+    {
+      "mes": "2025-02",
+      "quantidade": 126
+    },
+    {
+      "mes": "2025-03",
+      "quantidade": 151
+    },
+    {
+      "mes": "2025-04",
+      "quantidade": 157
+    },
+    {
+      "mes": "2025-05",
+      "quantidade": 167
+    },
+    {
+      "mes": "2025-06",
+      "quantidade": 134
+    },
+    {
+      "mes": "2025-07",
+      "quantidade": 175
+    },
+    {
+      "mes": "2025-08",
+      "quantidade": 204
+    },
+    {
+      "mes": "2025-09",
+      "quantidade": 123
+    },
+    {
+      "mes": "2025-10",
+      "quantidade": 128
+    },
+    {
+      "mes": "2025-11",
+      "quantidade": 112
+    },
+    {
+      "mes": "2025-12",
+      "quantidade": 79
+    },
+    {
+      "mes": "2026-01",
+      "quantidade": 70
+    },
+    {
+      "mes": "2026-02",
+      "quantidade": 85
+    }
+  ],
+  "regioes": {
+    "Norte": {
+      "cor": "#31A69B",
+      "caas": [
+        {
+          "caa": "CAAAC",
+          "uf": "AC",
+          "estado": "Acre",
+          "site": "caaac.org.br",
+          "posts_total": 41,
+          "posts_gestao": 16
+        },
+        {
+          "caa": "CAAAP",
+          "uf": "AP",
+          "estado": "Amapá",
+          "site": "caaap.org.br",
+          "posts_total": 91,
+          "posts_gestao": 11
+        },
+        {
+          "caa": "CAAAM",
+          "uf": "AM",
+          "estado": "Amazonas",
+          "site": "caaam.org.br",
+          "posts_total": 418,
+          "posts_gestao": 142
+        },
+        {
+          "caa": "CAAPA",
+          "uf": "PA",
+          "estado": "Pará",
+          "site": "caapara.org.br",
+          "posts_total": 144,
+          "posts_gestao": 48
+        },
+        {
+          "caa": "CAARO",
+          "uf": "RO",
+          "estado": "Rondônia",
+          "site": "caaro.org.br",
+          "posts_total": 5,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAARR",
+          "uf": "RR",
+          "estado": "Roraima",
+          "site": "oabrr.org.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAATO",
+          "uf": "TO",
+          "estado": "Tocantins",
+          "site": "caato.com.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        }
+      ],
+      "total_posts": 699
+    },
+    "Nordeste": {
+      "cor": "#A36A66",
+      "caas": [
+        {
+          "caa": "CAABA",
+          "uf": "BA",
+          "estado": "Bahia",
+          "site": "caab.org.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAACE",
+          "uf": "CE",
+          "estado": "Ceará",
+          "site": "caace.org.br",
+          "posts_total": 275,
+          "posts_gestao": 90
+        },
+        {
+          "caa": "CAAMA",
+          "uf": "MA",
+          "estado": "Maranhão",
+          "site": "caama.org.br",
+          "posts_total": 88,
+          "posts_gestao": 33
+        },
+        {
+          "caa": "CAAPB",
+          "uf": "PB",
+          "estado": "Paraíba",
+          "site": "caapb.org.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAAPE",
+          "uf": "PE",
+          "estado": "Pernambuco",
+          "site": "caape.org.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAAPI",
+          "uf": "PI",
+          "estado": "Piauí",
+          "site": "caapi.org.br",
+          "posts_total": 2,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAARN",
+          "uf": "RN",
+          "estado": "Rio Grande do Norte",
+          "site": "caarn.org.br",
+          "posts_total": 180,
+          "posts_gestao": 53
+        },
+        {
+          "caa": "CAASE",
+          "uf": "SE",
+          "estado": "Sergipe",
+          "site": "caase.org.br",
+          "posts_total": 133,
+          "posts_gestao": 125
+        },
+        {
+          "caa": "CAAAL",
+          "uf": "AL",
+          "estado": "Alagoas",
+          "site": "caa-al.org.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        }
+      ],
+      "total_posts": 678
+    },
+    "Centro-Oeste": {
+      "cor": "#C45DF5",
+      "caas": [
+        {
+          "caa": "CAADF",
+          "uf": "DF",
+          "estado": "Distrito Federal",
+          "site": "caadf.org.br",
+          "posts_total": 252,
+          "posts_gestao": 99
+        },
+        {
+          "caa": "CASAG",
+          "uf": "GO",
+          "estado": "Goiás",
+          "site": "casag.org.br",
+          "posts_total": 206,
+          "posts_gestao": 61
+        },
+        {
+          "caa": "CAAMT",
+          "uf": "MT",
+          "estado": "Mato Grosso",
+          "site": "caamt.com.br",
+          "posts_total": 47,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAAMS",
+          "uf": "MS",
+          "estado": "Mato Grosso do Sul",
+          "site": "caams.org.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        }
+      ],
+      "total_posts": 505
+    },
+    "Sudeste": {
+      "cor": "#DA2E2C",
+      "caas": [
+        {
+          "caa": "CAAMG",
+          "uf": "MG",
+          "estado": "Minas Gerais",
+          "site": "caamg.org.br",
+          "posts_total": 593,
+          "posts_gestao": 212
+        },
+        {
+          "caa": "CAASP",
+          "uf": "SP",
+          "estado": "São Paulo",
+          "site": "caasp.org.br",
+          "posts_total": 280,
+          "posts_gestao": 81
+        },
+        {
+          "caa": "CAARJ",
+          "uf": "RJ",
+          "estado": "Rio de Janeiro",
+          "site": "caarj.org.br",
+          "posts_total": 121,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAAES",
+          "uf": "ES",
+          "estado": "Espírito Santo",
+          "site": "caaes.org.br",
+          "posts_total": 284,
+          "posts_gestao": 82
+        }
+      ],
+      "total_posts": 1278
+    },
+    "Sul": {
+      "cor": "#EECF0E",
+      "caas": [
+        {
+          "caa": "CAAPR",
+          "uf": "PR",
+          "estado": "Paraná",
+          "site": "caapr.org.br",
+          "posts_total": 0,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAARS",
+          "uf": "RS",
+          "estado": "Rio Grande do Sul",
+          "site": "caars.org.br",
+          "posts_total": 1,
+          "posts_gestao": 0
+        },
+        {
+          "caa": "CAASC",
+          "uf": "SC",
+          "estado": "Santa Catarina",
+          "site": "caasc.org.br",
+          "posts_total": 116,
+          "posts_gestao": 47
+        }
+      ],
+      "total_posts": 117
+    }
+  },
+  "caas_completas": {
+    "CAAMG": {
+      "uf": "MG",
+      "estado": "Minas Gerais",
+      "regiao": "Sudeste",
+      "cor": "#DA2E2C",
+      "site": "caamg.org.br",
+      "posts_total": 593,
+      "posts_gestao": 212
+    },
+    "CAASP": {
+      "uf": "SP",
+      "estado": "São Paulo",
+      "regiao": "Sudeste",
+      "cor": "#DA2E2C",
+      "site": "caasp.org.br",
+      "posts_total": 280,
+      "posts_gestao": 81
+    },
+    "CAARJ": {
+      "uf": "RJ",
+      "estado": "Rio de Janeiro",
+      "regiao": "Sudeste",
+      "cor": "#DA2E2C",
+      "site": "caarj.org.br",
+      "posts_total": 121,
+      "posts_gestao": 0
+    },
+    "CAAES": {
+      "uf": "ES",
+      "estado": "Espírito Santo",
+      "regiao": "Sudeste",
+      "cor": "#DA2E2C",
+      "site": "caaes.org.br",
+      "posts_total": 284,
+      "posts_gestao": 82
+    },
+    "CAAPR": {
+      "uf": "PR",
+      "estado": "Paraná",
+      "regiao": "Sul",
+      "cor": "#EECF0E",
+      "site": "caapr.org.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    },
+    "CAARS": {
+      "uf": "RS",
+      "estado": "Rio Grande do Sul",
+      "regiao": "Sul",
+      "cor": "#EECF0E",
+      "site": "caars.org.br",
+      "posts_total": 1,
+      "posts_gestao": 0
+    },
+    "CAASC": {
+      "uf": "SC",
+      "estado": "Santa Catarina",
+      "regiao": "Sul",
+      "cor": "#EECF0E",
+      "site": "caasc.org.br",
+      "posts_total": 116,
+      "posts_gestao": 47
+    },
+    "CAADF": {
+      "uf": "DF",
+      "estado": "Distrito Federal",
+      "regiao": "Centro-Oeste",
+      "cor": "#C45DF5",
+      "site": "caadf.org.br",
+      "posts_total": 252,
+      "posts_gestao": 99
+    },
+    "CASAG": {
+      "uf": "GO",
+      "estado": "Goiás",
+      "regiao": "Centro-Oeste",
+      "cor": "#C45DF5",
+      "site": "casag.org.br",
+      "posts_total": 206,
+      "posts_gestao": 61
+    },
+    "CAAMT": {
+      "uf": "MT",
+      "estado": "Mato Grosso",
+      "regiao": "Centro-Oeste",
+      "cor": "#C45DF5",
+      "site": "caamt.com.br",
+      "posts_total": 47,
+      "posts_gestao": 0
+    },
+    "CAAMS": {
+      "uf": "MS",
+      "estado": "Mato Grosso do Sul",
+      "regiao": "Centro-Oeste",
+      "cor": "#C45DF5",
+      "site": "caams.org.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    },
+    "CAABA": {
+      "uf": "BA",
+      "estado": "Bahia",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caab.org.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    },
+    "CAACE": {
+      "uf": "CE",
+      "estado": "Ceará",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caace.org.br",
+      "posts_total": 275,
+      "posts_gestao": 90
+    },
+    "CAAMA": {
+      "uf": "MA",
+      "estado": "Maranhão",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caama.org.br",
+      "posts_total": 88,
+      "posts_gestao": 33
+    },
+    "CAAPB": {
+      "uf": "PB",
+      "estado": "Paraíba",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caapb.org.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    },
+    "CAAPE": {
+      "uf": "PE",
+      "estado": "Pernambuco",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caape.org.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    },
+    "CAAPI": {
+      "uf": "PI",
+      "estado": "Piauí",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caapi.org.br",
+      "posts_total": 2,
+      "posts_gestao": 0
+    },
+    "CAARN": {
+      "uf": "RN",
+      "estado": "Rio Grande do Norte",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caarn.org.br",
+      "posts_total": 180,
+      "posts_gestao": 53
+    },
+    "CAASE": {
+      "uf": "SE",
+      "estado": "Sergipe",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caase.org.br",
+      "posts_total": 133,
+      "posts_gestao": 125
+    },
+    "CAAAL": {
+      "uf": "AL",
+      "estado": "Alagoas",
+      "regiao": "Nordeste",
+      "cor": "#A36A66",
+      "site": "caa-al.org.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    },
+    "CAAAC": {
+      "uf": "AC",
+      "estado": "Acre",
+      "regiao": "Norte",
+      "cor": "#31A69B",
+      "site": "caaac.org.br",
+      "posts_total": 41,
+      "posts_gestao": 16
+    },
+    "CAAAP": {
+      "uf": "AP",
+      "estado": "Amapá",
+      "regiao": "Norte",
+      "cor": "#31A69B",
+      "site": "caaap.org.br",
+      "posts_total": 91,
+      "posts_gestao": 11
+    },
+    "CAAAM": {
+      "uf": "AM",
+      "estado": "Amazonas",
+      "regiao": "Norte",
+      "cor": "#31A69B",
+      "site": "caaam.org.br",
+      "posts_total": 418,
+      "posts_gestao": 142
+    },
+    "CAAPA": {
+      "uf": "PA",
+      "estado": "Pará",
+      "regiao": "Norte",
+      "cor": "#31A69B",
+      "site": "caapara.org.br",
+      "posts_total": 144,
+      "posts_gestao": 48
+    },
+    "CAARO": {
+      "uf": "RO",
+      "estado": "Rondônia",
+      "regiao": "Norte",
+      "cor": "#31A69B",
+      "site": "caaro.org.br",
+      "posts_total": 5,
+      "posts_gestao": 0
+    },
+    "CAARR": {
+      "uf": "RR",
+      "estado": "Roraima",
+      "regiao": "Norte",
+      "cor": "#31A69B",
+      "site": "oabrr.org.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    },
+    "CAATO": {
+      "uf": "TO",
+      "estado": "Tocantins",
+      "regiao": "Norte",
+      "cor": "#31A69B",
+      "site": "caato.com.br",
+      "posts_total": 0,
+      "posts_gestao": 0
+    }
+  },
+  "servicos_webscraping": {
+    "CAAMG": [
+      "TotalPass",
+      "Plano de Saúde",
+      "Telemedicina",
+      "Academia +Fit",
+      "Espaço Kids",
+      "Cursos",
+      "Convênios"
+    ],
+    "CAAMT": [
+      "Plano de Saúde UNIMED",
+      "Telemedicina",
+      "Centro de Saúde",
+      "Certificação Digital",
+      "Livraria",
+      "OABPrev",
+      "Seguro de Vida",
+      "Auxílio Maternidade",
+      "Auxílio Funeral",
+      "Meu Escritório",
+      "Estacionamento"
+    ],
+    "CAAAC": [
+      "Academias",
+      "Bares & Restaurantes",
+      "Contabilidade",
+      "Educação",
+      "Estética & Beleza",
+      "Eventos",
+      "Hotelaria",
+      "Lavanderia",
+      "Lojas",
+      "Saúde",
+      "Tecnologia"
+    ],
+    "CAADF": [
+      "Atendimento Psicológico Gratuito",
+      "Telemedicina",
+      "Convênios",
+      "Cursos"
+    ],
+    "CASAG": [
+      "TotalPass",
+      "Convênios",
+      "Cursos",
+      "Eventos"
+    ],
+    "CAASP": [
+      "Plano de Saúde",
+      "Telemedicina",
+      "Coworking",
+      "Farmácia",
+      "Convênios"
+    ],
+    "CAARJ": [
+      "Sorteios",
+      "Hospedagem",
+      "Convênios",
+      "Dicas Culturais",
+      "Psicologia"
+    ],
+    "CAAES": [
+      "Wellhub",
+      "TotalPass",
+      "Eventos",
+      "Workshops"
+    ],
+    "CAACE": [
+      "Wellhub",
+      "Telemedicina",
+      "Convênios",
+      "Eventos"
+    ],
+    "CAARN": [
+      "Convênios",
+      "Eventos",
+      "Cursos"
+    ],
+    "CAASC": [
+      "Psicologia",
+      "Convênios",
+      "Eventos Esportivos"
+    ],
+    "CAAAM": [
+      "Convênios",
+      "Eventos",
+      "Cursos"
+    ],
+    "CAAPA": [
+      "Convênios",
+      "Eventos",
+      "Pizzaria"
+    ],
+    "CAASE": [
+      "Convênios",
+      "Eventos",
+      "Cursos"
+    ],
+    "CAARO": [
+      "Convênios",
+      "Eventos"
+    ],
+    "CAAMA": [
+      "Plano de Saúde",
+      "Convênios",
+      "Eventos"
+    ],
+    "CAAPI": [
+      "Resort",
+      "Convênios"
+    ],
+    "CAAAP": [
+      "Convênios",
+      "Eventos"
+    ],
+    "CAAAL": [
+      "Convênios",
+      "Eventos"
+    ]
+  },
+  "caas_com_dados": [
+    "CAAMG",
+    "CAASP",
+    "CAARJ",
+    "CAAES",
+    "CAARS",
+    "CAASC",
+    "CAADF",
+    "CASAG",
+    "CAAMT",
+    "CAACE",
+    "CAAMA",
+    "CAAPI",
+    "CAARN",
+    "CAASE",
+    "CAAAC",
+    "CAAAP",
+    "CAAAM",
+    "CAAPA",
+    "CAARO"
+  ],
+  "caas_sem_dados": [
+    "CAAPR",
+    "CAAMS",
+    "CAABA",
+    "CAAPB",
+    "CAAPE",
+    "CAAAL",
+    "CAARR",
+    "CAATO"
+  ]
+}

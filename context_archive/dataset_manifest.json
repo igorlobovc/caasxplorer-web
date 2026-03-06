@@ -1,0 +1,17 @@
+{
+  "canonical_inputs": {
+    "links_clean_csv": "core/datasets/processed/caa_links_clean.csv",
+    "national_entities_csv": "core/datasets/processed/caa_national_entities.csv",
+    "lawyer_counts_xlsx": "core/datasets/processed/MASTER__MISSING_DATE_METADATA__manual__caa_links__processed_master.xlsx",
+    "services_xlsx": "core/datasets/processed/MASTER__MISSING_DATE_METADATA__manual__caa_services_mobile__processed_master.xlsx"
+  },
+  "canonical_outputs": {
+    "caa_registry_final_csv": "core/datasets/processed/caa_registry_final.csv",
+    "caa_registry_review_needed_csv": "core/datasets/processed/caa_registry_review_needed.csv"
+  },
+  "notes": [
+    "BR/CONCAD excluded from /estados and stored separately.",
+    "Lawyer counts are sourced from the workbook previously misclassified as links.",
+    "Review flags mark rows that should be manually checked before public release."
+  ]
+}

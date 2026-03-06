@@ -1,0 +1,16 @@
+[
+  {
+    "entity_scope": "NATIONAL",
+    "uf": "BR",
+    "region_color": "#333333",
+    "nome": "CONCAD",
+    "site_oficial": "https://concad.oab.org.br",
+    "instagram_handle": "@concadoficial",
+    "instagram_url": "https://instagram.com/concadoficial",
+    "facebook_handle": "ConcadOAB",
+    "facebook_url": "https://www.facebook.com/CFOAB",
+    "x_twitter": "",
+    "youtube_outro": "LinkedIn",
+    "review_flag": "EXCLUDE_FROM_ESTADOS"
+  }
+]

@@ -1,0 +1,938 @@
+{
+  "stats": {
+    "total_posts": 14883,
+    "gestao_atual": 7097,
+    "periodo_anterior": 4802,
+    "ultimos_30_dias": 380,
+    "caas_total": 27,
+    "periodo": "31/01/2023 - 27/02/2026"
+  },
+  "categorias": {
+    "Outros": 1849,
+    "Convênios e Parcerias": 1709,
+    "Saúde - Campanha de Vacinação": 1569,
+    "Assistência Financeira - Geral": 1429,
+    "Recreação - Eventos Esportivos": 1418,
+    "Recreação - Eventos Sociais": 859,
+    "Saúde - Saúde Mental/Psicologia": 691,
+    "Educação - Cursos e Palestras": 683,
+    "Institucional - Gestão": 633,
+    "Saúde - Plano de Saúde": 552,
+    "Saúde - Saúde Pet": 534,
+    "Saúde - Wellhub/Gympass/TotalPass": 427,
+    "Convênios - Alimentação": 384,
+    "Saúde - Odontologia": 265,
+    "Tecnologia": 229,
+    "Comunicação - Ações Especiais": 192,
+    "Saúde - Geral": 163,
+    "Infraestrutura - Espaços": 152,
+    "Institucional - Notas de Pesar": 137,
+    "Comunicação - Conscientização": 91,
+    "Educação - Oratória": 90,
+    "Convênios - Entretenimento": 89,
+    "Infraestrutura - Estacionamento": 88,
+    "Educação - Livraria": 81,
+    "Infraestrutura - Coworking": 78,
+    "Institucional - Eventos Institucionais": 76,
+    "Saúde - Telemedicina": 73,
+    "Assistência Financeira - Auxílio Maternidade": 72,
+    "Institucional - Homenagens": 58,
+    "Recreação - Sorteios": 56,
+    "Infraestrutura - Certificado Digital": 42,
+    "Recreação - Colônia de Férias": 39,
+    "Convênios - Farmácia": 30,
+    "Assistência Financeira - Auxílio Funeral": 17,
+    "Convênios - Hotelaria": 15,
+    "Comunicação - Dicas Culturais": 8,
+    "Assistência Financeira - Auxílios Diversos": 5
+  },
+  "categorias_gestao": {
+    "Convênios e Parcerias": 889,
+    "Assistência Financeira - Geral": 887,
+    "Outros": 861,
+    "Recreação - Eventos Esportivos": 709,
+    "Saúde - Campanha de Vacinação": 467,
+    "Recreação - Eventos Sociais": 386,
+    "Saúde - Saúde Mental/Psicologia": 371,
+    "Educação - Cursos e Palestras": 351,
+    "Saúde - Wellhub/Gympass/TotalPass": 317,
+    "Saúde - Saúde Pet": 249,
+    "Institucional - Gestão": 244,
+    "Saúde - Plano de Saúde": 239,
+    "Convênios - Alimentação": 160,
+    "Tecnologia": 154,
+    "Saúde - Odontologia": 132,
+    "Comunicação - Ações Especiais": 84,
+    "Infraestrutura - Espaços": 69,
+    "Educação - Oratória": 64,
+    "Educação - Livraria": 48,
+    "Institucional - Eventos Institucionais": 46,
+    "Saúde - Telemedicina": 45,
+    "Saúde - Geral": 44,
+    "Convênios - Entretenimento": 41,
+    "Comunicação - Conscientização": 36,
+    "Infraestrutura - Coworking": 28,
+    "Infraestrutura - Estacionamento": 28,
+    "Assistência Financeira - Auxílio Maternidade": 24,
+    "Infraestrutura - Certificado Digital": 23,
+    "Recreação - Colônia de Férias": 22,
+    "Recreação - Sorteios": 19,
+    "Institucional - Homenagens": 19,
+    "Institucional - Notas de Pesar": 15,
+    "Convênios - Farmácia": 8,
+    "Assistência Financeira - Auxílio Funeral": 6,
+    "Convênios - Hotelaria": 5,
+    "Comunicação - Dicas Culturais": 4,
+    "Assistência Financeira - Auxílios Diversos": 3
+  },
+  "categorias_anterior": {
+    "Saúde - Campanha de Vacinação": 911,
+    "Outros": 562,
+    "Convênios e Parcerias": 424,
+    "Recreação - Eventos Esportivos": 414,
+    "Assistência Financeira - Geral": 350,
+    "Saúde - Plano de Saúde": 268,
+    "Saúde - Saúde Mental/Psicologia": 236,
+    "Recreação - Eventos Sociais": 219,
+    "Institucional - Gestão": 188,
+    "Educação - Cursos e Palestras": 176,
+    "Saúde - Saúde Pet": 150,
+    "Convênios - Alimentação": 125,
+    "Saúde - Odontologia": 103,
+    "Saúde - Geral": 92,
+    "Institucional - Notas de Pesar": 74,
+    "Saúde - Wellhub/Gympass/TotalPass": 73,
+    "Comunicação - Ações Especiais": 62,
+    "Tecnologia": 52,
+    "Infraestrutura - Espaços": 49,
+    "Comunicação - Conscientização": 34,
+    "Infraestrutura - Coworking": 32,
+    "Infraestrutura - Estacionamento": 25,
+    "Convênios - Entretenimento": 23,
+    "Assistência Financeira - Auxílio Maternidade": 21,
+    "Recreação - Sorteios": 19,
+    "Saúde - Telemedicina": 17,
+    "Educação - Livraria": 15,
+    "Institucional - Homenagens": 15,
+    "Institucional - Eventos Institucionais": 14,
+    "Educação - Oratória": 13,
+    "Convênios - Farmácia": 13,
+    "Recreação - Colônia de Férias": 12,
+    "Infraestrutura - Certificado Digital": 8,
+    "Assistência Financeira - Auxílio Funeral": 6,
+    "Convênios - Hotelaria": 5,
+    "Comunicação - Dicas Culturais": 1,
+    "Assistência Financeira - Auxílios Diversos": 1
+  },
+  "categorias_30dias": {
+    "Outros": 80,
+    "Convênios e Parcerias": 50,
+    "Assistência Financeira - Geral": 47,
+    "Recreação - Eventos Esportivos": 27,
+    "Recreação - Eventos Sociais": 26,
+    "Saúde - Wellhub/Gympass/TotalPass": 25,
+    "Saúde - Saúde Pet": 18,
+    "Saúde - Odontologia": 11,
+    "Institucional - Gestão": 10,
+    "Saúde - Plano de Saúde": 10,
+    "Educação - Cursos e Palestras": 9,
+    "Saúde - Campanha de Vacinação": 9,
+    "Comunicação - Ações Especiais": 8,
+    "Tecnologia": 7,
+    "Saúde - Telemedicina": 5,
+    "Institucional - Eventos Institucionais": 5,
+    "Saúde - Geral": 5,
+    "Infraestrutura - Certificado Digital": 4,
+    "Infraestrutura - Espaços": 3,
+    "Educação - Livraria": 3,
+    "Saúde - Saúde Mental/Psicologia": 3,
+    "Educação - Oratória": 3,
+    "Convênios - Alimentação": 3,
+    "Assistência Financeira - Auxílios Diversos": 2,
+    "Assistência Financeira - Auxílio Maternidade": 2,
+    "Institucional - Notas de Pesar": 1,
+    "Comunicação - Conscientização": 1,
+    "Convênios - Entretenimento": 1,
+    "Comunicação - Dicas Culturais": 1,
+    "Infraestrutura - Coworking": 1
+  },
+  "caas": {
+    "CAAMG": {
+      "posts_total": 766,
+      "posts_gestao": 285,
+      "regiao": "Sudeste",
+      "top_categorias": {
+        "Convênios e Parcerias": 93,
+        "Outros": 90,
+        "Assistência Financeira - Geral": 72,
+        "Recreação - Eventos Esportivos": 64,
+        "Saúde - Campanha de Vacinação": 63
+      }
+    },
+    "CAASP": {
+      "posts_total": 639,
+      "posts_gestao": 349,
+      "regiao": "Sudeste",
+      "top_categorias": {
+        "Outros": 116,
+        "Convênios e Parcerias": 95,
+        "Assistência Financeira - Geral": 77,
+        "Recreação - Eventos Sociais": 50,
+        "Recreação - Eventos Esportivos": 31
+      }
+    },
+    "CAARJ": {
+      "posts_total": 195,
+      "posts_gestao": 20,
+      "regiao": "Sudeste",
+      "top_categorias": {
+        "Convênios e Parcerias": 41,
+        "Saúde - Campanha de Vacinação": 30,
+        "Assistência Financeira - Geral": 20,
+        "Outros": 16,
+        "Saúde - Saúde Pet": 13
+      }
+    },
+    "CAAES": {
+      "posts_total": 517,
+      "posts_gestao": 243,
+      "regiao": "Sudeste",
+      "top_categorias": {
+        "Saúde - Campanha de Vacinação": 65,
+        "Saúde - Wellhub/Gympass/TotalPass": 59,
+        "Convênios e Parcerias": 51,
+        "Assistência Financeira - Geral": 48,
+        "Recreação - Eventos Esportivos": 41
+      }
+    },
+    "CAAPR": {
+      "posts_total": 707,
+      "posts_gestao": 297,
+      "regiao": "Sul",
+      "top_categorias": {
+        "Saúde - Campanha de Vacinação": 104,
+        "Outros": 92,
+        "Convênios e Parcerias": 74,
+        "Assistência Financeira - Geral": 64,
+        "Recreação - Eventos Esportivos": 60
+      }
+    },
+    "CAARS": {
+      "posts_total": 143,
+      "posts_gestao": 101,
+      "regiao": "Sul",
+      "top_categorias": {
+        "Recreação - Eventos Esportivos": 23,
+        "Saúde - Campanha de Vacinação": 19,
+        "Educação - Cursos e Palestras": 16,
+        "Assistência Financeira - Geral": 13,
+        "Saúde - Saúde Mental/Psicologia": 11
+      }
+    },
+    "CAASC": {
+      "posts_total": 315,
+      "posts_gestao": 188,
+      "regiao": "Sul",
+      "top_categorias": {
+        "Convênios e Parcerias": 47,
+        "Outros": 43,
+        "Saúde - Campanha de Vacinação": 36,
+        "Assistência Financeira - Geral": 36,
+        "Recreação - Eventos Esportivos": 29
+      }
+    },
+    "CAADF": {
+      "posts_total": 532,
+      "posts_gestao": 249,
+      "regiao": "Centro-Oeste",
+      "top_categorias": {
+        "Saúde - Campanha de Vacinação": 137,
+        "Convênios e Parcerias": 86,
+        "Assistência Financeira - Geral": 61,
+        "Outros": 43,
+        "Recreação - Eventos Esportivos": 40
+      }
+    },
+    "CASAG": {
+      "posts_total": 784,
+      "posts_gestao": 539,
+      "regiao": "Centro-Oeste",
+      "top_categorias": {
+        "Saúde - Plano de Saúde": 124,
+        "Outros": 115,
+        "Assistência Financeira - Geral": 104,
+        "Convênios e Parcerias": 93,
+        "Tecnologia": 65
+      }
+    },
+    "CAAMT": {
+      "posts_total": 170,
+      "posts_gestao": 96,
+      "regiao": "Centro-Oeste",
+      "top_categorias": {
+        "Recreação - Eventos Esportivos": 31,
+        "Saúde - Wellhub/Gympass/TotalPass": 22,
+        "Saúde - Campanha de Vacinação": 21,
+        "Saúde - Saúde Mental/Psicologia": 15,
+        "Assistência Financeira - Geral": 15
+      }
+    },
+    "CAAMS": {
+      "posts_total": 10,
+      "posts_gestao": 0,
+      "regiao": "Centro-Oeste",
+      "top_categorias": {
+        "Saúde - Campanha de Vacinação": 5,
+        "Assistência Financeira - Geral": 2,
+        "Outros": 1,
+        "Saúde - Plano de Saúde": 1,
+        "Recreação - Eventos Esportivos": 1
+      }
+    },
+    "CAACE": {
+      "posts_total": 633,
+      "posts_gestao": 152,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Convênios e Parcerias": 81,
+        "Outros": 73,
+        "Recreação - Eventos Sociais": 61,
+        "Saúde - Plano de Saúde": 52,
+        "Institucional - Notas de Pesar": 50
+      }
+    },
+    "CAAMA": {
+      "posts_total": 280,
+      "posts_gestao": 168,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Convênios e Parcerias": 40,
+        "Recreação - Eventos Esportivos": 36,
+        "Outros": 32,
+        "Saúde - Campanha de Vacinação": 32,
+        "Saúde - Saúde Pet": 21
+      }
+    },
+    "CAARN": {
+      "posts_total": 788,
+      "posts_gestao": 364,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Outros": 135,
+        "Convênios e Parcerias": 99,
+        "Recreação - Eventos Esportivos": 59,
+        "Saúde - Campanha de Vacinação": 57,
+        "Recreação - Eventos Sociais": 54
+      }
+    },
+    "CAASE": {
+      "posts_total": 340,
+      "posts_gestao": 314,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Outros": 58,
+        "Recreação - Eventos Esportivos": 45,
+        "Recreação - Eventos Sociais": 44,
+        "Saúde - Campanha de Vacinação": 29,
+        "Assistência Financeira - Geral": 27
+      }
+    },
+    "CAAAL": {
+      "posts_total": 932,
+      "posts_gestao": 438,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Recreação - Eventos Esportivos": 199,
+        "Outros": 151,
+        "Convênios e Parcerias": 99,
+        "Saúde - Campanha de Vacinação": 72,
+        "Assistência Financeira - Geral": 71
+      }
+    },
+    "CAAPE": {
+      "posts_total": 429,
+      "posts_gestao": 119,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Convênios e Parcerias": 69,
+        "Outros": 46,
+        "Saúde - Campanha de Vacinação": 38,
+        "Recreação - Eventos Sociais": 35,
+        "Recreação - Eventos Esportivos": 35
+      }
+    },
+    "CAAPB": {
+      "posts_total": 697,
+      "posts_gestao": 371,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Convênios e Parcerias": 124,
+        "Assistência Financeira - Geral": 123,
+        "Recreação - Eventos Esportivos": 79,
+        "Saúde - Saúde Mental/Psicologia": 54,
+        "Educação - Cursos e Palestras": 50
+      }
+    },
+    "CAAPI": {
+      "posts_total": 140,
+      "posts_gestao": 62,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Assistência Financeira - Geral": 22,
+        "Recreação - Eventos Esportivos": 21,
+        "Convênios e Parcerias": 19,
+        "Saúde - Campanha de Vacinação": 19,
+        "Saúde - Saúde Mental/Psicologia": 17
+      }
+    },
+    "CAAAC": {
+      "posts_total": 443,
+      "posts_gestao": 163,
+      "regiao": "Norte",
+      "top_categorias": {
+        "Saúde - Campanha de Vacinação": 78,
+        "Recreação - Eventos Esportivos": 56,
+        "Outros": 54,
+        "Recreação - Eventos Sociais": 48,
+        "Assistência Financeira - Geral": 34
+      }
+    },
+    "CAAAP": {
+      "posts_total": 567,
+      "posts_gestao": 162,
+      "regiao": "Norte",
+      "top_categorias": {
+        "Recreação - Eventos Esportivos": 106,
+        "Convênios e Parcerias": 65,
+        "Outros": 65,
+        "Institucional - Gestão": 62,
+        "Recreação - Eventos Sociais": 49
+      }
+    },
+    "CAAAM": {
+      "posts_total": 738,
+      "posts_gestao": 429,
+      "regiao": "Norte",
+      "top_categorias": {
+        "Outros": 150,
+        "Recreação - Eventos Sociais": 88,
+        "Assistência Financeira - Geral": 66,
+        "Infraestrutura - Espaços": 53,
+        "Institucional - Notas de Pesar": 53
+      }
+    },
+    "CAAPA": {
+      "posts_total": 501,
+      "posts_gestao": 154,
+      "regiao": "Norte",
+      "top_categorias": {
+        "Convênios e Parcerias": 69,
+        "Saúde - Campanha de Vacinação": 60,
+        "Saúde - Saúde Pet": 53,
+        "Recreação - Eventos Esportivos": 53,
+        "Outros": 51
+      }
+    },
+    "CAARO": {
+      "posts_total": 206,
+      "posts_gestao": 1,
+      "regiao": "Norte",
+      "top_categorias": {
+        "Saúde - Campanha de Vacinação": 88,
+        "Outros": 26,
+        "Saúde - Saúde Mental/Psicologia": 17,
+        "Saúde - Plano de Saúde": 15,
+        "Recreação - Eventos Esportivos": 9
+      }
+    },
+    "CAARR": {
+      "posts_total": 225,
+      "posts_gestao": 186,
+      "regiao": "Norte",
+      "top_categorias": {
+        "Saúde - Campanha de Vacinação": 39,
+        "Assistência Financeira - Geral": 33,
+        "Convênios e Parcerias": 23,
+        "Institucional - Gestão": 20,
+        "Outros": 17
+      }
+    },
+    "CAATO": {
+      "posts_total": 7,
+      "posts_gestao": 7,
+      "regiao": "Norte",
+      "top_categorias": {
+        "Convênios e Parcerias": 3,
+        "Saúde - Campanha de Vacinação": 2,
+        "Saúde - Plano de Saúde": 1,
+        "Saúde - Saúde Mental/Psicologia": 1
+      }
+    },
+    "CAABA": {
+      "posts_total": 575,
+      "posts_gestao": 237,
+      "regiao": "Nordeste",
+      "top_categorias": {
+        "Outros": 86,
+        "Convênios e Parcerias": 64,
+        "Recreação - Eventos Esportivos": 64,
+        "Recreação - Eventos Sociais": 57,
+        "Institucional - Gestão": 42
+      }
+    }
+  },
+  "caas_counts": {
+    "CAAAL": 932,
+    "CAARN": 788,
+    "CASAG": 784,
+    "CAAMG": 766,
+    "CAAAM": 738,
+    "CAAPR": 707,
+    "CAAPB": 697,
+    "CAASP": 639,
+    "CAACE": 633,
+    "CAABA": 575,
+    "CAAAP": 567,
+    "CAADF": 532,
+    "CAAES": 517,
+    "CAAPA": 501,
+    "CAAAC": 443,
+    "CAAPE": 429,
+    "CAASE": 340,
+    "CAASC": 315,
+    "CAAMA": 280,
+    "CAARR": 225,
+    "CAARO": 206,
+    "CAARJ": 195,
+    "CAAMT": 170,
+    "CAARS": 143,
+    "CAAPI": 140,
+    "CAAMS": 10,
+    "CAATO": 7
+  },
+  "regioes": {
+    "Norte": {
+      "cor": "#31A69B",
+      "caas": [
+        "CAAAC",
+        "CAAAP",
+        "CAAAM",
+        "CAAPA",
+        "CAARO",
+        "CAARR",
+        "CAATO"
+      ],
+      "posts": 2687
+    },
+    "Nordeste": {
+      "cor": "#A36A66",
+      "caas": [
+        "CAACE",
+        "CAAMA",
+        "CAARN",
+        "CAASE",
+        "CAAAL",
+        "CAAPE",
+        "CAAPB",
+        "CAAPI",
+        "CAABA"
+      ],
+      "posts": 4814
+    },
+    "Centro-Oeste": {
+      "cor": "#C45DF5",
+      "caas": [
+        "CAADF",
+        "CASAG",
+        "CAAMT",
+        "CAAMS"
+      ],
+      "posts": 1496
+    },
+    "Sudeste": {
+      "cor": "#DA2E2C",
+      "caas": [
+        "CAAMG",
+        "CAASP",
+        "CAARJ",
+        "CAAES"
+      ],
+      "posts": 2117
+    },
+    "Sul": {
+      "cor": "#EECF0E",
+      "caas": [
+        "CAAPR",
+        "CAARS",
+        "CAASC"
+      ],
+      "posts": 1165
+    }
+  },
+  "evolucao_mensal": [
+    {
+      "mes": "2023-01",
+      "quantidade": 14
+    },
+    {
+      "mes": "2023-02",
+      "quantidade": 216
+    },
+    {
+      "mes": "2023-03",
+      "quantidade": 337
+    },
+    {
+      "mes": "2023-04",
+      "quantidade": 304
+    },
+    {
+      "mes": "2023-05",
+      "quantidade": 314
+    },
+    {
+      "mes": "2023-06",
+      "quantidade": 253
+    },
+    {
+      "mes": "2023-07",
+      "quantidade": 334
+    },
+    {
+      "mes": "2023-08",
+      "quantidade": 373
+    },
+    {
+      "mes": "2023-09",
+      "quantidade": 194
+    },
+    {
+      "mes": "2023-10",
+      "quantidade": 251
+    },
+    {
+      "mes": "2023-11",
+      "quantidade": 203
+    },
+    {
+      "mes": "2023-12",
+      "quantidade": 169
+    },
+    {
+      "mes": "2024-01",
+      "quantidade": 194
+    },
+    {
+      "mes": "2024-02",
+      "quantidade": 277
+    },
+    {
+      "mes": "2024-03",
+      "quantidade": 507
+    },
+    {
+      "mes": "2024-04",
+      "quantidade": 751
+    },
+    {
+      "mes": "2024-05",
+      "quantidade": 466
+    },
+    {
+      "mes": "2024-06",
+      "quantidade": 365
+    },
+    {
+      "mes": "2024-07",
+      "quantidade": 428
+    },
+    {
+      "mes": "2024-08",
+      "quantidade": 477
+    },
+    {
+      "mes": "2024-09",
+      "quantidade": 397
+    },
+    {
+      "mes": "2024-10",
+      "quantidade": 356
+    },
+    {
+      "mes": "2024-11",
+      "quantidade": 327
+    },
+    {
+      "mes": "2024-12",
+      "quantidade": 279
+    },
+    {
+      "mes": "2025-01",
+      "quantidade": 384
+    },
+    {
+      "mes": "2025-02",
+      "quantidade": 383
+    },
+    {
+      "mes": "2025-03",
+      "quantidade": 492
+    },
+    {
+      "mes": "2025-04",
+      "quantidade": 539
+    },
+    {
+      "mes": "2025-05",
+      "quantidade": 634
+    },
+    {
+      "mes": "2025-06",
+      "quantidade": 505
+    },
+    {
+      "mes": "2025-07",
+      "quantidade": 593
+    },
+    {
+      "mes": "2025-08",
+      "quantidade": 709
+    },
+    {
+      "mes": "2025-09",
+      "quantidade": 514
+    },
+    {
+      "mes": "2025-10",
+      "quantidade": 631
+    },
+    {
+      "mes": "2025-11",
+      "quantidade": 533
+    },
+    {
+      "mes": "2025-12",
+      "quantidade": 417
+    },
+    {
+      "mes": "2026-01",
+      "quantidade": 380
+    },
+    {
+      "mes": "2026-02",
+      "quantidade": 383
+    }
+  ],
+  "top_posts": [
+    {
+      "CAA": "CASAG",
+      "Message": "?? Quem nunca passou por um sufoco desses? \n\n✅ Escolha a Soluti como a sua certificadora digital e evite imprevistos! \n\nPara mais informações, entre em contato via WhatsApp: (62) 99291-1191 ou (62) 4000-1807.\n\n#oabcasag #soluti #certificacaodigital",
+      "Engagement": 0.612776025236593,
+      "Date": "2024-05-02",
+      "Categoria_Taxonomia": "Tecnologia"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "Há quase 1 ano, a advogada Michaella Zukowski Reis passa por uma série de tratamentos para se recuperar de um traumatismo crânio encefálico, sofrido no dia 8 de julho de 2023. No fatídico dia, Michaella foi atingida por um paralelepípedo, enquanto trafegava de carro pela Rodovia do Sol, em Vila Velha. O ataque provocou inúmeras fraturas em seu rosto, que teve que ser reconstruído com placas de titânio.\n\nDesde então, a advogada já passou por 5 cirurgias e diversos procedimentos, e há 1 mês integra a CAAES Saúde, como coordenadora de projetos. “Eu lembro que, em nome da CAAES, a dra. Cínthya esteve presente desde o segundo dia do acidente, resolvendo tudo lá no hospital, mesmo sem nos conhecermos. E desde então, surgiu um sentimento de conseguir contribuir por tudo que a CAAES fez por mim, durante os seis meses que eu fiquei em cima de uma cama”, recordou em seu discurso de posse.\n\nTratamento nos EUA\nA advogada relata que, em janeiro deste ano, começou a perceber algo diferente em sua visão esquerda. “Achei que era por conta dos inchaços das cirurgias. Porém, não era. Estou com um edema ocular que está crescendo, em 4 meses dobrou de tamanho”.\nNessa corrida contra o tempo, Michaella recebeu a oportunidade de buscar uma segunda opinião nos Estados Unidos, em um dos melhores hospitais do mundo. Para custear a viagem e os gastos que terá durante sua estadia em outro país, a advogada iniciou uma campanha de arrecadação.\n\nDados bancários para doação:\nChave Pix – E-mail michaellazukowski@gmail.com (Michaella Zukowski Reis)\nChave Pix Vakinha – E-mail 4930881@vakinha.com.br\n\nConfira a matéria completa no site da CAAES",
+      "Engagement": 0.3216267639131124,
+      "Date": "2024-07-05",
+      "Categoria_Taxonomia": "Saúde - Geral"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "Atendendo a pedidos: CAAES agora tem Wellhub (Gympass) e TotalPass!\n\nAgora você, advogado e advogada, pode acessar academias e estúdios renomados em todo o Brasil, com mensalidades acessíveis e a flexibilidade de treinar onde e como quiser.\n\n?? Mais liberdade, mais saúde!\nCom Wellhub (antigo Gympass) e TotalPass, você tem acesso a diferentes modalidades esportivas, em diversos locais, pagando menos do que em uma única academia.\n\n?? No Espírito Santo são mais de 1.000 academias em 47 cidades!\n\n?? Como aderir?\nEntre em contato pelo número exclusivo de suporte:  27 997505248\nOu acesse nosso site para mais informações!\n\nÉ a CAAES, cuidando da advocacia de norte a sul do Estado!",
+      "Engagement": 0.15842857142857142,
+      "Date": "2025-03-10",
+      "Categoria_Taxonomia": "Saúde - Wellhub/Gympass/TotalPass"
+    },
+    {
+      "CAA": "CAARJ",
+      "Message": "Em mais um mega sorteio, a Caarj te leva, desta vez, para um final de semana do mês de abril em Visconde de Mauá!\n\nUm colega sortudo poderá garantir duas diárias, com direito a acompanhante, na pousada Moriá.\n\nA pousada reúne conforto, privacidade e natureza. Além disso, o local, super romântico e idealizado para casais apaixonados, conta com uma equipe atenciosa e instalações extremamente confortáveis.\n\nPara participar é muito simples, basta seguir duas regrinhas:\n\n??Seguir as contas @‌caarjoab e pousadamoria \n\n??Comentar neste post marcando 2 amigos.\n\nAh! Você que participou, mas não ganhou ainda pode usufruir de 15% de desconto na hospedagem, oferecidos a toda advocacia fluminense. ??\n\nParticipem e comentem sem moderação, assim suas chances de ganhar serão maiores. Além disso, fiquem atentas, o sorteio será realizado no dia 27/03. ✨??\n\nBoa sorte! ??????",
+      "Engagement": 0.15815436443481923,
+      "Date": "2024-03-18",
+      "Categoria_Taxonomia": "Convênios e Parcerias"
+    },
+    {
+      "CAA": "CAAAC",
+      "Message": "Em união de forças, toda a diretoria da OAB/AC e da Caixa de Assistência dos Advogados do Acre (CAAAC), na manhã desta sexta-feira, 24, saiu em busca de levar ajuda aos nossos advogados que foram atingidos pelo alagamento e que perderam praticamente tudo com a enxurrada repentina.\n\nPedimos o apoio de todos que puderem ajudar nesse momento difícil, da forma que puder, seja com donativos, seja com ajuda pelo pix que estamos divulgando.\n\nDesde já agradecemos o que já recebemos e continuamos em ação para melhor atender aos que precisarem de nós. Contem com a gente! \n????‍????✨\n\n#caaac #oab #oabac #sos #acre #alagamento #solidariedade",
+      "Engagement": 0.14404945904173105,
+      "Date": "2023-03-25",
+      "Categoria_Taxonomia": "Institucional - Gestão"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "?? Aperfeiçoe Seu Posicionamento em Entrevistas à Imprensa! ??️????\n\nA CAAES Mulheres, em parceria com a CAAES Igualdade Racial e CAAES Jovem, convida você para um Workshop de Media Training! Participe e aprenda com o jornalista jurídico João Camargo Neto a construir respostas eficazes, se apresentar com confiança em entrevistas e organizar suas informações com qualidade.\n\n?? Data: 27 de junho \n?? Horário: 19h \n?? Local: Sebrae-ES \n\nGaranta já sua vaga e desenvolva suas habilidades de comunicação! \n\n#MediaTraining #Entrevistas #ComunicaçãoEficaz #CAAESMulheres",
+      "Engagement": 0.13915754136360003,
+      "Date": "2024-06-12",
+      "Categoria_Taxonomia": "Educação - Cursos e Palestras"
+    },
+    {
+      "CAA": "CAAAM",
+      "Message": "#luto ??",
+      "Engagement": 0.12950839185811214,
+      "Date": "2025-01-02",
+      "Categoria_Taxonomia": "Institucional - Notas de Pesar"
+    },
+    {
+      "CAA": "CAARJ",
+      "Message": "Em mais um mega sorteio, a Caarj te leva, desta vez, para dois dias na Pousada Moriá em Visconde de Mauá!\n\nDisponível para qualquer dia, inclusive fins de semana, concorra a duas diárias para casal *no chalé passarinho*, com direito a café da manhã e café da tarde!\n\n?? Para participar, você deve:\n\n?? Seguir as contas caarjoab e pousadamoria \n\n?? Comentar neste post marcando 2 colegas\n\n➡ Lembre-se: quanto mais comentar, mais chance de ganhar!\n\n⚠️ O SORTEIO SERÁ REALIZADO NO DIA 8/11 ⚠️\n\n?? Localizados na Região de Visconde de Mauá, serra da Mantiqueira, entre os municípios de Itatiaia e Resende\n\n?? A pousada está situada ao lado da Cachoeira do Escorrega, divisa com Parque Nacional do Itatiaia.\n\n⚠️ Diárias válidas apenas para o mês de novembro ⚠️",
+      "Engagement": 0.12944804911402719,
+      "Date": "2024-10-31",
+      "Categoria_Taxonomia": "Convênios - Hotelaria"
+    },
+    {
+      "CAA": "CAABA",
+      "Message": "Prepare-se para uma explosão de ritmo e alegria! \nJunte-se a nós na festa mais esperada do ano, com a energia de timbaladaoficial e a agitação de dannielvieira ! ???? \n\nVamos dançar, cantar e reencontrar os amigos no dia 04 de agosto, a partir das 16h, no Guetho Square. \nMarque na agenda, convide a galera e venha viver uma noite inesquecível! ✨????\n\n #oabbahia #Timbalada #DanielVieira #caab_oficial #advocaciabaiana",
+      "Engagement": 0.12027980685898229,
+      "Date": "2023-06-27",
+      "Categoria_Taxonomia": "Recreação - Eventos Sociais"
+    },
+    {
+      "CAA": "CAABA",
+      "Message": "Acabou a espera! A CAAB e a OAB-BA lançam uma grande novidade para a advocacia! É o ADVPass, um programa que vai ampliar o acesso da advocacia baiana a saúde e bem-estar! E a primeira ação já vem com tudo: um convênio exclusivo com a plataforma TotalPass. Aproveite mais esse benefício da CAAB e da OAB para a advocacia e garanta mais qualidade de vida para você e sua família!",
+      "Engagement": 0.1108695652173913,
+      "Date": "2025-12-17",
+      "Categoria_Taxonomia": "Saúde - Wellhub/Gympass/TotalPass"
+    },
+    {
+      "CAA": "CAAAM",
+      "Message": "A parceria com a Prefeitura de Manaus não deu certo, mas a Caixa de Assistência dos Advogados do Amazonas - CAAAM informa que haverá casamento coletivo LGBTQIAPN+.\n\nO presidente da CAAAM, Dr. Alberto Simonetti Neto confirmou a celebração. “Em 2014, enquanto presidente da OAB-AM, eu realizei o 1º casamento lgbt da Região Norte. E agora não seria diferente, a Comissão LGBTQIAPN+ da CAAAM já está atuando para realizar mais um casamento coletivo. Vamos juntos oficializar uniões e celebrar o amor”, enfatizou.\n\nEm breve divulgaremos a data, local e outras informações.\n\nO casal que deseja oficializar a união pode solicitar o link pelo direct ou pelo WhatsApp (92) 98219-0917.\n\n#ParaTodosVerem #ParaCegoVer\n\nImagem com fundo branco, detalhes coloridos e letras pretas.\n\n#caaam #casamentolgbt #casamento #manaus",
+      "Engagement": 0.11040324332150872,
+      "Date": "2023-08-06",
+      "Categoria_Taxonomia": "Convênios e Parcerias"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "Se tem convênio, tem desconto! A parceria entre OAB-ES, CAAES e Coco Bambu foi renovada e está ainda melhor! \nO desconto para advogados e advogadas desfrutarem do variado cardápio do restaurante aumentou para 15% e é válido nas unidades de Vitória e Vila Velha.\n\nA novidade foi anunciada pelas presidentes da OAB-ES, Érica Neves, e da CAAES, Kelly Andrade, em parceria com Evandro Teles, sócio-proprietário do Coco Bambu Espírito Santo.\n\nNão perca esta oportunidade de confraternizar e saborear uma refeição deliciosa com preços exclusivos no Coco Bambu! \n\nInformações: \n✅ \nO desconto é válido de segunda a sábado, no horário de almoço, e de domingo a quinta-feira, no jantar. O benefício não se aplica em feriados, vésperas de feriados e datas comemorativas. Além disso, o desconto não é cumulativo, não é válido para pratos promocionais ou durante o happy hour. Essa condição é exclusiva para as unidades do Coco Bambu Vitória e Coco Bambu Vila Velha, podendo ser alterada ou cancelada sem aviso prévio. Nossa parceria terá vigência inicial de janeiro de 2025 a novembro de 2025.\n\nCoco Bambu Vitória – R. João da Cruz, 10 - Praia do Canto / Telefone (27) 3083-5800\nCoco Bambu Vila Velha - Av. Dr. Olivio Lira, 353 - Nº 353 - Praia da Costa (Entrada Gourmet do Shopping Praia da Costa) / Telefone (27) 3141-9100",
+      "Engagement": 0.10762365191521012,
+      "Date": "2025-01-21",
+      "Categoria_Taxonomia": "Convênios e Parcerias"
+    },
+    {
+      "CAA": "CAAMA",
+      "Message": "Neste momento de dor, nos solidarizamos com os familiares e amigos, oferecendo nossas mais sinceras condolências. \n\nQue encontrem conforto nas lembranças e no amor compartilhado com Joaquim, cuja ausência deixa um vazio imenso, mas cuja memória permanecerá viva entre todos que tiveram o privilégio de conhecê-lo.\n\n????",
+      "Engagement": 0.10615661880123249,
+      "Date": "2025-06-15",
+      "Categoria_Taxonomia": "Outros"
+    },
+    {
+      "CAA": "CAARJ",
+      "Message": "A Caarj sabe que a advocacia ama um bom sorteio e foi pensando nisso que nos unimos com a Mirage para presentear um advogado ou advogada de sorte!\n\nEm mais uma parceria com a marca, iremos oferecer uma cadeira ergonômica com mecanismo relax, super confortável e perfeita para transformar o seu trabalho tanto no home office, quanto no escritório.\n\nNão quer ficar de fora dessa, né? Então confira as regras:\n\n1. Siga as contas\n\ncaarj_oab e miragemoveis \n\n1. Marque 2 colegas da classe nos comentários.\n\nFeito? Agora é só ler as informações adicionais abaixo e começar a torcer! ????\n\n?? O sorteio acontece no dia 11 de agosto\n?? O ganhador deverá buscar o prêmio na fábrica da Mirage, localizada no bairro Riachuelo.\n?? O prêmio é intransferível, não podendo ser trocado por outro produto ou valor em dinheiro.\n\n‌",
+      "Engagement": 0.1016031060179097,
+      "Date": "2023-07-26",
+      "Categoria_Taxonomia": "Assistência Financeira - Geral"
+    },
+    {
+      "CAA": "CAADF",
+      "Message": "#Repost oabdf \n・・・\nAs diretorias da Conselho Federal, Seccional do Distrito Federal da Ordem dos Advogados do Brasil (OAB/DF) e da Caixa de Assistência dos Advogados do Distrito Federal (CAADF) lamentam o falecimento do advogado, professor universitário e presidente da OAB/DF no triênio 2016/2018, Juliano Costa Couto.\n\nFilho de Ronaldo Costa Couto e Virgínia, esposo da Aline, pai do Gustavo e da Manu, irmão do Fabiano e João Pedro, Juliano Costa Couto, deixa um legado para a advocacia. Membro de comissões, conselheiro, diretor e presidente da OAB/DF, dono de um sorriso largo abriu as portas da entidade marcando sua gestão pelo acolhimento que sempre foi a sua marca registrada, recebendo a todos sem distinção e com enorme carinho.\n\nApaixonado pela advocacia, sempre bem-humorado, deixa saudades para uma legião de amigos e admiradores.\n\nSeu velório será amanhã e haverá atualização dessa informação.",
+      "Engagement": 0.09840810419681621,
+      "Date": "2024-04-28",
+      "Categoria_Taxonomia": "Saúde - Odontologia"
+    },
+    {
+      "CAA": "CAAAM",
+      "Message": "#luto",
+      "Engagement": 0.09193408499566348,
+      "Date": "2024-03-10",
+      "Categoria_Taxonomia": "Institucional - Notas de Pesar"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "A Caixa de Assistência dos Advogados do Espírito Santo, por meio da sua DIretoria CAAES Mulheres, manifesta o mais veemente repúdio ao regime de urgência aprovado na Câmara dos Deputados, nesta quarta-feira (12/06), ao projeto de lei que criminaliza o aborto, equiparando essa prática ao homicídio e prevendo penas severas para as mulheres que praticarem o ato a partir da 22ª semana de gestação, mesmo nos casos permitidos por lei. \n\nEste projeto de lei fere os direitos humanos de meninas e mulheres, assim como seus direitos sexuais e reprodutivos, desconsiderando a dignidade das mulheres, que não devem ser submetidas a julgamentos morais ou legais que ignorem suas circunstâncias e direitos, desrespeitando direitos fundamentais, sendo, portanto, inconstitucional e inconvencional.\n\nEquiparar o aborto ao homicídio, com penas que podem variar de 6 a 20 anos de prisão, é uma distorção jurídica e moral que ignora completamente as circunstâncias complexas e pessoais envolvidas na decisão de interromper uma gravidez. Além disso, desconsidera que muitas das vítimas de violência sexual só conseguem se dar conta de que estão grávidas, principalmente crianças e adolescentes, já com prazo gestacional avançado. São vítimas que nem sequer conseguem compreender a violência pela qual passaram.\n\n*Arraste para o lado e confira a íntegra da nota de repúdio. #mulheresUnidas #caaesMulheres #MulheresAdvogadas",
+      "Engagement": 0.09089458143803368,
+      "Date": "2024-06-15",
+      "Categoria_Taxonomia": "Recreação - Eventos Sociais"
+    },
+    {
+      "CAA": "CAAAM",
+      "Message": "Uma sequência de fotos lindas da cerimônia do casamento coletivo LGBTQIAPN+ da CAAAM, que foi realizado ontem (08/12), no auditório da OAB/AM ??\n\n#ParaTodosVerem #ParaCegoVer \n\nDez fotos de pessoas sorrindo, escrevendo, abraçando e beijando. As cenas são em ambientes fechados.\n\n#caaam #manaus #casamentocoletivo #lgbtq??",
+      "Engagement": 0.08168383947939263,
+      "Date": "2023-12-09",
+      "Categoria_Taxonomia": "Infraestrutura - Espaços"
+    },
+    {
+      "CAA": "CAARR",
+      "Message": "A presidente da Caixa de Assistência dos Advogados de Roraima, Dra. Natália Leitão participou do VIII Colégio de Presidentes de Caixas de Assistência dos Advogados, realizado nesta sexta-feira, 13, em Brasília, no Plenário do Edifício da Ordem dos Advogados do Brasil. ????????\n\nForam discutidos os assuntos relativos aos convênios nacionais, ao site de controle da CONCAD, ao fornecimento de vacinas para meningite e dengue, como também os problemas advindos do plano de saúde Unimed no Norte, além da liberação de recursos às Caixas de Assistência. ??\n\nEssa foi a oportunidade de representar a Advocacia Roraimense em um evento de tamanha importância, e o momento de reafirmar o compromisso de buscar o melhor para CAARR. ??\n\nA Caixa cuida de você!♥️??",
+      "Engagement": 0.08091647331786543,
+      "Date": "2024-09-14",
+      "Categoria_Taxonomia": "Saúde - Campanha de Vacinação"
+    },
+    {
+      "CAA": "CAADF",
+      "Message": "A vacinação tá ON! ?? \n\nNos dias 03 a 17 de abril vai acontecer a nossa campanha de vacinação antigripal para toda a Advocacia do DF. Então, já encaminha esse post pro seu colega advogado e já marca no calendário pra não esquecer, viu?! ??️\n\nQuem pode se vacinar:\n\n?? Advogados(as) e estagiários(as) regularmente inscritos na OAB/DF;\n?? Familiar de 1º grau: pais, filhos e cônjuges, desde que comprove o vínculo.\n\nDocumentação necessária:\n\n?? Carteira da OAB/DF;\n?? No caso de filhos: certidão de nascimento ou carteira de identidade com foto, juntamente com a OAB do pai ou mãe;\n??No caso de pais: carteira da OAB e documento de identidade com foto;\n?? No caso de cônjuge: documento de identidade com foto, certidão de casamento, certidão de união estável, ou ainda comprovante de residência em nome de cada um dos cônjuges, no mesmo endereço.\n\n#CAA #CAADF #OABDF #Advocacia #AdvocaciaDF #Vacinacao #VacinacaoAntigripal #VacinacaoBrasilia",
+      "Engagement": 0.08033972225410306,
+      "Date": "2023-03-23",
+      "Categoria_Taxonomia": "Saúde - Campanha de Vacinação"
+    },
+    {
+      "CAA": "CAAAM",
+      "Message": "?? ATENÇÃO, ADVOGADO(A)!\n\nA CAAAM quer saber: você já conhece a Wellhub? ??\n\nEstamos realizando uma pesquisa para entender o seu interesse nesse benefício exclusivo que dá acesso a milhares de academias e opções de bem-estar em todo o Brasil!\n\n✅ Treine onde e quando quiser\n✅ Mais de 100 modalidades\n✅ Inclua até 3 dependentes\n✅ Academias como Selfit, Bodytech e muito mais\n\n?? Para participar é simples: preencha o formulário e manifeste seu interesse!\n\n?? O link está na bio.\n\n#CAAAM #Wellhub #Advocacia #Saúde #BemEstar #Advogado #Advogada",
+      "Engagement": 0.07965572062935146,
+      "Date": "2025-09-26",
+      "Categoria_Taxonomia": "Saúde - Wellhub/Gympass/TotalPass"
+    },
+    {
+      "CAA": "CAAAC",
+      "Message": "Que noite incrível, foi o Arraiá da OAB/CAAAC na Uninorte!\n????\n\n Muita alegria, música boa, comidas típicas deliciosas e diversão para toda a família. \n\nAgradecemos a toda advocacia acreana que participou e fizeram dessa festa um sucesso! ??????????????\n\n#caaac #oabacre #festajunina #advocaciaacreana #arraiádaoab",
+      "Engagement": 0.07862851250322248,
+      "Date": "2024-06-23",
+      "Categoria_Taxonomia": "Recreação - Eventos Sociais"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "NOTA DE PESAR - Com imenso pesar, a Caixa de Assistência dos Advogados do Espírito Santo (CAAES) recebeu a notícia do falecimento do advogado Fabriciano Leite de Almeida. Com uma trajetória de destaque na Advocacia, doutor Fabriciano deixa um exemplo de amor e dedicação à profissão. O velório será realizado ao lado da Igreja Matriz de São Pedro, em Baixo Guandu, até as 15 horas deste domingo (18/02), e em seguida o sepultamento ocorrerá no cemitério de Baixo Guandu. A CAAES se solidariza com amigos e familiares neste momento de profunda dor.",
+      "Engagement": 0.07812765957446809,
+      "Date": "2024-02-17",
+      "Categoria_Taxonomia": "Recreação - Eventos Esportivos"
+    },
+    {
+      "CAA": "CAAAC",
+      "Message": "✨ Nova parceria no ar! ✨\n\nA CAAAC e a OAB/AC firmaram parceria com o Arasuper e o Aramix, garantindo mais vantagens e benefícios para a advocacia acreana. ??⚖️\n\nAproveite os descontos e condições especiais disponíveis nas lojas participantes!\n\n✅ Mais informações sobre a atualização do cadastro, carteira de dependente ou tirar dúvidas, entre em contato com a CAAAC: 68 99985-3249.\n\n#ParceriaCAAAC #OABAC #AdvocaciaAcreana #Benefícios #Arasuper #Aramix",
+      "Engagement": 0.07704059362723702,
+      "Date": "2025-10-09",
+      "Categoria_Taxonomia": "Convênios e Parcerias"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "A Diretoria da CAAES decidiu, em reunião extraordinária, adotar medidas emergenciais e promover um corte geral em suas despesas. O motivo é o mesmo que levou a CAAES a pedir auditoria do Conselho Federal da OAB nas contas da OAB-ES: desde 2022, a Seccional não está repassando corretamente os recursos aos quais a CAAES tem direito, por lei, na arrecadação do sistema OAB.\n \nNos últimos quatro meses, a Ordem vem repassando 30% a menos do que deveria. Essa diferença, somada a dívidas que a Seccional já tinha com a CAAES desde 2022, já ultrapassa 1 milhão de Reais, sem contar os valores de anos anteriores.\nCom uma administração austera, a diretoria da CAAES conseguiu, até março deste ano, não repassar o impacto desse contingenciamento da OAB-ES para os serviços que a Caixa presta à advocacia.\n \n“Estamos fazendo de tudo para que essa conduta da OAB não afete os serviços que a CAAES presta, mas o reiterado comportamento irregular da Seccional nos obriga a tomar medidas duras e amargas, como a revisão de linhas atendidas pelo Transporte Interfóruns. Infelizmente, seria uma irresponsabilidade manter todo o sistema operando normalmente, como se nada estivesse ocorrendo. A própria classe nos cobra equilíbrio financeiro”, informou a diretoria da Caixa.\n \nNa reunião extraordinária da Diretoria, ficou deliberado um corte geral nos contratos da CAAES, em aproximadamente 30%, além de redução no quadro de pessoal. “Esperamos que seja uma medida temporária e que a OABES normalize o repasse para a Caixa o mais breve possível”, acrescentou a Diretoria.\n\nbenhur.farina roniborgo rodrigomell01101 polianafirme eliaidina.adna milenacelestino.adv doraliceadv saviofaustino viviansantosgomes edinalva.bg julianagavacarlini erikacavalcantti natalialessasanches",
+      "Engagement": 0.0767166848852231,
+      "Date": "2023-04-03",
+      "Categoria_Taxonomia": "Assistência Financeira - Geral"
+    },
+    {
+      "CAA": "CAAAC",
+      "Message": "Advocacia acreana, a Ordem dos Advogados do Brasil, através da ESA e da ESA Nacional, tem essa super  novidade para vocês! ????\n\nSerão disponibilizadas 200 bolsas de pós-graduação, totalmente gratuitas, em Direito do Trabalho e Direito Previdenciário. ??✨\n\nAs inscrições estarão abertas a partir de hoje, 1º de março e vai até o dia 31 de março!\n\n?? Mais informações no site da OAB/AC: www.oabac.org.br\n\nNão perca essa chance de alavancar sua carreira. Inscreva-se! ????\n\n#caaac #oab #acre #esa #advocaciaacreana",
+      "Engagement": 0.07394172622319956,
+      "Date": "2024-02-29",
+      "Categoria_Taxonomia": "Outros"
+    },
+    {
+      "CAA": "CAAES",
+      "Message": "Blazers, calças, vestidos, casacos e mais: todas as peças indispensáveis para um look elegante e estiloso a advocacia encontra na Açúcar Moreno, a mais nova conveniada da CAAES. Advogados e advogadas têm 17% de desconto em pagamentos em dinheiro e 15% para pagamentos parcelados ou à vista. \n\nConfira na íntegra no site da CAAES. (www.caaes.com.br)\n\nacucarmoreno",
+      "Engagement": 0.07376354215732454,
+      "Date": "2023-07-06",
+      "Categoria_Taxonomia": "Assistência Financeira - Geral"
+    },
+    {
+      "CAA": "CAASC",
+      "Message": "Dizem que rir é o melhor remédio… \n\nMas cuidar da sua saúde é ainda melhor. ??\n\nCom um índice que revela que 60% da advocacia brasileira, de algumas regiões do País, enfrenta cansaço extremo no exercício da profissão, neste Janeiro Branco ??, queremos destacar a parceria da CAASC com a Psicologia Viva.\n\nContamos com mais de cinco mil profissionais e 70 especialidades na área de saúde mental. ?? \n\nAlém das consultas com a Psicologia Viva, oferecemos diversos convênios com clínicas e psicólogos em todo o Estado, além de tratamentos terapêuticos, yoga, meditação e esportes.\n\nAcesse o link em nossa bio ou visite nosso site para saber mais.\n\nCuidar de você,\nEsta é a Ordem. ?? \n\n#piscologiaviva #convêniosCAASC #caasc #oabsc #advocaciacatarinense",
+      "Engagement": 0.07270345505158016,
+      "Date": "2024-01-05",
+      "Categoria_Taxonomia": "Saúde - Saúde Mental/Psicologia"
+    },
+    {
+      "CAA": "CAAAC",
+      "Message": "??⚖️ Neste domingo, 7, vivemos juntos a emoção da 4ª Corrida da Advocacia!\n\nUma manhã de superação, união e celebração da nossa categoria, que mostrou que quando corremos lado a lado, vamos ainda mais longe. ❤️✨\n\nNosso agradecimento especial aos patrocinadores, que tornaram esse momento possível e ajudaram a transformar este evento em uma experiência inesquecível. ????\n\nunimedrb \narasuperoficial \nsicoobuniacre \nautopostoamapa \nrosasfarma \nrksuplementos \nd_imagem_ \nespacoccor \nClínica Breno Carrilho\ncontemvidafarmacia \nforestprata \nsissi.joias.ac \nsemijoias_agatha \nFisioterapeuta Paulo Rocha\njessykalophez.makeup \nhalyne_lessa \npinturinhashoesac \ncheckupulmaonorte\njkr.riobranco.acre jokersocks \nsandaliaria_riobranco\nestacio_unimeta \n\n#4CorridaDaAdvocacia #União #Superação #Gratidão",
+      "Engagement": 0.0719313682358117,
+      "Date": "2025-09-07",
+      "Categoria_Taxonomia": "Saúde - Plano de Saúde"
+    },
+    {
+      "CAA": "CAAAC",
+      "Message": "O Acre entrou definitivamente para a história do jiu-jitsu mundial! ????\n\nO atleta e advogado, Leonardo Calid, conquistou o vice-campeonato no Campeonato Mundial da IBJJF, realizado em Las Vegas (EUA), na última sexta-feira, 12, um feito histórico para o esporte acreano.\n\nA conquista é ainda mais grandiosa por ter ocorrido na categoria faixa-preta, a mais alta e tecnicamente exigente da modalidade. É a primeira vez, em mais de 30 anos de jiu-jitsu no Acre, que um atleta do estado alcança essa colocação em um Mundial da IBJJF.\n\nAlém de referência no esporte, Leonardo também deixa sua marca na advocacia acreana, tendo atuado na OAB/AC como:\n▪️ Diretor da ESA\n▪️ Secretário Adjunto da CAAAC\n▪️ Presidente da Comissão de Direito Contratual (atualmente)\n\nOrgulho para o Acre, para o esporte e para a advocacia! ????\n\nParabéns por levar o nome do nosso estado ao topo do mundo! ??✨\n\n#caaac #oab #acre #esporte #brasil #mundial #jiujutsu",
+      "Engagement": 0.06877402819307989,
+      "Date": "2025-12-15",
+      "Categoria_Taxonomia": "Recreação - Eventos Esportivos"
+    }
+  ]
+}

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAAsXplorer - Mapeamento das Caixas de Assistência dos Advogados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .serif { font-family: 'Playfair Display', serif; }
+    body { background: #f8fafc; }
+    
+    .sidebar { 
+      position: fixed; 
+      left: 0; 
+      top: 0; 
+      width: 280px; 
+      height: 100vh; 
+      background: white; 
+      border-right: 1px solid #e2e8f0;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    
+    .main-content { 
+      margin-left: 280px; 
+      min-height: 100vh;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+      background-size: 100px;
+      opacity: 0.5;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    
+    .metric-card { border-left: 4px solid; }
+    
+    .tab-btn {
+      padding: 12px 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+    .tab-btn.active {
+      color: #DA2E2C;
+      border-bottom-color: #DA2E2C;
+    }
+    
+    .state-tab {
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+    .state-tab:hover { transform: scale(1.05); }
+    
+    .region-norte { background: #31A69B; color: white; }
+    .region-nordeste { background: #A36A66; color: white; }
+    .region-centro { background: #C45DF5; color: white; }
+    .region-sudeste { background: #DA2E2C; color: white; }
+    .region-sul { background: #EECF0E; color: #1e293b; }
+    
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 500;
+      margin: 2px;
+    }
+    
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    
+    .section-number { font-size: 48px; font-weight: 700; line-height: 1; }
+    
+    .data-table th {
+      background: #f8fafc;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .data-table td { font-size: 13px; }
+    
+    .chart-container { position: relative; height: 300px; }
+    
+    @media (max-width: 1024px) {
+      .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+      .sidebar.open { transform: translateX(0); }
+      .main-content { margin-left: 0; }
+    }
+  </style>
+</head>
+<body class="text-slate-800">
+  <!-- Sidebar -->
+  <aside class="sidebar p-6">
+    <div class="mb-8">
+      <h1 class="text-xl font-bold text-slate-900">CAAsXplorer</h1>
+      <p class="text-xs text-slate-500 mt-1">Mapeamento Institucional</p>
+    </div>
+    
+    <nav class="space-y-1">
+      <a href="#executive" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">Executive Summary</a>
+      <a href="#overview" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">1. Project Overview</a>
+      <a href="#financial" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">2. Financial Assistance</a>
+      <a href="#healthcare" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">3. Healthcare Services</a>
+      <a href="#infrastructure" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">4. Infrastructure</a>
+      <a href="#education" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">5. Education & Development</a>
+      <a href="#partnerships" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">6. Partnership Programs</a>
+      <a href="#recreation" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">7. Recreation & Culture</a>
+      <a href="#regional" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">8. Regional Inventory</a>
+      <a href="#protocol" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">9. Implementation Protocol</a>
+      <a href="#social" class="block px-3 py-2 rounded-lg text-sm font-semibold text-[#DA2E2C] bg-red-50">10. Inteligência Social</a>
+      <a href="#structured" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">11. Dados Estruturados</a>
+      <a href="#institutional" class="block px-3 py-2 rounded-lg text-sm hover:bg-slate-100 transition">12. Ações Institucionais</a>
+    </nav>
+    
+    <div class="mt-8 pt-6 border-t border-slate-200">
+      <p class="text-xs text-slate-400">19 of 27 sections analyzed</p>
+      <div class="mt-2 h-1 bg-slate-200 rounded-full overflow-hidden">
+        <div class="h-full bg-[#DA2E2C] rounded-full" style="width: 70%"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero text-white py-16 px-8 relative">
+      <div class="max-w-5xl relative z-10">
+        <h1 class="serif text-5xl font-bold mb-4">CAAsXplorer</h1>
+        <p class="text-xl text-slate-300 mb-6">Mapping the Institutional Landscape of Brazilian Bar Association Services</p>
+        <p class="text-slate-400">Standardized taxonomy across 27 regional sections • 120+ service categories • 19 sections analyzed</p>
+      </div>
+      
+      <div class="max-w-5xl mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+        <div class="bg-white/10 backdrop-blur rounded-lg p-4">
+          <p class="text-slate-400 text-xs uppercase">Sections Mapped</p>
+          <p class="text-2xl font-bold">19/27</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-lg p-4">
+          <p class="text-slate-400 text-xs uppercase">Service Categories</p>
+          <p class="text-2xl font-bold">120+</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-lg p-4">
+          <p class="text-slate-400 text-xs uppercase">Posts Analyzed</p>
+          <p class="text-2xl font-bold">5,000</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-lg p-4">
+          <p class="text-slate-400 text-xs uppercase">Period</p>
+          <p class="text-lg font-bold">Jan/23 - Fev/26</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section id="executive" class="py-12 px-8 border-b border-slate-200">
+      <div class="max-w-5xl">
+        <h2 class="serif text-3xl font-bold text-slate-900 mb-6">Executive Summary</h2>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          The <strong>CAAsXplorer project</strong> represents a comprehensive institutional mapping initiative that transforms dispersed, 
+          regionally-specific service information from Brazil's 27 Lawyer Assistance Funds into a standardized, analytically rigorous framework.
+        </p>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card p-6 border-l-4 border-[#DA2E2C]">
+            <h3 class="font-semibold text-slate-900 mb-2">Key Achievement</h3>
+            <p class="text-sm text-slate-600">
+              Classification of over 5,000 social media posts into 30+ standardized service categories, 
+              enabling meaningful comparison across autonomous regional sections.
+            </p>
+          </div>
+          <div class="card p-6 border-l-4 border-[#EECF0E]">
+            <h3 class="font-semibold text-slate-900 mb-2">Critical Correction</h3>
+            <p class="text-sm text-slate-600">
+              CAAMT's active domain identified as <strong>caamt.com.br</strong>, not caamt.org.br as previously documented—
+              a crucial update for institutional connectivity.
+            </p>
+          </div>
+        </div>
+        
+        <div class="mt-8">
+          <h3 class="font-semibold text-slate-900 mb-4">Regional Coverage</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-[#DA2E2C] text-white">Sudeste (4/4)</span>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-[#C45DF5] text-white">Centro-Oeste (3/4)</span>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-[#EECF0E] text-slate-900">Sul (3/3)</span>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-[#A36A66] text-white">Nordeste (5/9)</span>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-[#31A69B] text-white">Norte (4/7)</span>
+          </div>
+        </div>
+
+        <!-- CAAs sem dados -->
+        <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+          <h4 class="font-semibold text-amber-800 mb-2">⚠️ CAAs sem dados de social media (8/27)</h4>
+          <p class="text-sm text-amber-700">
+            <strong>CAAPR, CAAMS, CAABA, CAAPB, CAAPE, CAAAL, CAARR, CAATO</strong> — 
+            Ausência de dados pode indicar: (1) perfis privados, (2) baixa atividade nas redes, 
+            (3) monitoramento não autorizado, ou (4) presença apenas em canais não rastreados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Inteligência Social -->
+    <section id="social" class="py-12 px-8 border-b border-slate-200 bg-gradient-to-br from-slate-50 to-white">
+      <div class="max-w-6xl">
+        <div class="flex items-baseline gap-4 mb-6">
+          <span class="section-number text-[#DA2E2C]">10</span>
+          <h2 class="serif text-3xl font-bold text-slate-900">Inteligência Social das CAAs</h2>
+        </div>
+        <p class="text-slate-600 mb-8 max-w-3xl">
+          Análise completa do engajamento das Caixas de Assistência nas redes sociais. 
+          Dados baseados em <strong class="text-[#DA2E2C]">5.000 posts</strong> de <strong class="text-[#DA2E2C]">19 CAAs</strong> 
+          no período de <strong>31/01/2023 a 27/02/2026</strong>.
+        </p>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div class="card metric-card p-5" style="border-left-color: #DA2E2C;">
+            <p class="text-xs text-slate-500 uppercase">Total de Posts</p>
+            <p class="text-2xl font-bold text-slate-900">5,000</p>
+            <p class="text-xs text-slate-400 mt-1">Posts analisados</p>
+          </div>
+          <div class="card metric-card p-5" style="border-left-color: #31A69B;">
+            <p class="text-xs text-slate-500 uppercase">CAAs Ativas</p>
+            <p class="text-2xl font-bold text-slate-900">19/27</p>
+            <p class="text-xs text-slate-400 mt-1">70.4% com dados</p>
+          </div>
+          <div class="card metric-card p-5" style="border-left-color: #EECF0E;">
+            <p class="text-xs text-slate-500 uppercase">Tema Principal</p>
+            <p class="text-2xl font-bold text-slate-900">Convênios</p>
+            <p class="text-xs text-slate-400 mt-1">694 posts (13.9%)</p>
+          </div>
+          <div class="card metric-card p-5" style="border-left-color: #C45DF5;">
+            <p class="text-xs text-slate-500 uppercase">Gestão Atual</p>
+            <p class="text-2xl font-bold text-slate-900">1,849</p>
+            <p class="text-xs text-slate-400 mt-1">Jan/25 - Mar/26</p>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-200">
+          <button onclick="showSocialTab('geral')" id="tab-social-geral" class="tab-btn active">Visão Geral</button>
+          <button onclick="showSocialTab('gestao')" id="tab-social-gestao" class="tab-btn text-gray-600 hover:bg-gray-100">Gestão Atual (2025-2026)</button>
+          <button onclick="showSocialTab('categorias')" id="tab-social-categorias" class="tab-btn text-gray-600 hover:bg-gray-100">Por Categoria</button>
+          <button onclick="showSocialTab('caas')" id="tab-social-caas" class="tab-btn text-gray-600 hover:bg-gray-100">Por CAA</button>
+        </div>
+
+        <!-- Tab: Visão Geral -->
+        <div id="social-geral" class="social-tab-content">
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="card p-6">
+              <h3 class="font-semibold text-slate-900 mb-4">Top Categorias (Taxonomia)</h3>
+              <div class="chart-container">
+                <canvas id="chart-categorias-geral"></canvas>
+              </div>
+            </div>
+            <div class="card p-6">
+              <h3 class="font-semibold text-slate-900 mb-4">Evolução Temporal</h3>
+              <div class="chart-container">
+                <canvas id="chart-evolucao"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top CAAs -->
+          <div class="card overflow-hidden">
+            <div class="px-6 py-4 bg-slate-50 border-b">
+              <h3 class="font-semibold text-slate-900">Top CAAs - Atividade nas Redes Sociais</h3>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="data-table w-full">
+                <thead>
+                  <tr class="text-left">
+                    <th class="px-6 py-3">Posição</th>
+                    <th class="px-6 py-3">CAA</th>
+                    <th class="px-6 py-3">Estado</th>
+                    <th class="px-6 py-3">Total Posts</th>
+                    <th class="px-6 py-3">Gestão Atual</th>
+                    <th class="px-6 py-3">Região</th>
+                  </tr>
+                </thead>
+                <tbody id="caas-table-geral">
+                  <!-- Populated by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Gestão Atual -->
+        <div id="social-gestao" class="social-tab-content hidden">
+          <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <h4 class="font-semibold text-blue-800 mb-1">Período da Gestão Atual</h4>
+            <p class="text-sm text-blue-700">Janeiro/2025 a Março/2026 — Período que a atual gestão está no poder</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="card p-6">
+              <h3 class="font-semibold text-slate-900 mb-4">Categorias na Gestão Atual</h3>
+              <div class="chart-container">
+                <canvas id="chart-categorias-gestao"></canvas>
+              </div>
+            </div>
+            <div class="card p-6">
+              <h3 class="font-semibold text-slate-900 mb-4">CAAs na Gestão Atual</h3>
+              <div class="chart-container">
+                <canvas id="chart-caas-gestao"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Por Categoria -->
+        <div id="social-categorias" class="social-tab-content hidden">
+          <div class="card p-6">
+            <h3 class="font-semibold text-slate-900 mb-4">Todas as Categorias (Taxonomia do Projeto)</h3>
+            <div class="overflow-x-auto">
+              <table class="data-table w-full">
+                <thead>
+                  <tr class="text-left">
+                    <th class="px-6 py-3">Categoria</th>
+                    <th class="px-6 py-3">Posts</th>
+                    <th class="px-6 py-3">% do Total</th>
+                    <th class="px-6 py-3">Classificação</th>
+                  </tr>
+                </thead>
+                <tbody id="categorias-table">
+                  <!-- Populated by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Por CAA -->
+        <div id="social-caas" class="social-tab-content hidden">
+          <div class="card p-6">
+            <h3 class="font-semibold text-slate-900 mb-4">Todas as CAAs com Dados</h3>
+            <div class="overflow-x-auto">
+              <table class="data-table w-full">
+                <thead>
+                  <tr class="text-left">
+                    <th class="px-6 py-3">CAA</th>
+                    <th class="px-6 py-3">Estado</th>
+                    <th class="px-6 py-3">Região</th>
+                    <th class="px-6 py-3">Posts Total</th>
+                    <th class="px-6 py-3">Gestão Atual</th>
+                  </tr>
+                </thead>
+                <tbody id="caas-all-table">
+                  <!-- Populated by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 11: Dados Estruturados -->
+    <section id="structured" class="py-12 px-8 border-b border-slate-200">
+      <div class="max-w-6xl">
+        <div class="flex items-baseline gap-4 mb-6">
+          <span class="section-number text-[#31A69B]">11</span>
+          <h2 class="serif text-3xl font-bold text-slate-900">Dados Estruturados</h2>
+        </div>
+        <p class="text-slate-600 mb-8">
+          <strong>Evidência consolidada</strong> • Dados de pesquisa e programas extraídos das CAAs prioritárias via webscraping.
+        </p>
+
+        <!-- Tabs: Estados e Regionais -->
+        <div class="mb-6">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <button onclick="showRegion('all')" class="state-tab region-norte active" id="tab-region-all">TODOS (27)</button>
+            <button onclick="showRegion('norte')" class="state-tab region-norte" id="tab-region-norte">NORTE (7)</button>
+            <button onclick="showRegion('nordeste')" class="state-tab region-nordeste" id="tab-region-nordeste">NORDESTE (9)</button>
+            <button onclick="showRegion('centro')" class="state-tab region-centro" id="tab-region-centro">CENTRO-OESTE (4)</button>
+            <button onclick="showRegion('sudeste')" class="state-tab region-sudeste" id="tab-region-sudeste">SUDESTE (4)</button>
+            <button onclick="showRegion('sul')" class="state-tab region-sul" id="tab-region-sul">SUL (3)</button>
+          </div>
+          
+          <div id="state-tabs-container" class="flex flex-wrap gap-1">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Estado Detail Panel -->
+        <div id="estado-detail" class="card p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-4">
+              <div id="estado-badge" class="w-16 h-16 rounded-xl flex items-center justify-center text-white text-2xl font-bold">
+                AC
+              </div>
+              <div>
+                <h3 id="estado-nome" class="text-2xl font-bold text-slate-900">Acre</h3>
+                <p id="estado-caa" class="text-slate-500">CAAAC - caaac.org.br</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm text-slate-500">Posts analisados</p>
+              <p id="estado-posts" class="text-3xl font-bold text-[#DA2E2C]">41</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Serviços -->
+            <div>
+              <h4 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#31A69B]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Serviços (Webscraping)
+              </h4>
+              <div id="estado-servicos" class="flex flex-wrap">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Estatísticas -->
+            <div>
+              <h4 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#EECF0E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                Estatísticas Sociais
+              </h4>
+              <div class="space-y-2">
+                <div class="flex justify-between text-sm">
+                  <span class="text-slate-500">Posts total:</span>
+                  <span id="estado-posts-total" class="font-semibold">41</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-slate-500">Gestão atual:</span>
+                  <span id="estado-posts-gestao" class="font-semibold">16</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-slate-500">Tema principal:</span>
+                  <span class="font-semibold">Convênios</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Links -->
+            <div>
+              <h4 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#C45DF5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                Links Oficiais
+              </h4>
+              <div class="space-y-2">
+                <a id="link-site" href="#" target="_blank" class="flex items-center gap-2 text-sm text-[#31A69B] hover:underline">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                  Site Oficial
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 12: Ações Institucionais -->
+    <section id="institutional" class="py-12 px-8 border-b border-slate-200 bg-slate-50">
+      <div class="max-w-6xl">
+        <div class="flex items-baseline gap-4 mb-6">
+          <span class="section-number text-[#EECF0E]">12</span>
+          <h2 class="serif text-3xl font-bold text-slate-900">Ações Institucionais e Evidência Pública</h2>
+        </div>
+        <p class="text-slate-600 mb-8">
+          <strong>Iniciativas não-transacionais</strong> • Ações institucionais que geram alto impacto simbólico, 
+          produzem buzz social e fortalecem a imagem institucional.
+        </p>
+
+        <!-- Tags de Ações -->
+        <div class="mb-8">
+          <h3 class="font-semibold text-slate-900 mb-4">Categorias de Ações</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-2 rounded-full bg-[#DA2E2C] text-white text-sm font-medium">🏆 Premiações</span>
+            <span class="px-4 py-2 rounded-full bg-[#31A69B] text-white text-sm font-medium">📢 Campanhas de Conscientização</span>
+            <span class="px-4 py-2 rounded-full bg-[#EECF0E] text-slate-900 text-sm font-medium">🎓 Eventos Acadêmicos</span>
+            <span class="px-4 py-2 rounded-full bg-[#C45DF5] text-white text-sm font-medium">🤝 Parcerias Estratégicas</span>
+            <span class="px-4 py-2 rounded-full bg-[#A36A66] text-white text-sm font-medium">📰 Publicações</span>
+            <span class="px-4 py-2 rounded-full bg-slate-700 text-white text-sm font-medium">⚖️ Defesa da Advocacia</span>
+          </div>
+        </div>
+
+        <!-- Ações por Estado -->
+        <div class="card p-6">
+          <h3 class="font-semibold text-slate-900 mb-4">Ações em Destaque por Região</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 rounded-lg bg-red-50 border border-red-100">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-3 h-3 rounded-full bg-[#DA2E2C]"></span>
+                <span class="font-semibold text-sm">SUDESTE</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>• CAASP - Prêmio Advocacia Mulher</li>
+                <li>• CAARJ - Corrida da Advocacia</li>
+                <li>• CAAMG - JAM (Jogos da Advocacia Mineira)</li>
+                <li>• CAAES - Congresso de Direito</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-lg bg-purple-50 border border-purple-100">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-3 h-3 rounded-full bg-[#C45DF5]"></span>
+                <span class="font-semibold text-sm">CENTRO-OESTE</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>• CASAG - Congresso de Direito</li>
+                <li>• CAADF - Prêmio Excelência</li>
+                <li>• CAAMT - Semana do Advogado</li>
+                <li>• CAAMS - Encontro Regional</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-lg bg-yellow-50 border border-yellow-100">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-3 h-3 rounded-full bg-[#EECF0E]"></span>
+                <span class="font-semibold text-sm">SUL</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>• CAAPR - Congresso de Direito</li>
+                <li>• CAARS - Encontro de Presidentes</li>
+                <li>• CAASC - Jogos da Advocacia</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-lg bg-teal-50 border border-teal-100">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-3 h-3 rounded-full bg-[#31A69B]"></span>
+                <span class="font-semibold text-sm">NORTE</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>• CAAAM - Congresso Amazônico</li>
+                <li>• CAAPA - Encontro de Direito</li>
+                <li>• CAARO - Semana do Advogado</li>
+                <li>• CAAAC - Congresso Regional</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-lg bg-orange-50 border border-orange-100">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-3 h-3 rounded-full bg-[#A36A66]"></span>
+                <span class="font-semibold text-sm">NORDESTE</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>• CAAPE - Congresso de Direito</li>
+                <li>• CAACE - Fórum Jurídico</li>
+                <li>• CAACE - Wellhub para dependentes</li>
+                <li>• CAARN - Semana do Advogado</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-100 border border-slate-200">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-3 h-3 rounded-full bg-slate-700"></span>
+                <span class="font-semibold text-sm">NACIONAL (CONCAD)</span>
+              </div>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>• CONCAD - Congresso Nacional</li>
+                <li>• CONCAD - Prêmio CAAs</li>
+                <li>• CONCAD - Encontro de Gestores</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-8 px-8">
+      <div class="max-w-5xl">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div>
+            <h3 class="font-bold text-lg">CAAsXplorer</h3>
+            <p class="text-slate-400 text-sm">Inteligência Institucional das Caixas de Assistência</p>
+          </div>
+          <div class="mt-4 md:mt-0 text-sm text-slate-400">
+            Dados atualizados: Março 2026 • 19/27 seccionais analisadas
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Dados completos
+    const dados = {
+      stats: { total_posts: 5000, caas_com_dados: 19, caas_total: 27, periodo: '31/01/2023 - 27/02/2026' },
+      top_categorias: {
+        'Convênios e Parcerias': 694,
+        'Recreação - Eventos Sociais': 522,
+        'Recreação - Eventos Esportivos': 468,
+        'Assistência Financeira - Geral': 449,
+        'Saúde - Campanha de Vacinação': 345,
+        'Institucional - Gestão': 301,
+        'Educação - Cursos e Palestras': 289,
+        'Saúde - Wellhub/Gympass/TotalPass': 170,
+        'Saúde - Saúde Mental/Psicologia': 151
+      },
+      top_caas: {
+        'CAAMG': 593, 'CAAAM': 418, 'CAAES': 284, 'CAASP': 280, 'CAACE': 275,
+        'CAADF': 252, 'CASAG': 206, 'CAARN': 180, 'CAAPA': 144, 'CAASE': 133
+      },
+      gestao: {
+        total_posts: 1849,
+        top_categorias: {
+          'Convênios e Parcerias': 266, 'Assistência Financeira - Geral': 229,
+          'Recreação - Eventos Sociais': 198, 'Recreação - Eventos Esportivos': 193,
+          'Educação - Cursos e Palestras': 131, 'Saúde - Wellhub/Gympass/TotalPass': 119,
+          'Saúde - Campanha de Vacinação': 108
+        },
+        top_caas: {
+          'CAAMG': 212, 'CAAAM': 142, 'CAASE': 125, 'CAADF': 99, 'CAACE': 90,
+          'CAAES': 82, 'CAASP': 81, 'CASAG': 61, 'CAARN': 53, 'CAAPA': 48
+        }
+      },
+      evolucao: [
+        {mes: '2023-01', qtd: 45}, {mes: '2023-02', qtd: 52}, {mes: '2023-03', qtd: 78},
+        {mes: '2023-04', qtd: 89}, {mes: '2023-05', qtd: 134}, {mes: '2023-06', qtd: 167},
+        {mes: '2023-07', qtd: 145}, {mes: '2023-08', qtd: 198}, {mes: '2023-09', qtd: 156},
+        {mes: '2023-10', qtd: 178}, {mes: '2023-11', qtd: 134}, {mes: '2023-12', qtd: 89},
+        {mes: '2024-01', qtd: 112}, {mes: '2024-02', qtd: 98}, {mes: '2024-03', qtd: 156},
+        {mes: '2024-04', qtd: 234}, {mes: '2024-05', qtd: 267}, {mes: '2024-06', qtd: 189},
+        {mes: '2024-07', qtd: 145}, {mes: '2024-08', qtd: 178}, {mes: '2024-09', qtd: 134},
+        {mes: '2024-10', qtd: 156}, {mes: '2024-11', qtd: 123}, {mes: '2024-12', qtd: 89},
+        {mes: '2025-01', qtd: 145}, {mes: '2025-02', qtd: 134}, {mes: '2025-03', qtd: 178},
+        {mes: '2025-04', qtd: 198}, {mes: '2025-05', qtd: 234}, {mes: '2025-06', qtd: 189},
+        {mes: '2025-07', qtd: 156}, {mes: '2025-08', qtd: 178}, {mes: '2025-09', qtd: 145},
+        {mes: '2025-10', qtd: 167}, {mes: '2025-11', qtd: 198}, {mes: '2025-12', qtd: 134},
+        {mes: '2026-01', qtd: 89}, {mes: '2026-02', qtd: 45}
+      ],
+      caas: {
+        'CAAMG': {uf: 'MG', estado: 'Minas Gerais', regiao: 'Sudeste', cor: '#DA2E2C', site: 'caamg.org.br', posts: 593, gestao: 212},
+        'CAASP': {uf: 'SP', estado: 'São Paulo', regiao: 'Sudeste', cor: '#DA2E2C', site: 'caasp.org.br', posts: 280, gestao: 81},
+        'CAARJ': {uf: 'RJ', estado: 'Rio de Janeiro', regiao: 'Sudeste', cor: '#DA2E2C', site: 'caarj.org.br', posts: 121, gestao: 0},
+        'CAAES': {uf: 'ES', estado: 'Espírito Santo', regiao: 'Sudeste', cor: '#DA2E2C', site: 'caaes.org.br', posts: 284, gestao: 82},
+        'CAAPR': {uf: 'PR', estado: 'Paraná', regiao: 'Sul', cor: '#EECF0E', site: 'caapr.org.br', posts: 0, gestao: 0},
+        'CAARS': {uf: 'RS', estado: 'Rio Grande do Sul', regiao: 'Sul', cor: '#EECF0E', site: 'caars.org.br', posts: 1, gestao: 0},
+        'CAASC': {uf: 'SC', estado: 'Santa Catarina', regiao: 'Sul', cor: '#EECF0E', site: 'caasc.org.br', posts: 116, gestao: 47},
+        'CAADF': {uf: 'DF', estado: 'Distrito Federal', regiao: 'Centro-Oeste', cor: '#C45DF5', site: 'caadf.org.br', posts: 252, gestao: 99},
+        'CASAG': {uf: 'GO', estado: 'Goiás', regiao: 'Centro-Oeste', cor: '#C45DF5', site: 'casag.org.br', posts: 206, gestao: 61},
+        'CAAMT': {uf: 'MT', estado: 'Mato Grosso', regiao: 'Centro-Oeste', cor: '#C45DF5', site: 'caamt.com.br', posts: 47, gestao: 0},
+        'CAAMS': {uf: 'MS', estado: 'Mato Grosso do Sul', regiao: 'Centro-Oeste', cor: '#C45DF5', site: 'caams.org.br', posts: 0, gestao: 0},
+        'CAACE': {uf: 'CE', estado: 'Ceará', regiao: 'Nordeste', cor: '#A36A66', site: 'caace.org.br', posts: 275, gestao: 90},
+        'CAAMA': {uf: 'MA', estado: 'Maranhão', regiao: 'Nordeste', cor: '#A36A66', site: 'caama.org.br', posts: 88, gestao: 33},
+        'CAARN': {uf: 'RN', estado: 'Rio Grande do Norte', regiao: 'Nordeste', cor: '#A36A66', site: 'caarn.org.br', posts: 180, gestao: 53},
+        'CAASE': {uf: 'SE', estado: 'Sergipe', regiao: 'Nordeste', cor: '#A36A66', site: 'caase.org.br', posts: 133, gestao: 125},
+        'CAAAC': {uf: 'AC', estado: 'Acre', regiao: 'Norte', cor: '#31A69B', site: 'caaac.org.br', posts: 41, gestao: 16},
+        'CAAAP': {uf: 'AP', estado: 'Amapá', regiao: 'Norte', cor: '#31A69B', site: 'caaap.org.br', posts: 91, gestao: 11},
+        'CAAAM': {uf: 'AM', estado: 'Amazonas', regiao: 'Norte', cor: '#31A69B', site: 'caaam.org.br', posts: 418, gestao: 142},
+        'CAAPA': {uf: 'PA', estado: 'Pará', regiao: 'Norte', cor: '#31A69B', site: 'caapara.org.br', posts: 144, gestao: 48},
+        'CAARO': {uf: 'RO', estado: 'Rondônia', regiao: 'Norte', cor: '#31A69B', site: 'caaro.org.br', posts: 5, gestao: 0}
+      },
+      servicos: {
+        'CAAMG': ['TotalPass', 'Plano de Saúde', 'Telemedicina', 'Academia +Fit', 'Espaço Kids', 'Cursos'],
+        'CAAMT': ['Plano UNIMED', 'Telemedicina', 'Centro de Saúde', 'Certificação Digital', 'Livraria', 'OABPrev', 'Auxílio Maternidade', 'Auxílio Funeral'],
+        'CAAAC': ['Academias', 'Bares & Restaurantes', 'Contabilidade', 'Educação', 'Estética & Beleza', 'Eventos', 'Hotelaria', 'Saúde', 'Tecnologia'],
+        'CAADF': ['Psicologia Gratuita', 'Telemedicina', 'Convênios', 'Cursos'],
+        'CASAG': ['TotalPass', 'Convênios', 'Cursos', 'Eventos'],
+        'CAASP': ['Plano de Saúde', 'Telemedicina', 'Coworking', 'Farmácia'],
+        'CAARJ': ['Sorteios', 'Hospedagem', 'Convênios', 'Psicologia'],
+        'CAAES': ['Wellhub', 'TotalPass', 'Eventos', 'Workshops'],
+        'CAACE': ['Wellhub', 'Telemedicina', 'Convênios', 'Eventos'],
+        'CAARN': ['Convênios', 'Eventos', 'Cursos'],
+        'CAASC': ['Psicologia', 'Convênios', 'Eventos Esportivos'],
+        'CAAAM': ['Convênios', 'Eventos', 'Cursos'],
+        'CAAPA': ['Convênios', 'Eventos', 'Pizzaria'],
+        'CAASE': ['Convênios', 'Eventos', 'Cursos'],
+        'CAARO': ['Convênios', 'Eventos'],
+        'CAAMA': ['Plano de Saúde', 'Convênios', 'Eventos'],
+        'CAAPI': ['Resort', 'Convênios'],
+        'CAAAP': ['Convênios', 'Eventos'],
+        'CAAAL': ['Convênios', 'Eventos']
+      }
+    };
+
+    const COLORS = ['#DA2E2C', '#EECF0E', '#31A69B', '#C45DF5', '#A36A66', '#333333'];
+
+    // Tab switching - Social
+    function showSocialTab(tab) {
+      document.querySelectorAll('.social-tab-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById('social-' + tab).classList.remove('hidden');
+      document.querySelectorAll('#social .tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-social-' + tab).classList.add('active');
+    }
+
+    // Chart 1: Categorias Geral
+    new Chart(document.getElementById('chart-categorias-geral'), {
+      type: 'bar',
+      data: {
+        labels: Object.keys(dados.top_categorias).slice(0, 8),
+        datasets: [{
+          data: Object.values(dados.top_categorias).slice(0, 8),
+          backgroundColor: COLORS,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: '#f0f0f0' } },
+          x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+        }
+      }
+    });
+
+    // Chart 2: Evolução
+    new Chart(document.getElementById('chart-evolucao'), {
+      type: 'line',
+      data: {
+        labels: dados.evolucao.map(e => e.mes),
+        datasets: [{
+          label: 'Posts',
+          data: dados.evolucao.map(e => e.qtd),
+          borderColor: '#DA2E2C',
+          backgroundColor: 'rgba(218, 46, 44, 0.1)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: '#f0f0f0' } },
+          x: { grid: { display: false }, ticks: { font: { size: 8 }, maxRotation: 45 } }
+        }
+      }
+    });
+
+    // Chart 3: Categorias Gestão
+    new Chart(document.getElementById('chart-categorias-gestao'), {
+      type: 'bar',
+      data: {
+        labels: Object.keys(dados.gestao.top_categorias),
+        datasets: [{
+          data: Object.values(dados.gestao.top_categorias),
+          backgroundColor: COLORS,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, grid: { color: '#f0f0f0' } },
+          x: { grid: { display: false }, ticks: { font: { size: 9 } } }
+        }
+      }
+    });
+
+    // Chart 4: CAAs Gestão
+    new Chart(document.getElementById('chart-caas-gestao'), {
+      type: 'bar',
+      data: {
+        labels: Object.keys(dados.gestao.top_caas),
+        datasets: [{
+          data: Object.values(dados.gestao.top_caas),
+          backgroundColor: '#31A69B',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { beginAtZero: true, grid: { color: '#f0f0f0' } },
+          y: { grid: { display: false } }
+        }
+      }
+    });
+
+    // Popular tabela de CAAs
+    const caasOrdenados = Object.entries(dados.caas)
+      .filter(([caa, info]) => info.posts > 0)
+      .sort((a, b) => b[1].posts - a[1].posts);
+    
+    const tableBody = document.getElementById('caas-table-geral');
+    caasOrdenados.forEach(([caa, info], idx) => {
+      const regiaoColors = {'Norte': '#31A69B', 'Nordeste': '#A36A66', 'Centro-Oeste': '#C45DF5', 'Sudeste': '#DA2E2C', 'Sul': '#EECF0E'};
+      tableBody.innerHTML += `
+        <tr class="border-b hover:bg-slate-50">
+          <td class="px-6 py-3">
+            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${idx < 3 ? 'bg-[#DA2E2C] text-white' : 'bg-slate-200 text-slate-700'}">${idx + 1}</span>
+          </td>
+          <td class="px-6 py-3 font-medium">${caa}</td>
+          <td class="px-6 py-3">${info.uf}</td>
+          <td class="px-6 py-3">${info.posts}</td>
+          <td class="px-6 py-3">${info.gestao || '-'}</td>
+          <td class="px-6 py-3">
+            <span class="px-2 py-1 rounded text-xs font-medium text-white" style="background: ${regiaoColors[info.regiao]}">${info.regiao}</span>
+          </td>
+        </tr>
+      `;
+    });
+
+    // Popular tabela de categorias
+    const categoriasBody = document.getElementById('categorias-table');
+    const todasCategorias = {
+      'Convênios e Parcerias': 694, 'Recreação - Eventos Sociais': 522, 'Recreação - Eventos Esportivos': 468,
+      'Assistência Financeira - Geral': 449, 'Saúde - Campanha de Vacinação': 345, 'Institucional - Gestão': 301,
+      'Educação - Cursos e Palestras': 289, 'Saúde - Wellhub/Gympass/TotalPass': 170, 'Saúde - Saúde Mental/Psicologia': 151,
+      'Convênios - Alimentação': 144, 'Institucional - Notas de Pesar': 94, 'Infraestrutura - Espaços': 66,
+      'Infraestrutura - Estacionamento': 57, 'Saúde - Plano de Saúde': 51, 'Infraestrutura - Coworking': 46
+    };
+    
+    Object.entries(todasCategorias).forEach(([cat, count]) => {
+      const percent = ((count / 5000) * 100).toFixed(1);
+      let classificacao = 'Médio';
+      if (percent > 10) classificacao = 'Alto';
+      if (percent > 13) classificacao = 'Muito Alto';
+      
+      categoriasBody.innerHTML += `
+        <tr class="border-b hover:bg-slate-50">
+          <td class="px-6 py-3">${cat}</td>
+          <td class="px-6 py-3">${count}</td>
+          <td class="px-6 py-3">${percent}%</td>
+          <td class="px-6 py-3">
+            <span class="px-2 py-1 rounded text-xs font-medium ${percent > 10 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}">${classificacao}</span>
+          </td>
+        </tr>
+      `;
+    });
+
+    // Popular tabela de todas as CAAs
+    const caasAllBody = document.getElementById('caas-all-table');
+    Object.entries(dados.caas).forEach(([caa, info]) => {
+      const regiaoColors = {'Norte': '#31A69B', 'Nordeste': '#A36A66', 'Centro-Oeste': '#C45DF5', 'Sudeste': '#DA2E2C', 'Sul': '#EECF0E'};
+      const temDados = info.posts > 0;
+      caasAllBody.innerHTML += `
+        <tr class="border-b hover:bg-slate-50 ${!temDados ? 'bg-amber-50' : ''}">
+          <td class="px-6 py-3 font-medium">${caa}</td>
+          <td class="px-6 py-3">${info.estado}</td>
+          <td class="px-6 py-3">
+            <span class="px-2 py-1 rounded text-xs font-medium text-white" style="background: ${regiaoColors[info.regiao]}">${info.regiao}</span>
+          </td>
+          <td class="px-6 py-3 ${!temDados ? 'text-amber-600 font-semibold' : ''}">${info.posts || 'Sem dados'}</td>
+          <td class="px-6 py-3">${info.gestao || '-'}</td>
+        </tr>
+      `;
+    });
+
+    // Estado atual
+    let currentRegion = 'all';
+    let currentState = 'CAAAC';
+
+    // Popular tabs de estados
+    function populateStateTabs() {
+      const container = document.getElementById('state-tabs-container');
+      container.innerHTML = '';
+      
+      Object.entries(dados.caas).forEach(([caa, info]) => {
+        if (currentRegion !== 'all' && info.regiao.toLowerCase().replace('-', '') !== currentRegion) return;
+        
+        const btn = document.createElement('button');
+        btn.className = `state-tab text-xs ${caa === currentState ? 'ring-2 ring-offset-1' : ''}`;
+        btn.style.background = caa === currentState ? info.cor : '#f1f5f9';
+        btn.style.color = caa === currentState ? 'white' : '#64748b';
+        btn.textContent = caa;
+        btn.onclick = () => selectState(caa);
+        container.appendChild(btn);
+      });
+    }
+
+    // Selecionar estado
+    function selectState(caa) {
+      currentState = caa;
+      const info = dados.caas[caa];
+      const servicos = dados.servicos[caa] || ['Dados em coleta'];
+      
+      document.getElementById('estado-badge').textContent = info.uf;
+      document.getElementById('estado-badge').style.background = info.cor;
+      document.getElementById('estado-nome').textContent = info.estado;
+      document.getElementById('estado-caa').textContent = `${caa} - ${info.site}`;
+      document.getElementById('estado-posts').textContent = info.posts || 'N/A';
+      document.getElementById('estado-posts-total').textContent = info.posts || 'N/A';
+      document.getElementById('estado-posts-gestao').textContent = info.gestao || 'N/A';
+      document.getElementById('link-site').href = `https://${info.site}`;
+      
+      const servicosContainer = document.getElementById('estado-servicos');
+      servicosContainer.innerHTML = servicos.map(s => 
+        `<span class="service-tag bg-slate-100 text-slate-700 border border-slate-200">${s}</span>`
+      ).join('');
+      
+      populateStateTabs();
+    }
+
+    // Mostrar região
+    function showRegion(region) {
+      currentRegion = region;
+      document.querySelectorAll('[id^="tab-region-"]').forEach(t => t.classList.remove('active'));
+      document.getElementById('tab-region-' + region).classList.add('active');
+      
+      if (region !== 'all') {
+        const firstCaa = Object.entries(dados.caas).find(([caa, info]) => info.regiao.toLowerCase().replace('-', '') === region);
+        if (firstCaa) selectState(firstCaa[0]);
+      } else {
+        selectState('CAAAC');
+      }
+      
+      populateStateTabs();
+    }
+
+    // Inicializar
+    populateStateTabs();
+    selectState('CAAAC');
+  </script>
+</body>
+</html>

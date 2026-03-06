@@ -1,0 +1,291 @@
+[
+  {
+    "categoria": "Ações Institucionais",
+    "count": 2201,
+    "percentage": 34.99,
+    "subcategorias": [
+      {
+        "nome": "Posse e Gestão",
+        "count": 1274
+      },
+      {
+        "nome": "Campanhas Institucionais",
+        "count": 699
+      },
+      {
+        "nome": "Notas de Pesar",
+        "count": 228
+      }
+    ],
+    "engagement_total": 22.45054195413692,
+    "engagement_avg": 0.0138,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Convênios e Benefícios",
+    "count": 1314,
+    "percentage": 20.89,
+    "subcategorias": [
+      {
+        "nome": "Clube de Vantagens",
+        "count": 536
+      },
+      {
+        "nome": "Educação",
+        "count": 340
+      },
+      {
+        "nome": "Descontos Comerciais",
+        "count": 211
+      },
+      {
+        "nome": "Turismo e Lazer",
+        "count": 132
+      },
+      {
+        "nome": "Grandes Parceiros",
+        "count": 73
+      },
+      {
+        "nome": "Cinema e Entretenimento",
+        "count": 22
+      }
+    ],
+    "engagement_total": 15.644330703665302,
+    "engagement_avg": 0.0139,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Saúde",
+    "count": 910,
+    "percentage": 14.47,
+    "subcategorias": [
+      {
+        "nome": "Vacinação",
+        "count": 506
+      },
+      {
+        "nome": "Saúde Mental",
+        "count": 179
+      },
+      {
+        "nome": "Plano de Saúde",
+        "count": 89
+      },
+      {
+        "nome": "Prevenção e Exames",
+        "count": 59
+      },
+      {
+        "nome": "Odontológico",
+        "count": 49
+      },
+      {
+        "nome": "Telemedicina",
+        "count": 28
+      }
+    ],
+    "engagement_total": 9.750899439064671,
+    "engagement_avg": 0.0126,
+    "relevancia": "Alta"
+  },
+  {
+    "categoria": "Esporte e Treino",
+    "count": 497,
+    "percentage": 7.9,
+    "subcategorias": [
+      {
+        "nome": "Modalidades",
+        "count": 327
+      },
+      {
+        "nome": "Competições",
+        "count": 153
+      },
+      {
+        "nome": "Academias e Treino",
+        "count": 17
+      }
+    ],
+    "engagement_total": 5.398500472626466,
+    "engagement_avg": 0.0123,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Bem-estar Estético",
+    "count": 286,
+    "percentage": 4.55,
+    "subcategorias": [
+      {
+        "nome": "Saúde Pet",
+        "count": 156
+      },
+      {
+        "nome": "Cuidados Pessoais",
+        "count": 110
+      },
+      {
+        "nome": "Salão e Beleza",
+        "count": 15
+      },
+      {
+        "nome": "Estética Avançada",
+        "count": 5
+      }
+    ],
+    "engagement_total": 2.951983902597025,
+    "engagement_avg": 0.0114,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Sorteios e Promoções",
+    "count": 275,
+    "percentage": 4.37,
+    "subcategorias": [
+      {
+        "nome": "Sorteios",
+        "count": 275
+      }
+    ],
+    "engagement_total": 0.6981926863563547,
+    "engagement_avg": 0.0104,
+    "relevancia": "Alta"
+  },
+  {
+    "categoria": "Social e Eventos",
+    "count": 269,
+    "percentage": 4.28,
+    "subcategorias": [
+      {
+        "nome": "Festividades",
+        "count": 170
+      },
+      {
+        "nome": "Datas Comemorativas",
+        "count": 98
+      },
+      {
+        "nome": "Cultura e Gastronomia",
+        "count": 1
+      }
+    ],
+    "engagement_total": 3.9468604374911944,
+    "engagement_avg": 0.0169,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Financeiro",
+    "count": 188,
+    "percentage": 2.99,
+    "subcategorias": [
+      {
+        "nome": "Anuidade e Regularização",
+        "count": 72
+      },
+      {
+        "nome": "Auxílios",
+        "count": 69
+      },
+      {
+        "nome": "Previdência",
+        "count": 37
+      },
+      {
+        "nome": "Crédito e Empréstimos",
+        "count": 10
+      }
+    ],
+    "engagement_total": 2.3924146865748495,
+    "engagement_avg": 0.0142,
+    "relevancia": "Alta"
+  },
+  {
+    "categoria": "Infraestrutura e Serviços",
+    "count": 150,
+    "percentage": 2.38,
+    "subcategorias": [
+      {
+        "nome": "Suporte Digital e TI",
+        "count": 85
+      },
+      {
+        "nome": "Logística Profissional",
+        "count": 47
+      },
+      {
+        "nome": "Espaços Físicos",
+        "count": 18
+      }
+    ],
+    "engagement_total": 1.8644286822964307,
+    "engagement_avg": 0.0145,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Evidência Pública",
+    "count": 105,
+    "percentage": 1.67,
+    "subcategorias": [
+      {
+        "nome": "Presença Digital",
+        "count": 75
+      },
+      {
+        "nome": "Sinal Social",
+        "count": 30
+      }
+    ],
+    "engagement_total": 1.0330401250515033,
+    "engagement_avg": 0.012,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Nao_Classificado",
+    "count": 76,
+    "percentage": 1.21,
+    "subcategorias": [],
+    "engagement_total": 0.5391675060705151,
+    "engagement_avg": 0.0071,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Identidade e Cultura",
+    "count": 15,
+    "percentage": 0.24,
+    "subcategorias": [
+      {
+        "nome": "Serviços de Mídia",
+        "count": 9
+      },
+      {
+        "nome": "Estúdio e Imagem",
+        "count": 5
+      },
+      {
+        "nome": "Cultura e Lazer Especializado",
+        "count": 1
+      }
+    ],
+    "engagement_total": 0.17073794255825397,
+    "engagement_avg": 0.0114,
+    "relevancia": "Média"
+  },
+  {
+    "categoria": "Família e Maternidade",
+    "count": 5,
+    "percentage": 0.08,
+    "subcategorias": [
+      {
+        "nome": "Infantil e Lazer",
+        "count": 4
+      },
+      {
+        "nome": "Maternidade e Bebê",
+        "count": 1
+      }
+    ],
+    "engagement_total": 0.047002089862880986,
+    "engagement_avg": 0.0118,
+    "relevancia": "Média"
+  }
+]

@@ -1,0 +1,372 @@
+{
+  "caas": {
+    "Norte": {
+      "color": "#31A69B",
+      "states": [
+        {
+          "uf": "AC",
+          "caa": "CAAAC",
+          "site": "caaac.org.br",
+          "instagram": "@caaac.oficial"
+        },
+        {
+          "uf": "AP",
+          "caa": "CAAAP",
+          "site": "caaap.org.br",
+          "instagram": "@caixadeassistenciadosadv.ap"
+        },
+        {
+          "uf": "AM",
+          "caa": "CAAAM",
+          "site": "caaam.org.br",
+          "instagram": "@caaamazonas"
+        },
+        {
+          "uf": "PA",
+          "caa": "CAAPA",
+          "site": "caapara.org.br",
+          "instagram": "@caapara.oficial"
+        },
+        {
+          "uf": "RO",
+          "caa": "CAARO",
+          "site": "caaro.org.br",
+          "instagram": "@caaro_rondonia"
+        },
+        {
+          "uf": "RR",
+          "caa": "CAARR",
+          "site": "oabrr.org.br",
+          "instagram": "@caarr_oraima"
+        },
+        {
+          "uf": "TO",
+          "caa": "CAATO",
+          "site": "caato.com.br",
+          "instagram": "@caatocantis"
+        }
+      ]
+    },
+    "Nordeste": {
+      "color": "#A36A66",
+      "states": [
+        {
+          "uf": "AL",
+          "caa": "CAAAL",
+          "site": "caa-al.org.br",
+          "instagram": "@caa.al"
+        },
+        {
+          "uf": "BA",
+          "caa": "CAAB",
+          "site": "caab.org.br",
+          "instagram": "@caab_oficial"
+        },
+        {
+          "uf": "CE",
+          "caa": "CAACE",
+          "site": "caace.org.br",
+          "instagram": "@caace.oab"
+        },
+        {
+          "uf": "MA",
+          "caa": "CAAMA",
+          "site": "caama.org.br",
+          "instagram": "@caama.oabma"
+        },
+        {
+          "uf": "PB",
+          "caa": "CAAPB",
+          "site": "caapb.org.br",
+          "instagram": "@caa_paraiba"
+        },
+        {
+          "uf": "PE",
+          "caa": "CAAPE",
+          "site": "caape.org.br",
+          "instagram": "@caape_oab"
+        },
+        {
+          "uf": "PI",
+          "caa": "CAAPI",
+          "site": "caapi.org.br",
+          "instagram": "@caapi"
+        },
+        {
+          "uf": "RN",
+          "caa": "CAARN",
+          "site": "caarn.org.br",
+          "instagram": "@caarn.oab"
+        },
+        {
+          "uf": "SE",
+          "caa": "CAASE",
+          "site": "oabse.org.br",
+          "instagram": "@caasergipe"
+        }
+      ]
+    },
+    "Centro-Oeste": {
+      "color": "#C45DF5",
+      "states": [
+        {
+          "uf": "DF",
+          "caa": "CAADF",
+          "site": "caadf.org.br",
+          "instagram": "@caa.df"
+        },
+        {
+          "uf": "GO",
+          "caa": "CASAG",
+          "site": "casag.org.br",
+          "instagram": "@oab_casag"
+        },
+        {
+          "uf": "MT",
+          "caa": "CAAMT",
+          "site": "caamt.org.br",
+          "instagram": "@caamt1"
+        },
+        {
+          "uf": "MS",
+          "caa": "CAAMS",
+          "site": "caams.org.br",
+          "instagram": "@caams.oficial"
+        }
+      ]
+    },
+    "Sudeste": {
+      "color": "#DA2E2C",
+      "states": [
+        {
+          "uf": "ES",
+          "caa": "CAAES",
+          "site": "caaes.org.br",
+          "instagram": "@caaes"
+        },
+        {
+          "uf": "MG",
+          "caa": "CAAMG",
+          "site": "caamg.org.br",
+          "instagram": "@caa_mg"
+        },
+        {
+          "uf": "RJ",
+          "caa": "CAARJ",
+          "site": "caarj.org.br",
+          "instagram": "@caarj_oab"
+        },
+        {
+          "uf": "SP",
+          "caa": "CAASP",
+          "site": "caasp.org.br",
+          "instagram": "@oabcaasp"
+        }
+      ]
+    },
+    "Sul": {
+      "color": "#EECF0E",
+      "states": [
+        {
+          "uf": "PR",
+          "caa": "CAAPR",
+          "site": "caapr.org.br",
+          "instagram": "@caa_parana"
+        },
+        {
+          "uf": "RS",
+          "caa": "CAARS",
+          "site": "caars.org.br",
+          "instagram": "@caa.rs"
+        },
+        {
+          "uf": "SC",
+          "caa": "CAASC",
+          "site": "caasc.org.br",
+          "instagram": "@caasc_santacatarina"
+        }
+      ]
+    }
+  },
+  "servicos": {
+    "CAAAC": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Plano de Saúde",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAAAP": [
+      "Auxílio Funeral",
+      "Auxílio Doença",
+      "Odontologia",
+      "Telemedicina"
+    ],
+    "CAAAM": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Plano de Saúde",
+      "Coworking",
+      "Wellhub"
+    ],
+    "CAAPA": [
+      "Auxílio Funeral",
+      "Auxílio Emergencial",
+      "Odontologia",
+      "Telemedicina",
+      "Gympass"
+    ],
+    "CAARO": [
+      "Auxílio Funeral",
+      "Plano de Saúde",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAARR": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina"
+    ],
+    "CAATO": [
+      "Auxílio Funeral",
+      "Auxílio Doença",
+      "Plano de Saúde",
+      "Telemedicina"
+    ],
+    "CAAAL": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAAB": [
+      "Auxílio Funeral",
+      "Auxílio Emergencial",
+      "Plano de Saúde",
+      "Coworking",
+      "Gympass"
+    ],
+    "CAACE": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAAMA": [
+      "Auxílio Funeral",
+      "Auxílio Doença",
+      "Plano de Saúde",
+      "Telemedicina"
+    ],
+    "CAAPB": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina"
+    ],
+    "CAAPE": [
+      "Auxílio Funeral",
+      "Auxílio Emergencial",
+      "Plano de Saúde",
+      "Coworking",
+      "Wellhub"
+    ],
+    "CAAPI": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina"
+    ],
+    "CAARN": [
+      "Auxílio Funeral",
+      "Auxílio Doença",
+      "Plano de Saúde",
+      "Telemedicina",
+      "Gympass"
+    ],
+    "CAASE": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina"
+    ],
+    "CAADF": [
+      "Auxílio Funeral",
+      "Auxílio Emergencial",
+      "Plano de Saúde",
+      "Coworking",
+      "Wellhub"
+    ],
+    "CASAG": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina",
+      "Gympass"
+    ],
+    "CAAMT": [
+      "Auxílio Funeral",
+      "Auxílio Doença",
+      "Plano de Saúde",
+      "Telemedicina"
+    ],
+    "CAAMS": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAAES": [
+      "Auxílio Funeral",
+      "Auxílio Emergencial",
+      "Plano de Saúde",
+      "Coworking",
+      "Gympass"
+    ],
+    "CAAMG": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAARJ": [
+      "Auxílio Funeral",
+      "Auxílio Doença",
+      "Plano de Saúde",
+      "Telemedicina"
+    ],
+    "CAASP": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAAPR": [
+      "Auxílio Funeral",
+      "Auxílio Emergencial",
+      "Plano de Saúde",
+      "Coworking",
+      "Gympass"
+    ],
+    "CAARS": [
+      "Auxílio Funeral",
+      "Auxílio Maternidade",
+      "Odontologia",
+      "Telemedicina",
+      "Wellhub"
+    ],
+    "CAASC": [
+      "Auxílio Funeral",
+      "Auxílio Doença",
+      "Plano de Saúde",
+      "Telemedicina",
+      "Gympass"
+    ]
+  }
+}

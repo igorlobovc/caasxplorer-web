@@ -1,0 +1,859 @@
+{
+  "by_state": {
+    "GO": {
+      "post_count": 212,
+      "total_interactions": 60792,
+      "total_engagement": 1.7612508331940149,
+      "avg_engagement_per_post": 0.009624321492863469,
+      "category_distribution": {
+        "Ações Institucionais": 69,
+        "Convênios e Benefícios": 49,
+        "Social e Eventos": 28,
+        "Esporte e Treino": 18,
+        "Saúde": 11,
+        "Bem-estar Estético": 11,
+        "Financeiro": 9,
+        "Sorteios e Promoções": 9,
+        "Infraestrutura e Serviços": 7,
+        "Nao_Classificado": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 58,
+        "Festividades": 26,
+        "Descontos Comerciais": 20,
+        "Educação": 18,
+        "Modalidades": 15
+      }
+    },
+    "ES": {
+      "post_count": 915,
+      "total_interactions": 119270,
+      "total_engagement": 9.982586803043766,
+      "avg_engagement_per_post": 0.014404887161679316,
+      "category_distribution": {
+        "Ações Institucionais": 309,
+        "Convênios e Benefícios": 210,
+        "Esporte e Treino": 93,
+        "Saúde": 92,
+        "Infraestrutura e Serviços": 75,
+        "Bem-estar Estético": 39,
+        "Sorteios e Promoções": 38,
+        "Financeiro": 25,
+        "Evidência Pública": 16,
+        "Nao_Classificado": 11,
+        "Social e Eventos": 7
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 229,
+        "Modalidades": 76,
+        "Clube de Vantagens": 72,
+        "Educação": 65,
+        "Suporte Digital e TI": 61
+      }
+    },
+    "TO": {
+      "post_count": 257,
+      "total_interactions": 11831,
+      "total_engagement": 2.9030601026938374,
+      "avg_engagement_per_post": 0.014024444940549939,
+      "category_distribution": {
+        "Ações Institucionais": 95,
+        "Convênios e Benefícios": 46,
+        "Esporte e Treino": 37,
+        "Saúde": 24,
+        "Bem-estar Estético": 17,
+        "Nao_Classificado": 12,
+        "Sorteios e Promoções": 9,
+        "Financeiro": 8,
+        "Evidência Pública": 6,
+        "Social e Eventos": 2,
+        "Infraestrutura e Serviços": 1
+      },
+      "top_subcategories": {
+        "Campanhas Institucionais": 48,
+        "Posse e Gestão": 40,
+        "Modalidades": 27,
+        "Turismo e Lazer": 16,
+        "Clube de Vantagens": 14
+      }
+    },
+    "RJ": {
+      "post_count": 150,
+      "total_interactions": 32254,
+      "total_engagement": 0.9972298155583879,
+      "avg_engagement_per_post": 0.011462411673084918,
+      "category_distribution": {
+        "Convênios e Benefícios": 38,
+        "Ações Institucionais": 37,
+        "Sorteios e Promoções": 34,
+        "Financeiro": 18,
+        "Saúde": 9,
+        "Infraestrutura e Serviços": 4,
+        "Bem-estar Estético": 4,
+        "Evidência Pública": 3,
+        "Social e Eventos": 1,
+        "Família e Maternidade": 1,
+        "Esporte e Treino": 1
+      },
+      "top_subcategories": {
+        "Sorteios": 34,
+        "Posse e Gestão": 19,
+        "Clube de Vantagens": 18,
+        "Auxílios": 15,
+        "Campanhas Institucionais": 13
+      }
+    },
+    "AC": {
+      "post_count": 662,
+      "total_interactions": 36202,
+      "total_engagement": 9.563573319008853,
+      "avg_engagement_per_post": 0.01657465046621985,
+      "category_distribution": {
+        "Ações Institucionais": 225,
+        "Convênios e Benefícios": 100,
+        "Esporte e Treino": 93,
+        "Saúde": 89,
+        "Social e Eventos": 60,
+        "Bem-estar Estético": 34,
+        "Sorteios e Promoções": 22,
+        "Financeiro": 19,
+        "Infraestrutura e Serviços": 9,
+        "Evidência Pública": 9,
+        "Nao_Classificado": 2
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 133,
+        "Campanhas Institucionais": 85,
+        "Modalidades": 81,
+        "Vacinação": 47,
+        "Festividades": 43
+      }
+    },
+    "RO": {
+      "post_count": 750,
+      "total_interactions": 30377,
+      "total_engagement": 6.271530935269816,
+      "avg_engagement_per_post": 0.012201422053054117,
+      "category_distribution": {
+        "Ações Institucionais": 309,
+        "Saúde": 150,
+        "Convênios e Benefícios": 116,
+        "Evidência Pública": 34,
+        "Esporte e Treino": 32,
+        "Sorteios e Promoções": 26,
+        "Bem-estar Estético": 23,
+        "Financeiro": 23,
+        "Social e Eventos": 20,
+        "Nao_Classificado": 7,
+        "Identidade e Cultura": 5,
+        "Infraestrutura e Serviços": 4,
+        "Família e Maternidade": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 155,
+        "Vacinação": 99,
+        "Campanhas Institucionais": 78,
+        "Notas de Pesar": 76,
+        "Clube de Vantagens": 45
+      }
+    },
+    "AM": {
+      "post_count": 788,
+      "total_interactions": 130996,
+      "total_engagement": 8.40920449423123,
+      "avg_engagement_per_post": 0.013763018812162405,
+      "category_distribution": {
+        "Ações Institucionais": 370,
+        "Convênios e Benefícios": 119,
+        "Social e Eventos": 96,
+        "Saúde": 71,
+        "Esporte e Treino": 44,
+        "Financeiro": 18,
+        "Nao_Classificado": 17,
+        "Infraestrutura e Serviços": 14,
+        "Sorteios e Promoções": 13,
+        "Bem-estar Estético": 12,
+        "Identidade e Cultura": 8,
+        "Evidência Pública": 6
+      },
+      "top_subcategories": {
+        "Campanhas Institucionais": 187,
+        "Posse e Gestão": 117,
+        "Festividades": 67,
+        "Notas de Pesar": 66,
+        "Educação": 53
+      }
+    },
+    "PI": {
+      "post_count": 706,
+      "total_interactions": 96505,
+      "total_engagement": 6.182007680962851,
+      "avg_engagement_per_post": 0.011078866811761382,
+      "category_distribution": {
+        "Ações Institucionais": 263,
+        "Convênios e Benefícios": 156,
+        "Saúde": 89,
+        "Sorteios e Promoções": 52,
+        "Bem-estar Estético": 52,
+        "Esporte e Treino": 50,
+        "Financeiro": 20,
+        "Social e Eventos": 7,
+        "Nao_Classificado": 7,
+        "Infraestrutura e Serviços": 4,
+        "Evidência Pública": 4,
+        "Família e Maternidade": 2
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 210,
+        "Clube de Vantagens": 98,
+        "Sorteios": 52,
+        "Vacinação": 32,
+        "Competições": 30
+      }
+    },
+    "BA": {
+      "post_count": 430,
+      "total_interactions": 108990,
+      "total_engagement": 5.76825604680524,
+      "avg_engagement_per_post": 0.013766720875430167,
+      "category_distribution": {
+        "Ações Institucionais": 163,
+        "Convênios e Benefícios": 89,
+        "Saúde": 59,
+        "Esporte e Treino": 52,
+        "Bem-estar Estético": 22,
+        "Infraestrutura e Serviços": 18,
+        "Sorteios e Promoções": 17,
+        "Social e Eventos": 3,
+        "Nao_Classificado": 3,
+        "Evidência Pública": 2,
+        "Financeiro": 2
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 87,
+        "Campanhas Institucionais": 74,
+        "Educação": 34,
+        "Modalidades": 27,
+        "Competições": 25
+      }
+    },
+    "MA": {
+      "post_count": 297,
+      "total_interactions": 39964,
+      "total_engagement": 2.7075601029879555,
+      "avg_engagement_per_post": 0.011281500429116482,
+      "category_distribution": {
+        "Ações Institucionais": 71,
+        "Convênios e Benefícios": 71,
+        "Saúde": 60,
+        "Bem-estar Estético": 29,
+        "Esporte e Treino": 20,
+        "Sorteios e Promoções": 15,
+        "Evidência Pública": 12,
+        "Social e Eventos": 9,
+        "Financeiro": 6,
+        "Nao_Classificado": 3,
+        "Infraestrutura e Serviços": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 51,
+        "Clube de Vantagens": 46,
+        "Vacinação": 31,
+        "Saúde Pet": 23,
+        "Modalidades": 17
+      }
+    },
+    "DF": {
+      "post_count": 419,
+      "total_interactions": 105750,
+      "total_engagement": 4.860356700983709,
+      "avg_engagement_per_post": 0.013463591969483957,
+      "category_distribution": {
+        "Convênios e Benefícios": 154,
+        "Saúde": 127,
+        "Ações Institucionais": 64,
+        "Esporte e Treino": 22,
+        "Financeiro": 15,
+        "Sorteios e Promoções": 14,
+        "Bem-estar Estético": 10,
+        "Social e Eventos": 5,
+        "Infraestrutura e Serviços": 4,
+        "Evidência Pública": 2,
+        "Nao_Classificado": 2
+      },
+      "top_subcategories": {
+        "Vacinação": 105,
+        "Clube de Vantagens": 90,
+        "Campanhas Institucionais": 41,
+        "Descontos Comerciais": 25,
+        "Posse e Gestão": 22
+      }
+    },
+    "RR": {
+      "post_count": 339,
+      "total_interactions": 11509,
+      "total_engagement": 3.530900981918402,
+      "avg_engagement_per_post": 0.016422795264736754,
+      "category_distribution": {
+        "Ações Institucionais": 128,
+        "Convênios e Benefícios": 70,
+        "Saúde": 67,
+        "Sorteios e Promoções": 21,
+        "Bem-estar Estético": 16,
+        "Social e Eventos": 11,
+        "Esporte e Treino": 9,
+        "Evidência Pública": 6,
+        "Financeiro": 4,
+        "Infraestrutura e Serviços": 4,
+        "Nao_Classificado": 3
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 86,
+        "Vacinação": 45,
+        "Clube de Vantagens": 36,
+        "Campanhas Institucionais": 36,
+        "Sorteios": 21
+      }
+    },
+    "MS": {
+      "post_count": 9,
+      "total_interactions": 1531,
+      "total_engagement": 0.21121983516858625,
+      "avg_engagement_per_post": 0.02346887057428736,
+      "category_distribution": {
+        "Convênios e Benefícios": 3,
+        "Ações Institucionais": 3,
+        "Financeiro": 1,
+        "Esporte e Treino": 1,
+        "Saúde": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 3,
+        "Grandes Parceiros": 2,
+        "Anuidade e Regularização": 1,
+        "Academias e Treino": 1,
+        "Clube de Vantagens": 1
+      }
+    },
+    "SC": {
+      "post_count": 164,
+      "total_interactions": 43790,
+      "total_engagement": 1.7526690361119064,
+      "avg_engagement_per_post": 0.012700500261680481,
+      "category_distribution": {
+        "Convênios e Benefícios": 55,
+        "Saúde": 34,
+        "Ações Institucionais": 29,
+        "Esporte e Treino": 14,
+        "Financeiro": 6,
+        "Social e Eventos": 5,
+        "Infraestrutura e Serviços": 5,
+        "Evidência Pública": 4,
+        "Sorteios e Promoções": 4,
+        "Bem-estar Estético": 4,
+        "Nao_Classificado": 3,
+        "Identidade e Cultura": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 18,
+        "Clube de Vantagens": 18,
+        "Descontos Comerciais": 15,
+        "Vacinação": 12,
+        "Prevenção e Exames": 11
+      }
+    },
+    "PA": {
+      "post_count": 13,
+      "total_interactions": 1743,
+      "total_engagement": 0.12655070775526694,
+      "avg_engagement_per_post": 0.010545892312938912,
+      "category_distribution": {
+        "Financeiro": 4,
+        "Saúde": 3,
+        "Convênios e Benefícios": 3,
+        "Ações Institucionais": 1,
+        "Bem-estar Estético": 1,
+        "Nao_Classificado": 1
+      },
+      "top_subcategories": {
+        "Anuidade e Regularização": 3,
+        "Vacinação": 2,
+        "Educação": 2,
+        "Notas de Pesar": 1,
+        "Auxílios": 1
+      }
+    },
+    "PE": {
+      "post_count": 87,
+      "total_interactions": 27033,
+      "total_engagement": 0.8823612300169612,
+      "avg_engagement_per_post": 0.010142083103643233,
+      "category_distribution": {
+        "Ações Institucionais": 41,
+        "Convênios e Benefícios": 20,
+        "Saúde": 14,
+        "Bem-estar Estético": 5,
+        "Esporte e Treino": 3,
+        "Financeiro": 1,
+        "Família e Maternidade": 1,
+        "Sorteios e Promoções": 1,
+        "Nao_Classificado": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 32,
+        "Vacinação": 12,
+        "Campanhas Institucionais": 9,
+        "Clube de Vantagens": 8,
+        "Educação": 7
+      }
+    },
+    "PB": {
+      "post_count": 11,
+      "total_interactions": 2801,
+      "total_engagement": 0.17101678363713885,
+      "avg_engagement_per_post": 0.015546980330648986,
+      "category_distribution": {
+        "Convênios e Benefícios": 5,
+        "Bem-estar Estético": 2,
+        "Ações Institucionais": 2,
+        "Esporte e Treino": 1,
+        "Identidade e Cultura": 1
+      },
+      "top_subcategories": {
+        "Clube de Vantagens": 3,
+        "Saúde Pet": 2,
+        "Posse e Gestão": 2,
+        "Competições": 1,
+        "Cinema e Entretenimento": 1
+      }
+    },
+    "SE": {
+      "post_count": 26,
+      "total_interactions": 4492,
+      "total_engagement": 0.2548493540788392,
+      "avg_engagement_per_post": 0.010193974163153567,
+      "category_distribution": {
+        "Ações Institucionais": 11,
+        "Social e Eventos": 8,
+        "Bem-estar Estético": 3,
+        "Nao_Classificado": 2,
+        "Esporte e Treino": 1,
+        "Saúde": 1
+      },
+      "top_subcategories": {
+        "Festividades": 8,
+        "Campanhas Institucionais": 7,
+        "Saúde Pet": 3,
+        "Posse e Gestão": 3,
+        "Notas de Pesar": 1
+      }
+    },
+    "CE": {
+      "post_count": 8,
+      "total_interactions": 2609,
+      "total_engagement": 0.10631446155899535,
+      "avg_engagement_per_post": 0.015187780222713622,
+      "category_distribution": {
+        "Social e Eventos": 4,
+        "Convênios e Benefícios": 2,
+        "Saúde": 1,
+        "Ações Institucionais": 1
+      },
+      "top_subcategories": {
+        "Festividades": 4,
+        "Descontos Comerciais": 1,
+        "Vacinação": 1,
+        "Notas de Pesar": 1,
+        "Grandes Parceiros": 1
+      }
+    },
+    "RN": {
+      "post_count": 11,
+      "total_interactions": 1690,
+      "total_engagement": 0.09341609780979183,
+      "avg_engagement_per_post": 0.008492372528162893,
+      "category_distribution": {
+        "Financeiro": 5,
+        "Ações Institucionais": 3,
+        "Esporte e Treino": 1,
+        "Social e Eventos": 1,
+        "Convênios e Benefícios": 1
+      },
+      "top_subcategories": {
+        "Anuidade e Regularização": 4,
+        "Posse e Gestão": 3,
+        "Auxílios": 1,
+        "Academias e Treino": 1,
+        "Datas Comemorativas": 1
+      }
+    },
+    "MT": {
+      "post_count": 7,
+      "total_interactions": 747,
+      "total_engagement": 0.06535931212949113,
+      "avg_engagement_per_post": 0.009337044589927304,
+      "category_distribution": {
+        "Convênios e Benefícios": 2,
+        "Financeiro": 1,
+        "Saúde": 1,
+        "Ações Institucionais": 1,
+        "Esporte e Treino": 1,
+        "Bem-estar Estético": 1
+      },
+      "top_subcategories": {
+        "Turismo e Lazer": 2,
+        "Auxílios": 1,
+        "Telemedicina": 1,
+        "Posse e Gestão": 1,
+        "Modalidades": 1
+      }
+    },
+    "AL": {
+      "post_count": 13,
+      "total_interactions": 1766,
+      "total_engagement": 0.12818089899123342,
+      "avg_engagement_per_post": 0.0098600691531718,
+      "category_distribution": {
+        "Esporte e Treino": 4,
+        "Ações Institucionais": 3,
+        "Convênios e Benefícios": 3,
+        "Evidência Pública": 1,
+        "Social e Eventos": 1,
+        "Bem-estar Estético": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 3,
+        "Modalidades": 2,
+        "Clube de Vantagens": 2,
+        "Competições": 2,
+        "Descontos Comerciais": 1
+      }
+    },
+    "AP": {
+      "post_count": 5,
+      "total_interactions": 226,
+      "total_engagement": 0.04620252553048801,
+      "avg_engagement_per_post": 0.009240505106097602,
+      "category_distribution": {
+        "Ações Institucionais": 2,
+        "Saúde": 2,
+        "Social e Eventos": 1
+      },
+      "top_subcategories": {
+        "Posse e Gestão": 2,
+        "Datas Comemorativas": 1,
+        "Saúde Mental": 1,
+        "Odontológico": 1
+      }
+    },
+    "MG": {
+      "post_count": 9,
+      "total_interactions": 5718,
+      "total_engagement": 0.09348876955019635,
+      "avg_engagement_per_post": 0.010387641061132928,
+      "category_distribution": {
+        "Saúde": 4,
+        "Financeiro": 3,
+        "Convênios e Benefícios": 2
+      },
+      "top_subcategories": {
+        "Vacinação": 3,
+        "Auxílios": 2,
+        "Clube de Vantagens": 1,
+        "Descontos Comerciais": 1,
+        "Anuidade e Regularização": 1
+      }
+    },
+    "RS": {
+      "post_count": 1,
+      "total_interactions": 145,
+      "total_engagement": 0.005578854218768035,
+      "avg_engagement_per_post": 0.005578854218768035,
+      "category_distribution": {
+        "Saúde": 1
+      },
+      "top_subcategories": {
+        "Vacinação": 1
+      }
+    }
+  },
+  "by_category": {
+    "Infraestrutura e Serviços": {
+      "post_count": 150,
+      "percentage": 2.38,
+      "total_interactions": 25412,
+      "total_engagement": 1.8644286822964307,
+      "avg_engagement_per_post": 0.014452935521677757,
+      "top_states": {
+        "ES": 75,
+        "BA": 18,
+        "AM": 14,
+        "AC": 9,
+        "GO": 7
+      },
+      "subcategories": {
+        "Suporte Digital e TI": 85,
+        "Logística Profissional": 47,
+        "Espaços Físicos": 18
+      }
+    },
+    "Sorteios e Promoções": {
+      "post_count": 275,
+      "percentage": 4.37,
+      "total_interactions": 8803,
+      "total_engagement": 0.6981926863563547,
+      "avg_engagement_per_post": 0.010420786363527682,
+      "top_states": {
+        "PI": 52,
+        "ES": 38,
+        "RJ": 34,
+        "RO": 26,
+        "AC": 22
+      },
+      "subcategories": {
+        "Sorteios": 275
+      }
+    },
+    "Ações Institucionais": {
+      "post_count": 2201,
+      "percentage": 34.99,
+      "total_interactions": 274270,
+      "total_engagement": 22.45054195413692,
+      "avg_engagement_per_post": 0.01378179371033574,
+      "top_states": {
+        "AM": 370,
+        "RO": 309,
+        "ES": 309,
+        "PI": 263,
+        "AC": 225
+      },
+      "subcategories": {
+        "Posse e Gestão": 1274,
+        "Campanhas Institucionais": 699,
+        "Notas de Pesar": 228
+      }
+    },
+    "Convênios e Benefícios": {
+      "post_count": 1314,
+      "percentage": 20.89,
+      "total_interactions": 231804,
+      "total_engagement": 15.644330703665302,
+      "avg_engagement_per_post": 0.013930837670227339,
+      "top_states": {
+        "ES": 210,
+        "PI": 156,
+        "DF": 154,
+        "AM": 119,
+        "RO": 116
+      },
+      "subcategories": {
+        "Clube de Vantagens": 536,
+        "Educação": 340,
+        "Descontos Comerciais": 211,
+        "Turismo e Lazer": 132,
+        "Grandes Parceiros": 73,
+        "Cinema e Entretenimento": 22
+      }
+    },
+    "Social e Eventos": {
+      "post_count": 269,
+      "percentage": 4.28,
+      "total_interactions": 49638,
+      "total_engagement": 3.9468604374911944,
+      "avg_engagement_per_post": 0.016866924946543564,
+      "top_states": {
+        "AM": 96,
+        "AC": 60,
+        "GO": 28,
+        "RO": 20,
+        "RR": 11
+      },
+      "subcategories": {
+        "Festividades": 170,
+        "Datas Comemorativas": 98,
+        "Cultura e Gastronomia": 1
+      }
+    },
+    "Saúde": {
+      "post_count": 910,
+      "percentage": 14.47,
+      "total_interactions": 131370,
+      "total_engagement": 9.750899439064671,
+      "avg_engagement_per_post": 0.012614358912114711,
+      "top_states": {
+        "RO": 150,
+        "DF": 127,
+        "ES": 92,
+        "AC": 89,
+        "PI": 89
+      },
+      "subcategories": {
+        "Vacinação": 506,
+        "Saúde Mental": 179,
+        "Plano de Saúde": 89,
+        "Prevenção e Exames": 59,
+        "Odontológico": 49,
+        "Telemedicina": 28
+      }
+    },
+    "Esporte e Treino": {
+      "post_count": 497,
+      "percentage": 7.9,
+      "total_interactions": 64364,
+      "total_engagement": 5.398500472626466,
+      "avg_engagement_per_post": 0.012325343544809284,
+      "top_states": {
+        "ES": 93,
+        "AC": 93,
+        "BA": 52,
+        "PI": 50,
+        "AM": 44
+      },
+      "subcategories": {
+        "Modalidades": 327,
+        "Competições": 153,
+        "Academias e Treino": 17
+      }
+    },
+    "Financeiro": {
+      "post_count": 188,
+      "percentage": 2.99,
+      "total_interactions": 38589,
+      "total_engagement": 2.3924146865748495,
+      "avg_engagement_per_post": 0.014156299920561239,
+      "top_states": {
+        "ES": 25,
+        "RO": 23,
+        "PI": 20,
+        "AC": 19,
+        "RJ": 18
+      },
+      "subcategories": {
+        "Anuidade e Regularização": 72,
+        "Auxílios": 69,
+        "Previdência": 37,
+        "Crédito e Empréstimos": 10
+      }
+    },
+    "Bem-estar Estético": {
+      "post_count": 286,
+      "percentage": 4.55,
+      "total_interactions": 35163,
+      "total_engagement": 2.951983902597025,
+      "avg_engagement_per_post": 0.011441798072081491,
+      "top_states": {
+        "PI": 52,
+        "ES": 39,
+        "AC": 34,
+        "MA": 29,
+        "RO": 23
+      },
+      "subcategories": {
+        "Saúde Pet": 156,
+        "Cuidados Pessoais": 110,
+        "Salão e Beleza": 15,
+        "Estética Avançada": 5
+      }
+    },
+    "Evidência Pública": {
+      "post_count": 105,
+      "percentage": 1.67,
+      "total_interactions": 9647,
+      "total_engagement": 1.0330401250515033,
+      "avg_engagement_per_post": 0.012012094477343062,
+      "top_states": {
+        "RO": 34,
+        "ES": 16,
+        "MA": 12,
+        "AC": 9,
+        "RR": 6
+      },
+      "subcategories": {
+        "Presença Digital": 75,
+        "Sinal Social": 30
+      }
+    },
+    "Identidade e Cultura": {
+      "post_count": 15,
+      "percentage": 0.24,
+      "total_interactions": 2258,
+      "total_engagement": 0.17073794255825397,
+      "avg_engagement_per_post": 0.011382529503883599,
+      "top_states": {
+        "AM": 8,
+        "RO": 5,
+        "SC": 1,
+        "PB": 1
+      },
+      "subcategories": {
+        "Serviços de Mídia": 9,
+        "Estúdio e Imagem": 5,
+        "Cultura e Lazer Especializado": 1
+      }
+    },
+    "Família e Maternidade": {
+      "post_count": 5,
+      "percentage": 0.08,
+      "total_interactions": 826,
+      "total_engagement": 0.047002089862880986,
+      "avg_engagement_per_post": 0.011750522465720246,
+      "top_states": {
+        "PI": 2,
+        "PE": 1,
+        "RO": 1,
+        "RJ": 1
+      },
+      "subcategories": {
+        "Infantil e Lazer": 4,
+        "Maternidade e Bebê": 1
+      }
+    },
+    "Nao_Classificado": {
+      "post_count": 76,
+      "percentage": 1.21,
+      "total_interactions": 6762,
+      "total_engagement": 0.5391675060705151,
+      "avg_engagement_per_post": 0.0070943092904015145,
+      "top_states": {
+        "AM": 17,
+        "TO": 12,
+        "ES": 11,
+        "RO": 7,
+        "PI": 7
+      },
+      "subcategories": {}
+    }
+  },
+  "by_period": {
+    "P1_2022_2026": {
+      "description": "Período completo: 2022 a Março/2026",
+      "start_date": "2022-01-01",
+      "end_date": "2026-03-31",
+      "post_count": 6291,
+      "status": "ativo"
+    },
+    "P2_2025_2026": {
+      "description": "Comparativo: 2025-01-01 a Mar/2026 vs período igual anterior",
+      "start_date": "2025-01-01",
+      "end_date": "2026-03-31",
+      "post_count": 1513,
+      "status": "ativo"
+    },
+    "P3_last_28d": {
+      "description": "Últimos 28 dias",
+      "status": "Aguardando YouScan",
+      "post_count": 0,
+      "data": {}
+    }
+  },
+  "national": {
+    "total_posts": 6291,
+    "total_interactions": 878906,
+    "total_engagement": 66.88810062835236,
+    "avg_engagement_per_post": 0.013374945136643144,
+    "date_range": {
+      "start": "2022-03-03 12:52:59",
+      "end": "2026-03-05 15:00:23"
+    }
+  }
+}
